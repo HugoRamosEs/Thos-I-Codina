@@ -1,0 +1,61 @@
+#main-cu{
+    padding: 10px 10px 240px 10px;
+
+    #art1-cu{
+        form{
+            padding-top: 20px;
+            padding-left: 10px;
+
+            .camp{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+        
+                label{
+                    font-weight: bold;
+                    width: 125px;
+                }
+        
+                input, textarea{
+                    padding: 7px;
+                    background-color: var(--form1);
+                    border: 1px solid var(--form2);
+                    color: var(--email2);
+                    border-radius: 3px;
+                    flex: 1;
+                }
+        
+                input{
+                    max-width: 60%;
+                }
+        
+                textarea{
+                    max-width: 70%;
+                }
+            }
+        
+            .camp:nth-last-child(2) {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    #as2-cu{
+        img{
+            padding-top: 12px;
+            margin-right: 20px;
+        }
+    }
+
+    #as3-cu{
+        p{
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main-cu{
+        padding-bottom: 10px;
+    }
+}

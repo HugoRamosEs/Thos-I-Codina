@@ -1,0 +1,4 @@
+1686822228676	Rename type 'Tablero'
+1686822385170	Rename type 'Vaixells'
+1686822675168	Encapsulate field 'x'
+1686822681021	Encapsulate field 'y'

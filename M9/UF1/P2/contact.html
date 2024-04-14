@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <script defer type="text/javascript" src="lib/bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
+    <title>Pràctica 2. Disseny d'interfícies mitjançant frameworks</title>
+</head>
+
+<body>
+    <div class="bg-secondary-contact">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary-contact">
+                <div class="container-fluid p-0">
+                    <a class="navbar-brand" href="index.html">Soft<span class="text-info-contact">GPL</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <div class="justify-content-center me-auto">
+                            <button type="button" class="btn text-light" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">
+                                Log In
+                            </button>
+                            <button type="button" class="btn text-light" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">
+                                Sign In
+                            </button>
+                        </div>
+                        <button class="btn btn-primary-contact text-light me-2" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#notificationsOffcanvas" aria-controls="offcanvasExample">
+                            Notifications
+                            <span class="badge bg-secondary-contact rounded-pill">4</span>
+                        </button>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 custom-focus" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-primary-contact text-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-contact text-light">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+                    <div data-bs-theme="dark">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="d-flex">
+                            <div class="mb-2 me-4">
+                                <label for="first-name" class="col-form-label">First Name</label>
+                                <input type="text" class="form-control custom-focus" id="first-name"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="mb-2">
+                                <label for="last-name" class="col-form-label">Last Name</label>
+                                <input type="text" class="form-control custom-focus" id="last-name"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="email-sign" class="col-form-label">Email address</label>
+                            <input type="email" class="form-control custom-focus" id="email-sign"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="password-sign" class="col-form-label">Password</label>
+                            <input type="password" class="form-control custom-focus" id="password-sign"
+                                placeholder="Password">
+                        </div>
+                        <div class="mb-2">
+                            <label for="gender" class="col-form-label">Date of Birth</label>
+                            <div class="d-flex">
+                                <select class="form-select me-3 custom-focus" aria-label="Day">
+                                    <option selected>Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select class="form-select me-3 custom-focus" aria-label="Month">
+                                    <option selected>Month</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select class="form-select custom-focus" aria-label="Year">
+                                    <option selected>Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gender" class="col-form-label">Gender</label>
+                            <div class="d-flex">
+                                <div class="form-control me-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Male
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-control me-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Personalized
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p>By clicking Sing Up, you agree to out Terms. Learn more about how we collect, use and share your
+                        informartion in the <a class="text-primary-contact" href="#">Data Policy</a>, as well as our use
+                        of cookies and similar
+                        technologies in
+                        out <a class="text-primary-contact" href="#">Cookie Policy</a>. We may send you SMS
+                        notifications that you can turn off at
+                        any time.
+                    </p>
+                    <div class="d-flex">
+                        <div class="flex-grow-1"><button type="button" class="btn btn-primary-contact text-light">Sign
+                                in</button></div>
+                        <div class="mt-2 me-3">
+                            <p>Are you already registered?</p>
+                        </div>
+                        <div class="mt-2"><a class="text-primary-contact" href="#" data-bs-toggle="modal"
+                                data-bs-target="#loginModal"> Log In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-contact text-light">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                    <div data-bs-theme="dark">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="name-login" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="name-login" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-login" class="col-form-label">Email address</label>
+                            <input type="text" class="form-control" id="email-login" placeholder="name@example.com">
+                        </div>
+                    </form>
+                    <div class="d-flex">
+                        <div class="flex-grow-1"><button type="button" class="btn btn-primary-contact text-light">Log
+                                in</button></div>
+                        <div class="mt-2 me-3">
+                            <p>Are you not registered yet?</p>
+                        </div>
+                        <div class="mt-2"><a class="text-primary-contact" href="#" data-bs-toggle="modal"
+                                data-bs-target="#signupModal"> Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="notificationsOffcanvas"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header bg-secondary-contact text-light">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notifications</h5>
+            <div data-bs-theme="dark">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists,
+                etc.
+            </div>
+            <div class="list-group mt-3 mb-3">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small>And some small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-body-secondary">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-body-secondary">And some muted small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-body-secondary">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-body-secondary">And some muted small print.</small>
+                </a>
+            </div>
+            <button type="button" class="btn btn-primary-contact text-light">Clear</button>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="mt-3">Informació Bàsica</h3>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button custom-focus" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        1. Termes
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        Si us plau, dedica un moment per revisar atentament els següents termes que regeixen l'ús del
+                        nostre lloc web. En accedir o utilitzar els nostres serveis, acceptes complir amb aquests
+                        termes. Si no estàs d'acord amb alguna part d'aquests termes, et preguem que
+                        no utilitzis el nostre lloc.
+                        <ol class="mt-3">
+                            <li>Ús del Lloc</li>
+                            <ul>
+                                <li>Assumeixes la responsabilitat de mantenir la confidencialitat del teu email i nom.
+                                </li>
+                            </ul>
+                            <li>Contingut de l'Usuari</li>
+                            <ul>
+                                <li>En contribuir amb contingut al nostre lloc, concedeixes a SoftGPL el dret no
+                                    exclusiu d'utilitzar, reproduir, modificar i distribuir aquest contingut.</li>
+                                <li>No es permet contingut difamatori, obscè, il·legal o que infringeixi els drets de
+                                    tercers.</li>
+                            </ul>
+                            <li>Privacitat</li>
+                            <ul>
+                                <li>La teva privacitat és important per a nosaltres. Consulta la nostra Política de
+                                    Privacitat per obtenir informació detallada sobre com gestionem les teves dades
+                                    personals.</li>
+                            </ul>
+                            <li>Propietat Intel·lectual</li>
+                            <ul>
+                                <li>Tot el contingut d'aquest lloc, incloent-hi textos, gràfics, logotips, imatges i
+                                    programari, està protegit per drets d'autor i altres lleis de propietat
+                                    intel·lectual.</li>
+                            </ul>
+                        </ol>
+                        Agraïm la teva col·laboració en respectar aquests termes mentre gaudeixes dels nostres serveis.
+                        Si tens alguna pregunta o preocupació, no dubtis en posar-te en contacte amb nosaltres.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed custom-focus" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        2. Condicions
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        A continuació, es detallen les condicions que han de ser acceptades per aquells que utilitzin
+                        els serveis de SoftGPL. La utilització del nostre lloc implica l'acceptació incondicional
+                        d'aquestes condicions. Si no esteu d'acord amb qualsevol part d'aquestes
+                        condicions, us preguem que no feu ús del nostre lloc.
+                        <ol class="mt-3">
+                            <li>Llei Aplicable</li>
+                            <ul>
+                                <li>Aquestes condicions es regeixen per les lleis de d'Espanya, i qualsevol disputa
+                                    estarà sotmesa a la jurisdicció dels tribunals.</li>
+                            </ul>
+                            <li>Modificacions i Suspensió de Serveis</li>
+                            <ul>
+                                <li>Ens reservem el dret de modificar o suspendre els nostres serveis en qualsevol
+                                    moment sense previ avís.</li>
+                            </ul>
+                            <li>Limitació de Responsabilitat</li>
+                            <ul>
+                                <li>SoftGPL no es fa responsable de pèrdues o danys que puguin derivar-se de l'ús dels
+                                    nostres serveis.</li>
+                            </ul>
+                        </ol>
+                        Agraïm la teva col·laboració en respectar aquestes condicions mentre gaudeixes dels nostres serveis.
+                        Si tens alguna pregunta o preocupació, no dubtis en posar-te en contacte amb nosaltres.
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="spinner-grow text-warning-contact me-3" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="d-inline-flex gap-1 me-3">
+                    <button class="btn btn-warning-contact mt-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        IMPORTANT!! (Clic per llegir)
+                    </button>
+                </p>
+                <div class="spinner-grow text-warning-contact" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body mb-3 text-center">
+                    Per poder enviar un missatge al centre d'opinions hauràs d'acceptar tots els termes i condicions
+                    mencionants anteriorment.
+                </div>
+            </div>
+        </div>
+        <h3>Formulari d'opinió</h3>
+        <div class="mt-3 mb-3">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Nom</label>
+                    <input type="text" class="form-control custom-focus" id="validationCustom01"
+                        placeholder="Introdueix un nom..." required>
+                    <div class="invalid-feedback">
+                        Has d'introduir un nom.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Cognom</label>
+                    <input type="text" class="form-control custom-focus" id="validationCustom02"
+                        placeholder="Introdueix un cognom..." required>
+                    <div class="invalid-feedback">
+                        Has d'introduir un cognom.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom03" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email" class="form-control custom-focus" id="validationCustom03"
+                            aria-describedby="inputGroupPrepend" placeholder="Introdueix un email..." required>
+                        <div class="invalid-feedback">
+                            Has d'escriure un email vàlid.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <label for="validationCustom04" class="form-label">Ciutat</label>
+                    <input type="text" class="form-control custom-focus" id="validationCustom04"
+                        placeholder="Introdueix una ciutat..." required>
+                    <div class="invalid-feedback">
+                        Has d'escriure una ciutat.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom05" class="form-label">Estat</label>
+                    <select class="form-select custom-focus" id="validationCustom05" required>
+                        <option selected disabled value="">Selecciona...</option>
+                        <option>Espanya</option>
+                        <option>Italia</option>
+                        <option>França</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecciona un estat vàlid.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom06" class="form-label">Missatge</label>
+                    <textarea class="form-control custom-focus" id="validationCustom06"
+                        placeholder="Introdueix un missatge..." required></textarea>
+                    <div class="invalid-feedback">
+                        Has d'enviar un missatge.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom07" class="form-label">Fitxer</label>
+                    <input type="file" class="form-control custom-focus" id="validationCustom07" required>
+                    <div class="invalid-feedback">
+                        Selecciona un fitxer vàlid.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom08" class="form-label">Termes i condicions</label>
+                    <div class="form-check">
+                        <input class="form-check-input custom-focus" type="checkbox" value="" id="invalidCheck"
+                            required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Acceptar termes i condicions.
+                        </label>
+                        <div class="invalid-feedback">
+                            Has d'acceptar abans de continuar i enviar el missatge.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="submit" class="btn btn-primary-contact text-light" id="liveAlertBtn">Enviar</button>
+                    <button type="button" class="btn btn-secondary-contact" id="liveToastBtn">Opinió dels
+                        usuaris</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <h3>Patrocinadors</h3>
+            <div class="col-4">
+                <a href="https://www.apple.com/es/"><img src="img/apple.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="apple"/></a>
+            </div>
+            <div class="col-4">
+                <a href="https://store.google.com/es/?hl=es&pli=1"><img src="img/google.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="google"/></a>
+            </div>
+            <div class="col-4">
+                <a href="https://www.dell.com/es-es"><img src="img/dell.png" class="img-fluid shadow-1-strong rounded mb-4" alt="dell"/></a>
+            </div>
+        </div>        
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Opinions</strong>
+                <small>1 min ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <div class="d-flex flex-column">
+                    <span class="text-danger">- Dolenta</span>
+                    <span class="text-info">- Variada</span>
+                    <span class="text-success">- Positiva</span>
+                </div>
+                <div class="progress-stacked mt-2">
+                    <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <div class="progress-bar bg-info"></div>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                        <div class="progress-bar bg-success"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-secondary-contact footer-personalized-contact">
+        <div class="container d-flex justify-content-between">
+            <nav class="nav flex-column">
+                <a class="nav-link" aria-current="page" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </nav>
+            <nav class="nav flex-column">
+                <a class="nav-link active active-p" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </nav>
+            <nav class="nav flex-column">
+                <a class="nav-link" aria-current="page" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </nav>
+            <nav class="nav flex-column">
+                <a class="nav-link" aria-current="page" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </nav>
+        </div>
+    </footer>
+</body>

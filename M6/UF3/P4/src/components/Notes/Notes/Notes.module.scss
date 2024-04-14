@@ -1,0 +1,35 @@
+.main_notes {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    margin-left: -105px;
+
+    h2{
+        font-size: 30px;
+        color: #15294e;
+        font-weight: bold;
+        margin-left: -2px;
+        margin-bottom: 20px;
+    }
+
+    .nCreate {
+        border: none;
+        background-color: #f6f6eb;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3296e2;
+        cursor: pointer;
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .nCreate:hover {
+        color: #3822d4;
+    }
+}
+
+.no_notes {
+    font-size: 30px;
+    text-align: center;
+}
+  

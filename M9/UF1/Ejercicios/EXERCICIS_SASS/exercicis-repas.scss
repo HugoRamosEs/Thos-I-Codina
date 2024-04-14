@@ -1,0 +1,115 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:color";
+
+$color-list: (red, blue, green);
+$color-comp-list: ();
+
+@each $color in $color-list{
+    $color-comp-list: append($color-comp-list, complement($color)); 
+}
+
+@debug $color-comp-list;
+
+$col1: nth($color-comp-list, 1);
+.complementary{
+    background-color: $col1;
+}
+
+@mixin shadow-color($rgb-border, $shadow-color){
+    border: 10px solid $rgb-border;
+    padding: 10px;
+    box-shadow: 0 0 30px $shadow-color;
+}
+
+.ex2{
+    @include shadow-color(red, white);
+}
+
+@mixin shadow-color($rgb-border, $shadow-color: grey, $opacity: 0.5){
+    border: 10px solid $rgb-border;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba($shadow-color, $opacity);
+}
+
+.ex3{
+    @include shadow-color(green, blue);
+}
+
+$font-weights: ("regular": 1rem, "medium": 1.5rem, "large": 2rem);
+$font-weights-extra: ();
+
+@each $key, $value in $font-weights{
+    $new: ($key + '-plus': $value + 0.4);
+    $font-weights-extra: map-merge($font-weights-extra, $new);
+}
+
+$font-weights: map-merge($font-weights, $font-weights-extra);
+@debug $font-weights;
+
+$opacity : (
+    property: opacity,
+    class: op,
+    values: (
+    0: 0,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1,
+    )
+);
+
+@mixin ex5($propietat: map-get($opacity, property), $classe: map-get($opacity, class), $valors: map-get($opacity, values)){
+    @each $key, $valor in $valors{
+        .#{$classe}-#{$key}{
+            #{$propietat}: $valor;
+        }
+    }
+}
+
+@include ex5();
+
+$font-size : (
+    property: font-size,
+    class: fs,
+    unit: rem,
+    values: (
+    'xs': 0.4,
+    'md': 0.625,
+    'lg': 1.2,
+    'xl': 1.8,
+    'xxl': 2.5,
+    )
+);
+
+@mixin ex5($propietat: map-get($font-size, property), $classe: map-get($font-size, class), $unitat: map-get($font-size, unit), $valors: map-get($font-size, values)){
+    @each $key, $valor in $valors{
+        .#{$classe}-#{$key}{
+            #{$propietat}: $valor + $unitat;
+        }
+    }
+}
+
+@include ex5();
+
+@function ex6($color, $percentatge, $limit: 90){
+    @if(abs($limit)) > 90 {
+        $limit: 90;
+    }
+    $light-limit: abs($limit) * -1;
+    $dark-limit: abs($limit);
+    @if $percentatge < $light-limit{
+        $percentatge: $light-limit;
+    }
+    @if($percentatge > $dark-limit){
+        $percentatge: $dark-limit;
+    }
+    @if $percentatge > 0{
+        @return mix(black, $color, $percentatge);
+    }@else{
+        $percentatge: $percentatge * -1;
+        @return mix(white, $color, $percentatge);
+    }
+}
+
+@debug ex6(blue, -40);

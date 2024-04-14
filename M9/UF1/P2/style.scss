@@ -1,0 +1,203 @@
+// style.scss
+$primary: #e20a52 !default;
+$secondary: #0d2352 !default;
+
+$primary-contact: #4697b4 !default;
+$secondary-contact: #546eab !default;
+$third-contact: #254b5e !default;
+$info-contact: #a7d0d2 !default;
+$warning-contact: #f7ed97 !default;
+
+$enable-rounded: false !default;
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/functions";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/variables";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/variables-dark";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/maps";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/mixins";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/utilities";
+
+$new-color: (
+    "search-color": #f8c313
+);
+$theme-colors: map-merge($theme-colors, $new-color);
+
+$contact-colors: (
+    "primary-contact": $primary-contact,
+    "secondary-contact": $secondary-contact,
+    "third-contact": $third-contact,
+    "info-contact": $info-contact,
+    "warning-contact": $warning-contact,
+);
+$theme-colors: map-merge($theme-colors, $contact-colors);
+
+// Layout & components
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/root";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/reboot";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/type";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/images";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/containers";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/grid";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/tables";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/forms";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/buttons";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/transitions";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/dropdown";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/button-group";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/nav";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/navbar";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/card";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/accordion";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/breadcrumb";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/pagination";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/badge";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/alert";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/progress";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/list-group";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/close";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/toasts";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/modal";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/tooltip";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/popover";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/carousel";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/spinners";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/offcanvas";
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/helpers";
+
+// Utilities
+$utilities: map-merge($utilities,
+    ("max-height": (
+            property: max-height,
+            class: mh,
+            responsive: true,
+            values: (
+                0: 0,
+                sm: 580px,
+                md: 770px,
+                lg: 1000px,
+                xl: 1210px,
+                xll: 1410px,
+            )
+        )
+    )
+);
+
+@import "../P2/lib/bootstrap/node_modules/bootstrap/scss/utilities/api";
+// @import "../P2/lib/bootstrap/node_modules/bootstrap/scss/bootstrap";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+
+// 6. Optionally include any other parts as needed
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+
+// 8. Add additional custom code here
+.table-personalized {
+    thead th {
+        color: #fff !important;
+        background-color: #e20a52 !important;
+    }
+}
+
+.btn-personalized {
+    @extend .btn;
+    @extend .btn-primary;
+}
+
+.footer-personalized {
+    nav {
+        a {
+            &:not([aria-disabled="true"]):not(.active) {
+                color: #fff;
+            }
+
+            &:active {
+                color: $primary;
+            }
+
+            &[aria-disabled="true"] {
+                color: #415b6f
+            }
+        }
+    }
+}
+
+// CONTACT
+.bg-primary-contact {
+    background-color: map-get($theme-colors, "primary-contact");
+}
+
+.bg-secondary-contact {
+    background-color: map-get($theme-colors, "secondary-contact");
+}
+
+.bg-third-contact {
+    background-color: map-get($theme-colors, "third-contact");
+}
+
+.bg-info-contact {
+    background-color: map-get($theme-colors, "info-contact");
+}
+
+.text-primary-contact {
+    color: map-get($theme-colors, "primary-contact");
+}
+
+.text-secondary-contact {
+    color: map-get($theme-colors, "secondary-contact");
+}
+
+.text-third-contact {
+    color: map-get($theme-colors, "third-contact");
+}
+
+.text-info-contact {
+    color: map-get($theme-colors, "info-contact");
+}
+
+.text-warning-contact {
+    color: map-get($theme-colors, "warning-contact");
+}
+
+.footer-personalized-contact {
+    nav {
+        a {
+            &:not([aria-disabled="true"]):not(.active) {
+                color: #fff;
+            }
+
+            &[aria-disabled="true"] {
+                color: lightgray
+            }
+        }
+    }
+}
+
+.active-p {
+    color: $primary-contact;
+}
+
+.active-p:hover {
+    color: $info-contact;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: $info-contact;
+    color: #000;
+}
+
+.form-check-input:checked {
+    background-color: $primary-contact;
+    border-color: $info-contact;
+}
+
+.custom-focus:focus {
+    border-color: $primary-contact;
+    box-shadow: 0 0 0 0.30rem rgba(70, 151, 180, 0.25);
+}

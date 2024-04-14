@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulari.css" media="screen"/>
+    <script defer type="text/javascript" src="formulari.js"></script>
+    <title>Formulari</title>
+</head>
+<body>
+    <h1>Cookies i Web Storage</h1>
+    <form id="formulari">
+        <label for="nom" name="nom">Nom<span>*</span>:</label>
+        <input type="text" name="nom" id="nom" required="required" />
+        <label for="cognom" name="cognom">Cognom:</label>
+        <input type="text" name="cognom" id="cognom"/>
+        <label for="email" name="email">Email<span>*</span>:</label>
+        <input type="email" name="email" id="email" required="required"/>
+        <label for="adreca" name="adreca">Adreça:</label>
+        <input type="text" name="adreca" id="adreca"/><br>
+        <button type="submit" id="envia">Envia</button>
+        <button type="submit" id="reset">Reseteja</button>
+    </form>
+</body>
+</html>

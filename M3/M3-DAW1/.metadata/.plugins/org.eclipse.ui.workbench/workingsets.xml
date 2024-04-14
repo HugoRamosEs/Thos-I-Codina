@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1663009869935_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1663009869948_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1664390518995_3" label="EJER1_Primeros_programas" name="EJER1_Primeros_programas">
+<item elementID="=E05_Hipotenusa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E02_Aritmetica" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_AreaTriangulo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_Euro2Pts" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_AreaCoronaCircular" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_CosteGasolina" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E08_RepartoPremio" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E09_Segundos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1664390591428_5" label="EJER2_Estructuras_condicionales" name="EJER2_Estructuras_condicionales">
+<item elementID="=E04_Ordena2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E04_Ordena3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_Factura" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E20_SumaSegundo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_EsMayorCero" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E02_PosNegCero" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E19_Areas" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E15_MayorEdad" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_TrianguloRectangulo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1664390639541_6" label="EJER3_Estructuras_iterativas_y_de_salto" name="EJER3_Estructuras_iterativas_y_de_salto">
+<item elementID="=E02_Potencia" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_TablaMultiplicar" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_Linia" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_Linies" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E27_Terror" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E18_Rectangulo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E13_Temperaturas" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E20_Piramide" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E19_Marco" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E12_Notas" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E14_NumeroSecreto" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E28_Fletxa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E10_MCD" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E08_SimplificaPor2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_Dado" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E05_Factorial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_Producto" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1664390669398_7" label="EJER0_previos" name="EJER0_previos">
+<item elementID="=E02_Lectura" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1666103715885_8" label="M5_UF1" name="M5_UF1">
+<item elementID="=E07_Refaccio" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_Debug" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1666633650040_9" label="EJER4_Arrays" name="EJER4_Arrays">
+<item elementID="=Senzills_01" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_05" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_06" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_07" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_08" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E02_BuscaPalabra" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_Votacion" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_Sumas" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_Letras" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_09" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_10" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E15_Rotacion" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E16_Ciudades" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1668424129704_10" label="EJERS_Sin_Acabar" name="EJERS_Sin_Acabar">
+<item elementID="=E06_Divisibles" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E04_Division" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_Divisores" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E09_EsPrimo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E11_Intereses" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=hola" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1668624582294_11" label="EJER5_Arrays_bidimensionals" name="EJER5_Arrays_bidimensionals">
+<item elementID="=Senzills_03B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_04B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_01B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_02B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_05B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_06B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_08B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Senzills_07B" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_Trabajadores" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_Notas" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E02_Aula" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_Distancias" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E09_JocStratego" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_Baloncesto" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E08_JocDames" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1669056411602_12" label="EJER6_Objetos_POO" name="EJER6_Objetos_POO">
+<item elementID="=E01_DistanciaPuntos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E02_Fecha" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_SimplificaFraccion\(metodos)" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E04_SumaFracciones\(metodos)" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E11_Barril" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E05_DistanciaPuntos3D" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_DiferenciaHoras" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E10_Amics" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_Alumnos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E08_Logins" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E12_Test" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E13_Emails" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1670871226471_13" label="Acepto_el_Reto" name="Acepto_el_Reto">
+<item elementID="=AR_Ejercicios" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=AR_Matrix" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292044658_14" label="EJERP_Practicas" name="EJERP_Practicas">
+<item elementID="=Practica_1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica_2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica_3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292133700_15" label="EJER1_Metodos" name="EJER1_Metodos">
+<item elementID="=EJER1_Metodos_Ejercicios" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EJER1_Repaso" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292592406_17" label="---------------UF1---------------" name="---------------UF1---------------"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292696096_20" label="---------------UF2---------------" name="---------------UF2---------------"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292768650_22" label="-------------OTROS--------------" name="-------------OTROS--------------"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673292882340_26" label="M5_UF2" name="M5_UF2">
+<item elementID="=E03_Proves_Caixa_Blanca" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E04_Proves_amb_JUnit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E05_Proves_amb_JUnit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E06_JavaDoc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=FlowLayout" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-ExamenEj2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-ExamenEj3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-ExamenEj4" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1676110850093_20" label="M8_UF4" name="M8_UF4">
+<item elementID="=M8-eclipse" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1676484548499_21" label="EJERP2_Practicas" name="EJERP2_Practicas">
+<item elementID="=Practica1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1676562767221_23" label="M5_UF3" name="M5_UF3">
+<item elementID="=E02_Rombe" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E03_Comptador" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E04_Cotxes" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E05_HoresMinutsSegons" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E07_Figures" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E08_FiguresTridimensionals" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E09_MetodesPoliformics" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2021-2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=E01_DefinicioDeClasses" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2021-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2022-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5_PartPractica" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2023-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2022-2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1677256435726_24" label="EJER2_Clases_de_Java" name="EJER2_Clases_de_Java">
+<item elementID="=EJER2_Clases_de_Java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1679506537174_25" label="M8_UF2" name="M8_UF2"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1679506613952_26" label="---------------UF3---------------" name="---------------UF3---------------"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1679676936731_26" label="EJER3_Recursividad" name="EJER3_Recursividad">
+<item elementID="=EJER3_Recursividad" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1681754136426_27" label="EJER4_Biblioteca" name="EJER4_Biblioteca">
+<item elementID="=EJER4_Biblioteca" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EJER4_ImportarBiblioteca" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1682358249139_28" label="EJER5_Repaso" name="EJER5_Repaso">
+<item elementID="=EJER5_Repaso" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1682521528606_29" label="M8_UF3" name="M8_UF3">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Servers" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683134605713_30" label="EJER1_Ficheros_Texto" name="EJER1_Ficheros_Texto">
+<item elementID="=EJER1_Ficheros_Texto" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EJER2_Ficheros_Binarios" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica1_UF3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Practica2_UF3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686749188952_31" label="M5_UF3_Repaso" name="M5_UF3_Repaso">
+<item elementID="=M5-2021-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-2021-2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-2022-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-2023-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M5-2022-2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=M05 UF3 Examen Ext 2023" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1663009870515_2" label="Window Working Set" name="Aggregate for window 1663009870514"/>
+<mruList name="-------------OTROS--------------"/>
+</workingSetManager>

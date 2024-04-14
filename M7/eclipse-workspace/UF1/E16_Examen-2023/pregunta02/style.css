@@ -1,0 +1,14 @@
+#dialog-message {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+table {
+	border: 1px SOLID RED;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px SOLID RED;
+}

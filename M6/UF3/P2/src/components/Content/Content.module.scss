@@ -1,0 +1,35 @@
+.pagination{
+    grid-column: 1 / 4;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    button{
+        padding: 5px 20px;
+        color: white;
+        background-color: #7d7d7d;
+        border: 1px solid #7d7d7d;
+        border-radius: 3px;
+        margin-right: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:last-child{
+        margin-right: 0px;
+    }
+
+    .button_active{
+        background-color: #1ca4d8;
+        border-color: #1ca4d8;
+    }
+}
+
+.no_items{
+    grid-column: 1 / 4;
+    text-align: center;
+    font-size: 30px;
+}
+

@@ -1,0 +1,10 @@
+Defineix una Checked Exception pròpia que emmagatzemi un codi alfanumèric 
+per tal de marcar el lloc exacte del programa on s'ha llançat. 
+Fes que aprofiti tota la potència del llenguatge java en 
+tots els casos possibles de llançament.
+
++-------------------------------------------------------------------------
+Define una Checked Exception propia que almacene un código alfanumérico 
+para marcar el lugar exacto del programa donde se ha lanzado. 
+Haz que aproveche toda la potencia del lenguaje java en 
+todos los casos posibles de lanzamiento.

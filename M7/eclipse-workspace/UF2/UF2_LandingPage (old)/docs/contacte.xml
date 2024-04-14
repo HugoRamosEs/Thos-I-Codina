@@ -1,0 +1,16 @@
+<REGISTRES>
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <COMENTARI>hola</COMENTARI>
+        <HORA>21:09:00</HORA>
+        <DATA>16/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <COMENTARI>hola</COMENTARI>
+        <HORA>21:09:47</HORA>
+        <DATA>16/11/2023</DATA>
+    </REGISTRE> 
+</REGISTRES>

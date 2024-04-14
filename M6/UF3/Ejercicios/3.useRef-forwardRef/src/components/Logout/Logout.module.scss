@@ -1,0 +1,19 @@
+.logout{
+    text-decoration: none;
+    color: #15294e;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 15px !important;
+    margin-left: 5px;
+    border: none;
+    background-color: #f6f6eb;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #fedb63;
+    }
+}
+
+.active{
+    background-color: #fedb63;
+}

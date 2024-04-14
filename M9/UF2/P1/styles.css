@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e4f5;
+}
+
+h1{
+    padding: 20px;
+    color: #019bd9;
+    background-color: #516379;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+ul{
+    display: flex;
+    background-color: #afdaee;
+    padding: 20px 0px;
+}
+
+.ul2{
+    background-color: #e0e4f5;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    padding: 20px;
+    text-decoration: none;
+    color: #7a374b;
+}
+
+a:hover{
+    background-color: #ffffff;
+}
+
+#d1, #d2, #d3, #d4, #d5{
+    background-color: #e0e4f5;
+}
+
+h2{
+    padding: 20px;
+    color: white;
+    background-color: #2d2f3b;
+}
+
+#jpg, #png, #webp, #avif, #svg, #jpg-webp, #jpg-avif, #png-webp, #png-avif, #gif, #gif-2, #video-picture, #d31, #d32, #d411, #d51{
+    display: block;
+    padding: 20px;
+}
+
+h3{
+    padding: 20px;
+    background-color: #afb2bf;
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.images{
+    display: flex;
+}
+
+span{
+    margin-top: 5px;
+}
+
+.img{
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+#d31 li{
+    padding: 0;
+    margin: 5px;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+#d31 li:hover{
+    background-color: #e0e4f5;
+}
+
+/* EXERCICI 3 */
+
+#contenedor3{
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+#d33-3, #d33-4 {
+    padding: 10px 0px;
+}
+
+#d33 li{
+    padding: 10px 0px;
+}
+
+#d33 li:hover{
+    background-color: #e0e4f5;
+}
+
+.images3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 764px) {
+    .img3 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 765px) and (max-width: 1023px) {
+    .img3 {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1240px) {
+    .img3 {
+        width: 33.3%;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .img3 {
+        width: 33.3%;
+    }
+}
+
+/* EXERCICI 4 */
+
+#d411 .img{
+    padding: 5px 0px;
+}
+
+#d411 p {
+    text-align: start;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+#d411 span{
+    text-align: start;
+    font-size: 15px;
+}
+
+/* EXERCICI 5 */
+#d51 span .ol1{
+    padding-left: 10px;
+}
+
+.ol1 li{
+    margin: 5px 0px;
+}
+
+#d51 h5{
+    font-size: 25px;
+    margin: 5px 0px;
+}
+
+#d51-3, #d51-4 {
+    padding: 10px 0px;
+}

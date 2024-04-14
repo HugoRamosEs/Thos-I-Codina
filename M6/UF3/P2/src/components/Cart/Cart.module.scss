@@ -1,0 +1,52 @@
+.cart_table{
+    font-size: 18px;
+    z-index: 1;
+    border-collapse: collapse;
+    position: fixed;
+    width: 1000px;
+    top: 150px;
+    left: 465px;
+    border: 3px solid #e8e9ec;
+    background-color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
+
+    thead{
+        background-color: #48667b;
+        color: white;
+
+        th{
+            padding: 5px;
+            height: 25px;
+            text-align: center;
+        }
+    }
+
+    tbody{
+        img{
+            width: 100px;
+            height: auto;
+        }
+
+        td{
+            padding: 5px;
+            height: 40px;
+            width: 75px;
+            text-align: center;
+            
+            input{
+                width: 50%;
+                text-align: center;
+            }
+        }
+        
+        .total{
+            text-align: right;
+            padding-right: 45px;
+            font-weight: bold;
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}

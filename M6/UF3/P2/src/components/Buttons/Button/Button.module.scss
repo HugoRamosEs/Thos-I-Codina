@@ -1,0 +1,44 @@
+.seguir_comprant, .buidar_carretó, .netejar_filtres{
+    font-weight: bold;
+    padding: 2px 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.seguir_comprant{
+    border: 2px solid #1fa0da;
+    color: #1fa0da;
+}
+
+.buidar_carretó{
+    border: 2px solid #eb4b3d;
+    color: #eb4b3d;
+}
+
+.seguir_comprant:hover{
+    cursor: pointer;
+    background-color: #1fa0da;;
+    color: white;
+}
+
+.buidar_carretó:hover{
+    cursor: pointer;
+    background-color: #eb4b3d;
+    color: white;
+}
+
+.netejar_filtres{
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #20a0dd;
+    border-color: #20a0dd;
+    margin-bottom: 15px;
+}
+
+.netejar_filtres:hover{
+    cursor: pointer;
+    background-color: #eb4b3d;
+    border-color: #eb4b3d;
+}

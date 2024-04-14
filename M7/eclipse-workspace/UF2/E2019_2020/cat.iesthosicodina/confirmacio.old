@@ -1,0 +1,51 @@
+<?php
+require_once 'php/generalFunctions.php';
+require_once 'php/variablesDeconfiguracio.php';
+
+// Definició de l'idioma
+if (isset($_COOKIE['lang'])) {
+    $idiomaDeLaPagina = sanitize($_COOKIE['lang'],0);
+} else {
+    $idiomaDeLaPagina = IDIOMA_PER_DEFECTE;
+}
+
+foreach ($idiomesDelFormulari as $clau => $valor) {
+    $idiomes [] = $clau;
+}
+
+if ( (isset($_GET['lang'])) && (in_array($_GET['lang'], $idiomes)) ) {
+    $idiomaDeLaPagina = sanitize($_GET['lang'],0);
+    $resultat = setcookie("lang", $idiomaDeLaPagina,time() + 60*60*24*30);
+    $_COOKIE['lang'] = $idiomaDeLaPagina;
+}
+$fitxerDeTraduccions = "languages/{$idiomaDeLaPagina}_traduccio.php";
+require_once $fitxerDeTraduccions;
+
+if ($_GET["tipo"] == "conf" && isset($_GET["cod"]) ) {
+    $id = sanitize($_GET["cod"], 0);
+    if ($idConnexioPerAccions = mysqli_connect ($dbServidor, $dbUsernamePerAccions, $dbPassword, $dbBaseDeDades)) {
+        // $sSql = "UPDATE tbl_users SET status=1 WHERE id ='$id'" ;
+        $sSql = "UPDATE tbl_usuaris SET status=1, dataDarrerAcces=CURRENT_TIMESTAMP WHERE id ='$id'" ;
+        if ($consulta = mysqli_query ($idConnexioPerAccions, $sSql)) {
+        } else {
+            $errorsDetectats["baseDades"] = "Hi ha un error en al consulta a la BBDD: " . mysqli_error($idConnexioPerAccions);
+        }
+    } else {
+        $errorsDetectats["baseDades"] = "No s'ha pogut conectar a la base de dades: " . mysqli_connect_errno();
+    }
+    
+}
+mysqli_close($idConnexioPerAccions);
+
+include "plantilles/header.php";
+include "plantilles/navigationIdiomes.php";
+include "plantilles/navigation.php";
+if (isset($errorsDetectats)) {
+    include "plantilles/error.php";
+} else {
+    include "plantilles/confirmacio.php";
+}
+include "plantilles/footer.php";
+
+
+?>

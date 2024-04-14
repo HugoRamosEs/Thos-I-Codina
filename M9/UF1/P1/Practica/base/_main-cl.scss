@@ -1,0 +1,21 @@
+#main-cl{
+    padding: 10px 10px 60px 10px;
+    
+    #as1-cl{
+        margin-top: 12px;
+
+        section{
+            margin-top: 15px;
+
+            p{
+                font-style: italic;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main-cl{
+        padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UF2.P4.JQuery - Backlog</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/backlog-script.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>UF2.P4 - jQuery-UI</h1>
+            <nav>
+                <ul>
+                    <li><a href="kanban.html">Kanban</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main_backlog">
+            <h2>Exercicis d'animacions amb jQuery-UI</h2>
+
+            <div id="dialog-form" title="Crea una nova tasca">
+                <p class="validateTips">Tots els camps son obligatoris.</p>
+               
+                <form>
+                  <fieldset>
+                    <label for="nota">Nota</label>
+                    <input type="text" name="nota" id="nota" class="text ui-widget-content ui-corner-all">
+                    <label for="tipus">Tipus</label>
+                    <input type="text" name="tipus" id="tipus" class="text ui-widget-content ui-corner-all">
+                    <label for="dataInici">Data d'inici</label>
+                    <input type="date" name="dataInici" id="dataInici" class="text ui-widget-content ui-corner-all">
+                    <label for="dataFinal">Data final</label>
+                    <input type="date" name="dataFinal" id="dataFinal" class="text ui-widget-content ui-corner-all">
+
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                  </fieldset>
+                </form>
+            </div>
+
+            <div id="sprint" class="ui-widget">
+                <h3>Sprint</h3>
+                <table id="notes-s" class="ui-widget ui-widget-content">
+                  <thead>
+                    <tr class="ui-widget-header ">
+                        <th>Tasca</th>
+                        <th>Tipus</th>
+                        <th>Data d'inici</th>
+                        <th>Data final</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="placeholder" style="display: none;">
+                      <td colspan="4">Arrosega per afegir una tasca...</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+            <div id="backlog" class="ui-widget">
+                <h3>Backlog</h3>
+                <table id="notes-b" class="ui-widget ui-widget-content">
+                  <thead>
+                    <tr class="ui-widget-header ">
+                        <th>Tasca</th>
+                        <th>Tipus</th>
+                        <th>Data d'inici</th>
+                        <th>Data final</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="placeholder" style="display: none;">
+                        <td colspan="4">Arrosega per afegir una tasca o afegeix una tasca amb el botó...</td>
+                    </tr>
+                    <tr>
+                        <td>Exemple Backlog 1</td>
+                        <td>Exemple</td>
+                        <td>17/03/2024</td>
+                        <td>17/03/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Exemple Backlog 2</td>
+                        <td>Exemple</td>
+                        <td>17/03/2024</td>
+                        <td>17/03/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Exemple Backlog 3</td>
+                        <td>Exemple</td>
+                        <td>17/03/2024</td>
+                        <td>17/03/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Exemple Backlog 4</td>
+                        <td>Exemple</td>
+                        <td>17/03/2024</td>
+                        <td>17/03/2024</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+            <div id="trash" class="ui-widget">
+                <div class="trash-div">
+                    <h3>Trash</h3>
+                    <div>
+                        <button type="submit" id="t-borrar">Buidar</button>
+                    </div>
+                </div>
+                <table class="ui-widget ui-widget-content">
+                    <thead>
+                        <tr>
+                            <th colspan="4">🗑️ Trash</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="placeholder" style="display: none;">
+                            <td colspan="4">Afegeix items per eliminar-los...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="afegir-tasca" class="ui-button ui-corner-all ui-widget">Afegir una tasca</button>
+            <button id="restaurar" class="ui-button ui-corner-all ui-widget">Restaurar Bag. i Kan.</button>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="">Sobre nosaltres</a></li>
+                    <li><a href="">Altres Pràctiques</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

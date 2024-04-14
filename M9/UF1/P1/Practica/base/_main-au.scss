@@ -1,0 +1,49 @@
+#main-au{
+    padding: 10px 10px 60px 10px;
+
+    #art2-au{
+        h2{
+            border: none;
+        }
+    }
+
+    #art3-au{
+        .titol{
+            border: none;
+            position: relative;
+
+            h2{
+                color: var(--gris8);
+                margin: 0px;
+                margin-top: 55px;
+                padding-left: 30px;
+                z-index: 1;
+            }
+
+            img{
+                padding-left: 20px;
+                z-index: 1;
+            }
+
+            .web-img {
+                position: absolute;
+                bottom: 0;
+                padding-left: 0px;
+            }
+        }
+
+        .p1{
+            padding-top: 20px;
+        }
+    }
+
+    #as1-au{
+        margin-top: 15.5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main-au{
+        padding-bottom: 10px;
+    }
+}

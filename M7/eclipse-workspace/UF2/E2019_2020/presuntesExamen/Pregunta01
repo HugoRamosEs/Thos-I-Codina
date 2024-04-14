@@ -1,0 +1,8 @@
+/* 
+Pregunta 01 ( 1 punt )
+
+Crea una classe controladora d'errors.
+
+La classe mostrarà els errors produits a la nastra aplicació
+mitjançant la invocació del mètode "show".
+*/

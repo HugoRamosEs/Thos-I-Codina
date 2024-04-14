@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parametres>
+	<persistencia>
+		<dsn>jdbc:mysql</dsn>
+		<host>127.0.0.1</host>
+		<data_base>myweb</data_base>
+		<usuari>appuser</usuari>
+		<contrasenya>TiC.123456</contrasenya>
+	</persistencia>
+	<grafics>
+		<pantalla>
+			<amplada>1920</amplada>
+			<alcada>1080</alcada>
+		</pantalla>
+	</grafics>
+</parametres>

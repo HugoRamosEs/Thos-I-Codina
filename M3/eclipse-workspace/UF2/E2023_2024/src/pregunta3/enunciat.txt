@@ -1,0 +1,9 @@
+Defineix la classe MusicParser per tal que pugui llegir el fitxer
+musica01.xml i carregar-ho en Pila.
+No es por modificar la classe Main excepte per fer un CORRECTE 
+tractament d'Excepcions.
+/********************************************************************
+Define la clase MusicParser para que pueda leer el fichero
+musica01.xml y cargarlo en Pila.
+No se miedo modificar la clase Main excepto para hacer un CORRECTO 
+tratamiento de Excepciones.

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>UF2 - Pràctica 1</title>
+</head>
+
+<!--
+    
+INCOMPATIBILITATS EN DIFERENTS NAVEGADORS:
+- En Microsoft Edge, els .avif no funcionen. 
+- En Google Chrome, l'extensió de video .ogg no funciona.
+
+-->
+
+<body>
+    <div id="contenedor">
+        <h1>UF2. Pràctica 1. Contingut multimèdia optimitzat per al web. Imatges</h1>
+        <nav>
+            <ul>
+                <li><a href="#d1">Exercici 1</a></li>
+                <li><a href="#d2">Exercici 2</a></li>
+                <li><a href="#d3">Exercici 3</a></li>
+                <li><a href="#d4">Exercici 4</a></li>
+                <li><a href="#d5">Exercici 5</a></li>
+            </ul>
+        </nav>
+        <div id="d1">
+            <h2>Exercici 1</h2>
+            <h3>Punt 1</h3>
+            <div id="jpg">
+                <h4>JPG</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300/v1705072092/M9/duisburg-4158910_640_tr17uv.jpg" alt="duisburg-4158910_640.jpg"/>
+                        <span>114 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_65/v1705072092/M9/duisburg-4158910_640_tr17uv.jpg" alt="duisburg-4158910_640.jpg"/>
+                        <span>28,77 kB - 25% </span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_40/v1705072092/M9/duisburg-4158910_640_tr17uv.jpg" alt="duisburg-4158910_640.jpg"/>
+                        <span>20,68 kB - 18%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_25/v1705072092/M9/duisburg-4158910_640_tr17uv.jpg" alt="duisburg-4158910_640.jpg"/>
+                        <span>15,63 kB - 14%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="png">
+                <h4>PNG</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296/v1705072113/M9/lake-2608425_640_u35eeu.png" alt="lake-2608425_640.png"/>
+                        <span>43,47 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_65/v1705072113/M9/lake-2608425_640_u35eeu.png" alt="lake-2608425_640.png"/>
+                        <span>111,17 kB - 270%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_40/v1705072113/M9/lake-2608425_640_u35eeu.png" alt="lake-2608425_640.png"/>
+                        <span>111,17 kB - 270%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_25/v1705072113/M9/lake-2608425_640_u35eeu.png" alt="lake-2608425_640.png"/>
+                        <span>111,17 kB - 270%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="webp">
+                <h4>WEBP</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_278/v1705072108/M9/fantasy-3502188_640_bexwpc.webp" alt="fantasy-3502188_640.webp"/>
+                        <span>10,45 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_278,q_65/v1705072108/M9/fantasy-3502188_640_bexwpc.webp" alt="fantasy-3502188_640.webp"/>
+                        <span>8,29 kB - 79%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_278,q_40/v1705072108/M9/fantasy-3502188_640_bexwpc.webp" alt="fantasy-3502188_640.webp"/>
+                        <span>6,14 kB - 59%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_278,q_25/v1705072108/M9/fantasy-3502188_640_bexwpc.webp" alt="fantasy-3502188_640.webp"/>
+                        <span>4,32 kB - 41%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="avif">
+                <h4>AVIF</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_253/v1705072098/M9/reflection-711926_640_jkp3rg.avif" alt="reflection-711926_640.avif"/>
+                        <span>4,18 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_253,q_65/v1705072098/M9/reflection-711926_640_jkp3rg.avif" alt="reflection-711926_640.avif"/>
+                        <span>2,92 kB - 70%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_253,q_40/v1705072098/M9/reflection-711926_640_jkp3rg.avif" alt="reflection-711926_640.avif"/>
+                        <span>2,19 kB - 52%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_253,q_25/v1705072098/M9/reflection-711926_640_jkp3rg.avif" alt="reflection-711926_640.avif"/>
+                        <span>1,65 kB - 39%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="svg">
+                <h4>SVG</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <image src="img/vintage-1817598.svg" alt="vintage-1817598.svg"/>                     
+                        <span>234 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió</p>
+                        <image src="img/vintage-1817598c.svg" alt="vintage-1817598c.svg"/>                     
+                        <span>219 kB</span>
+                    </div>
+                </div>
+            </div>
+            <h3>Punt 2</h3>
+            <div id="jpg-webp">
+                <h4>JPG a WEBP</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300/v1705072092/M9/duisburg-4158910_640_tr17uv.webp" alt="duisburg-4158910_640.webp"/>
+                        <span>28,63 kB - 25% (respecte a l'imatge original)</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_65/v1705072092/M9/duisburg-4158910_640_tr17uv.webp" alt="duisburg-4158910_640.webp"/>
+                        <span>23,68 kB - 83% </span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_40/v1705072092/M9/duisburg-4158910_640_tr17uv.webp" alt="duisburg-4158910_640.webp"/>
+                        <span>18,33 kB - 64%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_25/v1705072092/M9/duisburg-4158910_640_tr17uv.webp" alt="duisburg-4158910_640.webp"/>
+                        <span>13,38 kB - 47%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="jpg-avif">
+                <h4>JPG a AVIF</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300/v1705072092/M9/duisburg-4158910_640_tr17uv.avif" alt="duisburg-4158910_640.avif"/>
+                        <span>26,53 kB - 23% (respecte a l'imatge original)</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_65/v1705072092/M9/duisburg-4158910_640_tr17uv.avif" alt="duisburg-4158910_640.avif"/>
+                        <span>22,61 kB - 85% </span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_40/v1705072092/M9/duisburg-4158910_640_tr17uv.avif" alt="duisburg-4158910_640.avif"/>
+                        <span>18,30 kB - 69%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_300,q_25/v1705072092/M9/duisburg-4158910_640_tr17uv.avif" alt="duisburg-4158910_640.avif"/>
+                        <span>13,48 kB - 51%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="png-webp">
+                <h4>PNG a WEBP</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296/v1705072113/M9/lake-2608425_640_u35eeu.webp" alt="lake-2608425_640.webp"/>
+                        <span>5,71 kB - 13% (respecte a l'imatge original)</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_65/v1705072113/M9/lake-2608425_640_u35eeu.webp" alt="lake-2608425_640.webp"/>
+                        <span>4,75 kB - 83%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_40/v1705072113/M9/lake-2608425_640_u35eeu.webp" alt="lake-2608425_640.webp"/>
+                        <span>3,63 kB - 64%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_25/v1705072113/M9/lake-2608425_640_u35eeu.webp" alt="lake-2608425_640.webp"/>
+                        <span>2,72 kB - 48%</span>
+                    </div>
+                </div>
+            </div>
+            <div id="png-avif">
+                <h4>PNG a AVIF</h4>
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296/v1705072113/M9/lake-2608425_640_u35eeu.avif" alt="lake-2608425_640.avif"/>
+                        <span>3,80 kB - 9% (respecte a l'imatge original)</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 65%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_65/v1705072113/M9/lake-2608425_640_u35eeu.avif" alt="lake-2608425_640.avif"/>
+                        <span>3,71 kB - 98%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 40%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_40/v1705072113/M9/lake-2608425_640_u35eeu.avif" alt="lake-2608425_640.avif"/>
+                        <span>2,83 kB - 74%</span>
+                    </div>
+                    <div class="img">
+                        <p>Compressió 25%</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/h_296,q_25/v1705072113/M9/lake-2608425_640_u35eeu.avif" alt="lake-2608425_640.avif"/>
+                        <span>2,04 kB - 54%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d2">
+            <h2>Exercici 2</h2>
+            <h3>Punt 1</h3>
+            <div id="gif">
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.gif" alt="nadal.gif"/>
+                        <span>73,63 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>MP4</p>
+                        <video controls>
+                            <source src="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.mp4" type="video/mp4">
+                        </video>                          
+                        <span>32,38 kB - 44%</span>
+                    </div>
+                    <div class="img">
+                        <p>WEBM</p>
+                        <video controls>
+                            <source src="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.webm" type="video/webm">
+                        </video>                          
+                        <span>25,88kB - 35%</span>
+                    </div>
+                    <div class="img">
+                        <p>OGG</p>
+                        <video controls>
+                            <source src="img/nadal.ogg" type="video/ogg">
+                        </video>       
+                        <span>67,4 kB - 92%</span>
+                    </div>
+                </div>
+            </div>
+            <h3>Punt 2</h3>
+            <div id="gif-2">
+                <div class="images">
+                    <div class="img">
+                        <p>Original</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.gif" alt="nadal.gif"/>
+                        <span>73,63 kB</span>
+                    </div>
+                    <div class="img">
+                        <p>WEBP</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.webp" alt="nadal.webp"/>
+                        <span>30,47 kB - 41%</span>
+                    </div>
+                    <div class="img">
+                        <p>AVIF</p>
+                        <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.avif" alt="nadal.avif"/>
+                        <span>19,30 kB - 26%</span>
+                    </div>
+                </div>
+            </div>
+            <h3>Punt 3</h3>
+            <div id="video-picture">
+                <div class="images">
+                    <div class="img">
+                        <p>Video</p>
+                        <video controls>
+                            <source src="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.webm" type="video/webm">
+                            <source src="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.mp4" type="video/mp4">
+                            <source src="img/nadal.ogg" type="video/ogg">
+                            Video no suportat.
+                        </video>  
+                    </div>
+                    <div class="img">
+                        <p>Picture</p>
+                        <picture>
+                            <source srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.avif" type="image/avif">
+                            <source srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.webp" type="image/webp">
+                            <img srcset="https://res.cloudinary.com/dfkpssmvx/image/upload/v1705933824/M9/nadal_x92cuo.gif" alt="nadal.gif">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d3">
+            <h2>Exercici 3</h2>
+            <h3>Punt 1</h3>
+            <div id="d31">
+                <span><a href="https://cloudinary.com/">Cloudinary</a> és un servei que permet gestionar imatges i videos en linia, modificant l'URL, oferint diverses caràcteristiques tals com:
+                    <ol>
+                        <li>Transformació d'imatges en temps real. Permet escalar, retallar, aplicar filtres a l'imatge.</li>
+                        <li>Formats adaptatius. Permet canviar el format de l'imatge o video, a eleccio de l'usuari.</li>
+                        <li>Optimització d'imatges. Permet optimitzar l'imatge, per minimitzar el tamany i temps de càrrega.</li>
+                        <li>CDN integrat. Utilitza una xarxa de lliurament de contingut (CDN).</li>
+                        <li>API Completa. Ofereix una API que permet als desenvolupadors controlar i gestionar les imatges de manera programàtica, oferint flexibilitat i personalització.</li>
+                    </ol>
+                </span>
+            </div>
+            <h3>Punt 2</h3>
+            <div id="d32">
+                <img width="1200px" height="auto" srcset="img/compte.png" alt="compte.png">
+            </div>
+            <h3>Punt 3</h3>
+            <ul class="ul2">
+                <li><a href="exercici3.html#d33-3">Pàgina per a Exercici 3.3</a></li>
+            </ul>
+            <h3>Punt 4</h3>
+            <ul class="ul2">
+                <li><a href="exercici3.html#d33-4">Pàgina per a Exercici 3.4</a></li>
+            </ul>
+        </div>  
+        <div id="d4">
+            <h2>Exercici 4</h2>
+            <ul class="ul2">
+                <li><a href="exercici4.html">Pàgina per a Exercici 4.1</a></li>
+            </ul>
+        </div>
+        <div id="d5">
+            <h2>Exercici 5</h2>
+            <h3>Punt 1</h3>
+            <div id="d51">
+                <span><a href="https://www.thumbor.org/">Thumbor</a> és un servei d'edició d'imatges open-source que permet manipular imatges de manera eficient i flexible. Algunes de les funcionalitats son:
+                    <ol class="ol1">
+                        <li>• Caracteristiques bàsiques per a manipular imatges. Aquestes serien retall, rotació, redimensionar... etc.</li>
+                        <li>• Personalització. Permet crear plugins i extensions per adaptar-se a necessitats específiques de l'aplicació.</li>
+                        <li>• Compatibilitat. És compatible amb una àmplia gamma de plataformes, frameworks, llenguatges i entorns de desenvolupament.</li>
+                        <li>• Cache. Emmagatzema en memòria cau les imatges modificades per a un accés més ràpid i eficient en futures crides.</li>
+                    </ol>
+                </span>
+            </div>
+            <h3>Punt 2</h3>
+            <div id="d51">
+                <span>
+                    <h5>Guia d'instal•lació de Thumbor</h5>
+                    <ol class="ol1">
+                        <li>1. Instal•lació del entorn virtual de Phyton.</li>
+                        <img src="img/thumbor/1.png" alt="1.png"/>
+                        <li>2. Instal•lació de les dependencies de Thumbor.</li>
+                        <img src="img/thumbor/2.png" alt="2.png"/>
+                        <li>3. Creació de l'entorn virtual.</li>
+                        <img src="img/thumbor/3.png" alt="3.png"/>
+                        <li>4. Activar l'entorn virtual.</li>
+                        <img src="img/thumbor/4.png" alt="4.png"/>
+                        <li>5. Instal•lació de Thumbor.</li>
+                        <img src="img/thumbor/5.png" alt="5.png"/>
+                        <li>6. Mirar que están totes les dependencies.</li>
+                        <img src="img/thumbor/6.png" alt="6.png"/>
+                        <li>7. Iniciar Thumbor.</li>
+                        <img src="img/thumbor/7.png" alt="7.png"/>
+                        <li>8. Configuració Thumbor. Crear el fitxer de configuració.</li>
+                        <img src="img/thumbor/8.png" alt="8.png"/>
+                    </ol>
+                    <h5>Post instal•lació de Thumbor</h5>
+                    <ol class="ol1">
+                        <li>1. Indica la carpeta on es pujaran les imatges originals. Les imatges originals es desaran a /tmp/storage/thumbor.</li>
+                        <img src="img/thumbor/9.png" alt="9.png"/>
+                        <li>2. Indica la carpeta on es desaran les imatges transformades. Les imatges transformades es desaran a /tmp/thumbor/result_storage</li>
+                        <img src="img/thumbor/10.png" alt="10.png"/>
+                        <li>3. Activa la configuració per a la carrega d'imatges local. S'ha de descomentar UPLOAD_ENABLED i establir-la a TRUE. A més s'ha d'assignar un màxim de tamany permès, UPLOAD_MAX_SIZE.</li>
+                        <img src="img/thumbor/11.png" alt="11.png"/>
+                        <li>4. Indica com s'habilita la càrrega de imatges per http. Comprova que funciona. S'ha d'activar la directriu ALLOW_UNSAFE_URL = True i LOADER = thumbor.loaders.http_loader</li>
+                        <img src="img/thumbor/12.png" alt="12.png"/>
+                        <img src="img/thumbor/13.png" alt="13.png"/><br>
+                        <li>Executar el servidor amb la seguent comanda:</li>
+                        <img src="img/thumbor/14.png" alt="14.png"/>
+                        <li>Comprovar que funciona:</li>
+                        <img src="img/thumbor/balance.png" alt="balance.png"/><br>
+                        <img src="http://localhost:8888/unsafe/https://cdn.pixabay.com/photo/2013/05/12/18/55/balance-110850_960_720.jpg" alt="balance.jpg"/>
+                    </ol>
+                </span>
+            </div>
+            <h3>Punt 3</h3>
+            <ul class="ul2">
+                <li><a href="exercici5.html">Pàgina per a Exercici 5 (Punts 3 i 4 de l'exercici 3)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

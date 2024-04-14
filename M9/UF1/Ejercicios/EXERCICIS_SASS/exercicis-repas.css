@@ -1,0 +1,57 @@
+.complementary {
+  background-color: aqua;
+}
+
+.ex2 {
+  border: 10px solid red;
+  padding: 10px;
+  box-shadow: 0 0 30px white;
+}
+
+.ex3 {
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.5);
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+.op-25 {
+  opacity: 0.25;
+}
+
+.op-50 {
+  opacity: 0.5;
+}
+
+.op-75 {
+  opacity: 0.75;
+}
+
+.op-100 {
+  opacity: 1;
+}
+
+.fs-xs {
+  font-size: 0.4rem;
+}
+
+.fs-md {
+  font-size: 0.625rem;
+}
+
+.fs-lg {
+  font-size: 1.2rem;
+}
+
+.fs-xl {
+  font-size: 1.8rem;
+}
+
+.fs-xxl {
+  font-size: 2.5rem;
+}
+
+/*# sourceMappingURL=exercicis-repas.css.map */

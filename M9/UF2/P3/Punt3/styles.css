@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: black;
+}
+
+.contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 0px;
+}
+
+.title {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  border:5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  animation: change 10s infinite linear;
+}
+
+.title h2{
+  font-style: italic;
+}
+
+.col {	
+  display: inline-block;
+  width: 20%;
+}
+
+.figure {
+  margin: 0 auto;
+  position: relative;
+  top: -100vh;
+}
+
+#f1{
+  width: 60px;
+  background-color: #37c7fc;
+  animation: slide 18s linear infinite;
+  animation-delay: 5s;
+}
+
+#f2, #f3, #f4, #f5{
+  width: 120px;
+}
+
+#f2{
+  background-color: #edbf3d;
+  animation: slide 12s linear infinite;
+}
+
+#f3{
+  background-color: #995eeb;
+  animation: slide 12s linear infinite;
+  animation-delay: 21s;
+}
+
+#f4{
+  background-color: #8fd922;
+  animation: slide 16s linear infinite;
+  animation-delay: 12s;
+}
+
+#f5{
+  background-color: #fc9100;
+  animation: slide 15s linear infinite;
+  animation-delay: 6s;
+}
+
+.c, .c-i{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+}
+
+.c-i{
+  border: 5px solid black;
+  background-color: black;
+}
+
+.c{
+  border: 5px solid #fff;
+}
+
+@keyframes slide {
+  from {
+    top: 120vh;
+  }
+  to {
+    top: -40vh;
+  }
+}
+
+@keyframes change {
+  0% { background-color: #37c7fc; }
+  20% { background-color: #edbf3d; }
+  40% { background-color: #995eeb; }
+  60% { background-color: #8fd922; }
+  80% { background-color: #fc9100; }
+  100% { background-color: #37c7fc; }
+}
+

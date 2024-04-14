@@ -1,0 +1,103 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenedor{
+    width: 80%;
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1{
+    color: #019bd9;
+    font-size: 70px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #edebeb;
+}
+
+th {
+    width: 250px;
+    padding: 10px;
+    background-color: #f0f8ff;
+}
+
+td{
+    width: 250px;
+    padding: 10px;
+    border-top: 1px solid #edebeb;
+    border-bottom: 1px solid #edebeb;
+}
+
+td img{
+    height: 100px;
+}
+
+td:nth-child(3){
+    text-align: start;
+}
+
+input[type="number"]{
+    width: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.eliminar{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 30px;
+}
+
+#buidar{
+    border: 1px solid black;
+    background-color: #f0f8ff;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#importTotal{
+    text-align: center;
+    font-weight: bold;
+}
+
+#iT{
+    text-align: center;
+    font-weight: bold;
+}
+
+#cercador, #cercar, #reset{
+    border: 1px solid black;
+    background-color: #f0f8ff;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}

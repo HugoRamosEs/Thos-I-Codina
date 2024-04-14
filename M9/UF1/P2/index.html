@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+  <script defer type="text/javascript" src="lib/bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <title>Pràctica 2. Disseny d'interfícies mitjançant frameworks</title>
+</head>
+
+<body>
+  <div class="bg-secondary">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="index.html">Soft<span class="text-primary">GPL</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <div class="justify-content-center me-auto">
+              <button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Log In
+              </button>
+              <button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#signupModal">
+                Sign In
+              </button>
+            </div>
+            <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#notificationsOffcanvas" aria-controls="offcanvasExample">
+              Notifications
+              <span class="badge bg-secondary rounded-pill">4</span>
+            </button>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-search-color" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+            <div data-bs-theme="dark">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="d-flex">
+                <div class="mb-2 me-4">
+                  <label for="first-name" class="col-form-label">First Name</label>
+                  <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                </div>
+                <div class="mb-2">
+                  <label for="last-name" class="col-form-label">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="email-sign" class="col-form-label">Email address</label>
+                <input type="email" class="form-control" id="email-sign" placeholder="name@example.com">
+              </div>
+              <div class="mb-2">
+                <label for="password-sign" class="col-form-label">Password</label>
+                <input type="password" class="form-control" id="password-sign" placeholder="Password">
+              </div>
+              <div class="mb-2">
+                <label for="gender" class="col-form-label">Date of Birth</label>
+                <div class="d-flex">
+                  <select class="form-select me-3" aria-label="Day">
+                    <option selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  <select class="form-select me-3" aria-label="Month">
+                    <option selected>Month</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select class="form-select" aria-label="Year">
+                    <option selected>Year</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="gender" class="col-form-label">Gender</label>
+                <div class="d-flex">
+                  <div class="form-control me-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Male
+                      </label>
+                    </div>                    
+                  </div>
+                  <div class="form-control me-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Personalized
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <p>By clicking Sing Up, you agree to out Terms. Learn more about how we collect, use and share your
+              informartion in the <a href="#">Data Policy</a>, as well as our use of cookies and similar technologies in
+              out <a href="#">Cookie Policy</a>. We may send you SMS notifications that you can turn off at any time.
+            </p>
+            <div class="d-flex">
+              <div class="flex-grow-1"><button type="button" class="btn btn-primary">Sign in</button></div>
+              <div class="mt-2 me-3">
+                <p>Are you already registered?</p>
+              </div>
+              <div class="mt-2"><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> Log In</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+            <div data-bs-theme="dark">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-2">
+                <label for="name-login" class="col-form-label">Name</label>
+                <input type="text" class="form-control" id="name-login" placeholder="Name">
+              </div>
+              <div class="mb-3">
+                <label for="email-login" class="col-form-label">Email address</label>
+                <input type="text" class="form-control" id="email-login" placeholder="name@example.com">
+              </div>
+            </form>
+            <div class="d-flex">
+              <div class="flex-grow-1"><button type="button" class="btn btn-primary">Log in</button></div>
+              <div class="mt-2 me-3">
+                <p>Are you not registered yet?</p>
+              </div>
+              <div class="mt-2"><a href="#" data-bs-toggle="modal" data-bs-target="#signupModal"> Sign In</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="notificationsOffcanvas"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header bg-primary text-light">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notifications</h5>
+        <div data-bs-theme="dark">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+          etc.
+        </div>
+        <div class="list-group mt-3 mb-3">
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-body-secondary">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-body-secondary">And some muted small print.</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-body-secondary">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-body-secondary">And some muted small print.</small>
+          </a>
+        </div>
+        <button type="button" class="btn btn-primary">Clear</button>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-3">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+      </ol>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item mh-sm active">
+          <img src="img/pexels-flickr-157040.jpg" class="d-block w-100" alt="pexels-flickr-157040.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Foto de Flickr: https://www.pexels.com/es-es/foto/agua-amanecer-molinos-de-viento-puesta-de-sol-157040/.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item mh-xxl">
+          <img src="img/pexels-rodolfo-quirós-2330137.jpg" class="d-block w-100"
+            alt="pexels-rodolfo-quirós-2330137.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item mh-xxl">
+          <img src="img/pexels-soumil-kumar-735911.jpg" class="d-block w-100" alt="pexels-soumil-kumar-735911.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 col-lg-4 mb-4">
+        <div class="card" style="width: 100%;">
+          <img src="img/pexels-format-1.jpg" class="card-img-top" alt="pexels-format-1.jpg">
+          <div class="card-body">
+            <h5 class="card-title text-capitalize fw-bold">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body bg-light d-flex align-items-center">
+            <button type="button" class="btn btn-primary me-3">Add to Cart</button>
+            <a href="#" class="card-link flex-grow-1">View specs</a>
+            <div class="btn-personalized">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-share-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-4">
+        <div class="card" style="width: 100%;">
+          <img src="img/pexels-format-2.jpg" class="card-img-top" alt="pexels-format-2.jpg">
+          <div class="card-body">
+            <h5 class="card-title text-capitalize fw-bold">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body bg-light d-flex align-items-center">
+            <button type="button" class="btn btn-primary me-3">Add to Cart</button>
+            <a href="#" class="card-link flex-grow-1">View specs</a>
+            <div class="btn-personalized">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-share-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-4">
+        <div class="card" style="width: 100%;">
+          <img src="img/pexels-pixabay-3.jpg" class="card-img-top" alt="pexels-pixabay-3.jpg">
+          <div class="card-body">
+            <h5 class="card-title text-capitalize fw-bold">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body bg-light d-flex align-items-center">
+            <button type="button" class="btn btn-primary me-3">Add to Cart</button>
+            <a href="#" class="card-link flex-grow-1">View specs</a>
+            <div class="btn-personalized">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-share-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <span class="page-link text-muted">Previous</span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">2</span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <h5 class="fw-bold">Compare Specs</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p>
+    </div>
+    <table class="table table-personalized">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Apple Mackbook</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">Chromebook</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">Dell Inspiron</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    <h6 class="mb-4 text-muted">Compare Specs</h6>
+  </div>
+  <footer class="bg-secondary footer-personalized">
+    <div class="container d-flex justify-content-between">
+      <nav class="nav flex-column">
+        <a class="nav-link" aria-current="page" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </nav>
+      <nav class="nav flex-column">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </nav>
+      <nav class="nav flex-column">
+        <a class="nav-link" aria-current="page" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </nav>
+      <nav class="nav flex-column">
+        <a class="nav-link" aria-current="page" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>

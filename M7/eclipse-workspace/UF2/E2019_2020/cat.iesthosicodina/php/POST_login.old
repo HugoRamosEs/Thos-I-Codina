@@ -1,0 +1,58 @@
+<?php
+require_once 'php/generalFunctions.php';
+require_once 'php/variablesDeconfiguracio.php';
+
+
+if (($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST["submit"]=="Verifica")) {
+    // Hem arribar per un post
+    // Verifiquem les dades que han arribat.
+    $paginaActual=99;
+    
+    $sUsuari = sanitize($_POST["usuari"],1);
+    $sContrasenya =  sanitize($_POST["contrasenya"],0);
+     
+    if ($sUsuari == "") {
+        $errorsDetectats["usuari"] = "l'email és una dada obligatòria, si us plau indica-la.";
+    } else {
+        if (!esEmail($sUsuari)) {
+            $errorsDetectats["usuari"] = "l'email no té un format adient.";
+            unset($sUsuari);
+        }
+    }
+    
+    if ($sContrasenya == "") {
+        $errorsDetectats["password"] = "El nom és una dada obligatòria, si us plau indica-la.";
+    } 
+    
+    if (!isset($errorsDetectats)) {
+        if ($idConnexioPerConsultes = mysqli_connect ($dbServidor, $dbUsernamePerConsultes, $dbPassword, $dbBaseDeDades)) {
+            // He pogut fer la connexió a la base de dades
+            $sSql = "SELECT * FROM tbl_usuaris WHERE email ='$sUsuari' AND password ='$sContrasenya'";
+            if ($resultatConsulta = mysqli_query ($idConnexioPerConsultes, $sSql)) {
+                if (mysqli_num_rows($resultatConsulta) == 0) {
+                    $errorsDetectats["password"] = "No existeix aquesta convinació d'usuari i contrasenya. Revisa les dades entrades";
+                } else {
+                    $registreResultat = mysqli_fetch_array($resultatConsulta);
+                    if ($registreResultat['status'] == 0) {
+                        $errorsDetectats["password"] = "El teu usuari encara no està actiu. Ves al teu mail i segueix les instruccions";
+                    } else {
+                        // Hi ha usuari+contrasenya i està actiu.... activo la sessió
+                        $_SESSION['usuari'] = $registreResultat['nom'];
+                        $_SESSION['img'] = $registreResultat['imatge'];
+                        $paginaActual=1;
+                    }
+                }
+            } else {
+                $errorsDetectats["password"] = "Hi ha un error en al consulta a la BBDD: " . mysqli_error($idConnexioPerConsultes);
+            }
+        } else {
+            $errorsDetectats["password"] = "No s'ha pogut conectar a la base de dades: " . mysqli_connect_errno();
+        }
+        mysqli_close($idConnexioPerConsultes);
+    } 
+    
+    
+} else {
+    $sUsuari = "";
+    $sContrasenya = "";
+ }

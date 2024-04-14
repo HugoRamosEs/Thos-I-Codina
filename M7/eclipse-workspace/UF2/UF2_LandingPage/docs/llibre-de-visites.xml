@@ -1,0 +1,100 @@
+<REGISTRES>
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <OPCIO>molt bona</OPCIO>
+        <COMENTARI>prova</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <OPCIO>bona</OPCIO>
+        <COMENTARI>prova per veure si s&#039;agrega un registre al principi</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@hotmail.com</MAIL>
+        <OPCIO>molt dolenta</OPCIO>
+        <COMENTARI>prova per veure si es carrega correctament la cookie</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>mario</NOM>
+        <MAIL>mario@gmail.com</MAIL>
+        <OPCIO>regular</OPCIO>
+        <COMENTARI>bon dia</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>alex</NOM>
+        <MAIL>alex@gmail.com</MAIL>
+        <OPCIO>molt bona</OPCIO>
+        <COMENTARI>hola</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>bernat</NOM>
+        <MAIL>bernat@yahoo.com</MAIL>
+        <OPCIO>bona</OPCIO>
+        <COMENTARI>adeu</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>maria</NOM>
+        <MAIL>maria@gmail.com</MAIL>
+        <OPCIO>molt bona</OPCIO>
+        <COMENTARI>visita 1</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>ekko</NOM>
+        <MAIL>ekko@gmail.com</MAIL>
+        <OPCIO>regular</OPCIO>
+        <COMENTARI>visita 2</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>albert</NOM>
+        <MAIL>albert@outlook.com</MAIL>
+        <OPCIO>molt bona</OPCIO>
+        <COMENTARI>visita 3</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>roberto</NOM>
+        <MAIL>roberto@gmail.com</MAIL>
+        <OPCIO>dolenta</OPCIO>
+        <COMENTARI>visita 4</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <OPCIO>regular</OPCIO>
+        <COMENTARI>visita 5</COMENTARI>
+        <DATA>17/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>hugo</NOM>
+        <MAIL>hugodarken7@gmail.com</MAIL>
+        <OPCIO>regular</OPCIO>
+        <COMENTARI>hola</COMENTARI>
+        <DATA>28/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>Hugo</NOM>
+        <MAIL>hugoramos@gmail.com</MAIL>
+        <OPCIO>Molt Bona</OPCIO>
+        <COMENTARI>Hola</COMENTARI>
+        <DATA>29/11/2023</DATA>
+    </REGISTRE> 
+    <REGISTRE>
+        <NOM>Hugo</NOM>
+        <MAIL>hugo@gmail.com</MAIL>
+        <OPCIO>Molt Bona</OPCIO>
+        <COMENTARI>&lt;script&gt;alert(&quot;hola&quot;)&lt;/script&gt;;</COMENTARI>
+        <DATA>31/1/2024</DATA>
+    </REGISTRE> 
+</REGISTRES>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;info&apos; in &apos;E10_InfoUsuario.main(...)&apos; to &apos;nombre&apos;&#x0A;- Original project: &apos;EJER1_Ficheros_Texto&apos;&#x0A;- Original element: &apos;E10_InfoUsuario.main(String[]).info&apos;&#x0A;- Renamed element: &apos;info&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;info&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{E10_InfoUsuario.java[E10_InfoUsuario~main~\[QString;@info!777!793!784!787!QString;!0!false" name="nombre" references="true" stamp="1684347359842" version="1.0"/>
+</session>

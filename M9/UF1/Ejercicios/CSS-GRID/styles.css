@@ -1,0 +1,399 @@
+*{
+  box-sizing: border-box;
+}
+
+#contenedor{
+  min-width: 600px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* EXEMPLE 1 */
+
+.taula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 50px 20px;
+}
+
+.element{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+/* EXEMPLE 2 */
+
+.taula2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 50px 20px;
+}
+
+.element2-1{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+.element2-2{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.element2-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+.element2-4{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+/* EXEMPLE 3 */
+
+.taula3 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 20px;
+}
+
+.element3-1{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+.element3-2{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+.element3-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+.element3-4{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  grid-column: span 6;
+}
+
+.element3-5{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  grid-column: span 8;
+}
+
+/* EXEMPLE 4 */
+
+.taula4 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 30px 120px;
+}
+
+.element4-1{
+  background-color: #999999;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: 3 / span 4;
+}
+
+.element4-2{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 2;
+  grid-row: 2
+}
+
+.element4-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 4;
+  grid-row: 2;
+}
+
+.element4-3 h2{
+  font-size: 50px;
+  margin: auto;
+  font-weight: 100;
+}
+
+.element4-4{
+  background-color: #999999;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 6;
+  grid-row: 3;
+}
+
+/* EXEMPLE 5 */
+
+.taula5 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 70px 20px;
+}
+
+.element5-1{
+  background-color: #999999;
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+
+.element5-2{
+  background-color: #ff0000;
+  color: black;
+  font-size: 25px;
+  grid-column: 2 / span 8;
+  grid-row: 1 / span 2;
+}
+
+.element5-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* EXEMPLE 6 */
+
+.taula6 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  border: 2px solid #dcdcdc;
+  padding: 50px 20px;
+}
+
+.element6-1{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 6;
+}
+
+.element6-2{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 6;
+}
+
+.element6-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 6;
+  grid-row: span 3;
+}
+
+.element6-4{
+  background-color: #444444;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  display: grid;
+  grid-column: span 6;
+  grid-row: span 3;
+}
+
+.element6-5{
+  background-color: #cccccc;
+  color: black;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 8;
+}
+
+.element6-6{
+  background-color: #cccccc;
+  color: black;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+.element6-7{
+  background-color: #cccccc;
+  color: black;
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+/* EXEMPLE 7 */
+
+.taula7 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.element7-1{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 4;
+}
+
+.element7-2{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.element7-3{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: 1 / span 2;
+}
+
+.element7-4{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+.element7-5{
+  background-color: #444444;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  grid-column: 7 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.element7-6{
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .taula7 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .element7-1 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .element7-2 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .element7-3 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .element7-4 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .element7-5 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .element7-6 {
+    background-color: #444444;
+    color: white;
+    font-size: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+}

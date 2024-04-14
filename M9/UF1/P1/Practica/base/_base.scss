@@ -1,0 +1,146 @@
+* {
+    padding: 0px;
+    margin: 0px; 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Century-Gothic-Regular";
+    background-color: var(--fons);
+}
+
+h1{
+    font-size: 27px;
+    color: var(--h1);
+    border-bottom: 1px solid var(--gris3);
+    padding-bottom: 5px;
+
+    span{
+        color: var(--span-link-h2);
+    }
+}
+
+h2{
+    font-size: 22px;
+    color: var(--span-link-h2);
+    border-bottom: 1px solid var(--gris3);
+    padding-bottom: 5px;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Arial";
+    color: var(--h3);
+}
+
+p{
+    font-size: 12px;
+    font-family: "Arial";
+    color: var(--gris4);
+    line-height: 18px;
+    margin-top: 20px;
+}
+
+.p1{
+    margin-top: 6px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Arial";
+    color: var(--span-link-h2);
+}
+
+nav{
+    ul{
+        text-align: right;
+
+        li{
+            a{
+                color: var(--nav-a);
+                padding: 10px;
+            }
+
+            a:hover{
+                border: 1px solid var(--a-hover5);
+                border-radius: 2px;
+                background-image: linear-gradient(0deg, var(--a-hover1) 0%, var(--a-hover2) 50%, var(--a-hover3) 100%);
+                color: var(--a-hover4);
+            }
+        }
+    }
+}
+
+label{
+    font-size: 12px;
+    font-family: "Arial";
+    color: var(--gris4);
+    line-height: 18px;     
+}
+
+aside{
+    h2{
+        padding-bottom: 12px;
+    }
+
+    a{
+        color: var(--a-ot);
+        font-weight: bold;
+    }
+}
+
+.titol {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--gris3);
+    padding-bottom: 5px;
+
+    h2{
+        border: none;
+        margin-left: 10px;
+
+        span{
+            color: var(--as1-li1);
+        }
+    }
+}
+
+.sep{
+    margin-bottom: 20px;
+}
+
+.as1-ac{
+    margin-top: 6px;
+
+    ul {
+        list-style-type: none;
+        padding: 8px 5px;
+
+        li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: var(--as1-li1);
+        }
+
+            li::before{
+            content: "•";
+            color: var(--as1-li2);
+            font-size: 1.5em;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+        }
+    }    
+}
+
+.main-ot{
+    background-color: var(--targeta1);
+    border-radius: 10px;
+}

@@ -1,0 +1,24 @@
+.client{
+    display: flex;
+    flex-direction: column;
+
+    img{
+        border: 10px solid var(--client1);
+        border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a{
+        text-align: left;
+        padding-top: 10px;
+        color: var(--a-ot);
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    p{
+        text-align: left;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 100vh;
+}
+
+.imgs {
+  display: grid;
+  transform-style: preserve-3d;
+  animation: hex 20s linear infinite alternate;
+  position: relative;
+}
+
+.imgs img {
+  grid-area: 1/1;
+  width: 160px;
+  border: 5px solid #c9b398;
+  transform: rotate(var(--r)) translateY(120%) rotateX(90deg);
+}
+
+.imgs img:nth-child(1) {
+  --r: 0deg;
+}
+
+.imgs img:nth-child(2) {
+  --r: 60deg;
+}
+
+.imgs img:nth-child(3) {
+  --r: 120deg;
+}
+
+.imgs img:nth-child(4) {
+  --r: 180deg;
+}
+
+.imgs img:nth-child(5) {
+  --r: 240deg;
+}
+
+.imgs img:nth-child(6) {
+  --r: 300deg;
+}
+
+@keyframes hex {
+  0%, 15% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(0deg);
+  }
+  20%, 30% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(-60deg);
+  }
+  35%, 50% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(-120deg);
+  }
+  55%, 70% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(-180deg);
+  }
+  75%, 85% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(-240deg);
+  }
+  90%, 100% {
+    transform: perspective(444.44px) rotateX(-100deg) rotate(-300deg);
+  }
+}

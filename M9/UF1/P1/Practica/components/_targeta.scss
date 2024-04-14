@@ -1,0 +1,47 @@
+.targeta {
+    border-radius: 6px;
+    filter: drop-shadow(1px 1.732px 1.5px var(--targeta5));
+    border: 1px solid var(--targeta2);
+    background-color: var(--targeta1);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+
+    h2 {
+        background-image: linear-gradient(0deg, var(--targeta3) 0%, var(--targeta4) 100%);
+        filter: drop-shadow(1px 1.732px 1.5px var(--targeta6));
+        padding: 10px;
+        color: var(--gris6);
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        width: 100%;
+    }
+
+    h3{
+        padding: 10px 0px;
+    }
+
+    img {
+        padding: 25px 10px;
+        align-self: flex-start;
+    }
+
+    .texto {
+        padding-top: 10px;
+        flex: 1;
+
+        p{
+            margin: 0px;
+            padding-top: 0px;
+        }
+
+        a{
+            padding: 25px 10px 20px 10px;
+            float: right;
+        }
+
+        u{
+            color: var(--targeta7);
+        }
+    }
+}

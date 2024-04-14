@@ -1,0 +1,39 @@
+.main_profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-size: 30px;
+        color: #15294e;
+        margin-bottom: 20px;
+        margin-left: -2px;
+        font-weight: bold;
+    }
+
+    table {
+        margin-bottom: 20px;
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            text-align: left;
+        }
+
+        th:first-child, td:first-child {
+            width: 125px;
+        }
+
+        td {
+            font-size: 18px;
+            color: #213c61;
+            padding-bottom: 5px;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: #15294e;
+            background-color: #f6f6eb;
+        }
+    }
+}

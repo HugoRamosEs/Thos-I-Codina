@@ -1,0 +1,153 @@
+// 1. Donada una llista de colors recorre-la per:
+    // Crea una nova llista amb els seus complementaris
+    @use "sass:list";
+    @use 'sass:color';
+    @use "sass:map";
+
+    $colors: red, blue, green;
+    $colorsComp: ();
+
+    @each $color in $colors {
+        $colorsComp: append($colorsComp, complement($color));
+    }
+
+    @debug $colorsComp;
+
+    // Aplica el segon color de la llista a una classe
+    $col1: nth($colorsComp, 2);
+    @debug $col1;
+
+    .complementary{
+        background-color: $col1; // nth($colorsComp, 1)
+    }
+
+// 2. Crea un mixin que rebi per paràmetres el color RGB de border i el color de shadow, i crea una classe que l'apliqui. (MIXIN = FUNCIO)
+    // @mixin dialog-box($shadow-x, $shadow-y, $shadow-color, $border-size, $border-color) {
+    //     box-shadow: $shadow-x $shadow-y $shadow-color;
+    //     border: $border-size solid $border-color;
+    // }
+
+    // .mixin-shadow{
+    //     @include dialog-box(10px, 5px, black, 5px, red);
+    // }
+
+    @mixin dialog-box($border-color, $shadow-color, $padding, $border) {
+        border: $border solid $border-color;
+        padding: $padding;
+        box-shadow: 0 0 30px $shadow-color;
+    }
+
+    .alert-winning-user{
+        @include dialog-box(green, blue , 10px, 10px);
+    }
+
+// 3. Modifica el mixin del punt anterior perquè:
+    // El color de shadow sigui per defecte gris en format RGB
+    // Tingui un tercer paràmetre per passar el valor d'opacity, per defecte 0.5
+    @mixin dialog-box($border-color, $shadow-color: rgb(121, 118, 118), $opacity: 0.5) {
+        border: 1px solid $border-color;
+        padding: 10px;
+        box-shadow: 0 0 30px rgba($shadow-color, $opacity);
+    }
+
+    .alert-winning-user{
+        @include dialog-box(green, blue);
+    }
+
+// 4. A partir d'aquest map crea'n un altre amb els valors incrementats amb 0.4rem i fusiona'ls:
+    $font-weights: ("regular": 1rem, "medium": 1.5rem, "large": 2rem);
+    $font-weights-avg: ();
+    
+    @each $clau, $value in $font-weights{
+        $clau: $clau + "-plus";
+        $value: $value + 0.4;
+        $font-weights-avg: map.set($font-weights-avg, $clau, $value);
+    }
+
+    @debug map.merge($font-weights, $font-weights-avg);
+
+// 5. Crea un mixin que a partir d'un map.
+$opacity : (
+    property: opacity,
+    class: op,
+    values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+    )
+);
+
+@mixin mixin-map($propietat: map.get($opacity, property), $clase: map.get($opacity, class), $valors: map.get($opacity, values)) {
+    @each $clau, $valor in $valors {
+        .#{$clase}-#{$clau} {
+            #{$propietat}: $valor;
+        }
+    }
+}
+
+@include mixin-map();
+
+    // Modifica el mixin anterior perquè se pugui indicar la utilitat de la propietat.
+    $font-size : (
+        property: font-size,
+        class: fs,
+        unit: rem,
+        values: (
+        'xs': 0.4,
+        'md': 0.625,
+        'lg': 1.2,
+        'xl': 1.8,
+        'xxl': 2.5,
+        )
+    );
+
+    @mixin mixin-map($property: map.get($font-size, property), $class: map.get($font-size, class), $values: map.get($font-size, values)) {
+        $unit: map.get($font-size, unit);
+        @each $key, $value in $values {
+            .#{$class}-#{$key} {
+                #{$property}: $value#{$unit};
+            }
+        }
+    }
+
+    @include mixin-map();
+
+// 6. Crea una funció que se li passi com a paràmetres un color, el percentatge (per aclarir en número negatiu, per enfosquir positiu) i el límit de percentatge a aplicar, per defecte 90 que és el valor màxim.
+@function canviColor($col, $percentatge: 0, $limit: 90) {
+    @if $percentatge > 0 {
+        @if ($percentatge > $limit) {
+            $percentatge: $limit;
+        }
+        $percentatge: 100 - $percentatge;
+        $col: mix($col, black, $weight: $percentatge * 1%);
+    } @else if ($percentatge < 0) {
+        @if ($percentatge < -$limit) {
+            $percentatge: -$limit;
+        }
+        $percentatge: abs($percentatge);
+        $percentatge: 100 - $percentatge;
+        $col: mix($col, white, $weight: $percentatge * 1%);
+    }
+    @return $col;
+}
+
+@debug canviColor(red, -10);
+
+// 7. Crea una funcio que retorni un map que contingui una escala de colors. Paràmetres: color, interval i límit de percentatge. Utilitza la funció del punt anterior.
+@function paletaColors($color, $offset, $limit: 90){
+    $paleta: ();
+    $interval: floor(calc($limit / $offset));
+    @for $i from -$interval through $interval{
+        $color-name: #{$color}#{$offset * $i};
+        @if $i == 0{
+            $color-name: #{$color};
+        }
+        $new: ($color-name: canviColor($color, $i * $offset, $limit));
+        $paleta: map-merge($paleta, $new);
+    }
+    @return $paleta;
+}
+$orange-color: paletaColors(orange, 15, 90);
+@debug $orange-color;

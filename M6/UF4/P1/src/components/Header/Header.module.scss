@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 91.5px;
+
+    h1{
+        margin-top: 8px;
+        color: #3822d4;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    input[type="search"]{
+        padding: 10px;
+    }
+}
