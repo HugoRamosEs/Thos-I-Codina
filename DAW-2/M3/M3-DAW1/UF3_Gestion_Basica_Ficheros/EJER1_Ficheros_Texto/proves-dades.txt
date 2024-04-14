@@ -1,0 +1,19 @@
+Proves de lectura linia 1
+linia 2
+linia 3
+linia 4
+linia 5
+12
+46
+89
+19
+36
+24
+12
+38
+14
+88
+hola
+sol
+luna
+buenas

@@ -1,0 +1,42 @@
+/*
+    @Override
+	public int compareTo(Object obj) {
+		if (this == obj)
+			return 0;
+		if (obj == null)
+			throw new NullPointerException();
+		if (getClass() != obj.getClass())
+			throw new ClassCastException();
+		Window other = (Window) obj;
+		if (numElements > other.numElements)
+			return 1;
+		if (numElements < other.numElements)
+			return -1;
+			
+		return 0;
+	}
+	
+		
+	equals y compareTo estan orientados a objetos, porque son metodos.
+		con equals no puedes dar un criterio de ordenacion.
+		las primitivas como int, no.
+	
+	--------------------------------------------
+	public n-aria clone(){
+		n-aria copia = new n-aria();
+		int[] arrayCopia = 
+			for (int i = 0; arrayCopia.lenght; i++){
+				arrayCopia[0] = this.operandos[i];
+			}
+		copia.setOperando[]
+		
+		OTRA MANERA:
+		(int[] arrayCopia = this.operador.clone())
+		copia.setOperando[].arrayCopia
+		
+	}
+	--------------------------------------------
+	implementar equals para ver que dos objetos son iguales, clic derecho --> implements equals
+ */
+	
+}
