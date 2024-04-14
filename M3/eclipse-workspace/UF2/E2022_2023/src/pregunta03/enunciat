@@ -1,0 +1,38 @@
+A partir de la definició de Llista doblement enllaçada i circular, 
+defineix una classe Pila que implementi els mètodes definits 
+per Oracle a 
+https://docs.oracle.com/javase/10/docs/api/java/util/Stack.html
+aquests són:
+
+ Modifier and Type	    Method              Description
++--------------------+-------------------+-----------------------------------------------+
+ boolean               empty()             Tests if this stack is empty.
+ E                     peek()              Looks at the object at the top of this stack 
+                                             without removing it from the stack.
+ E                     pop()               Removes the object at the top of this stack 
+                                             and returns that object as the value of 
+                                             this function.
+ E                     push​(E item)        Pushes an item onto the top of this stack.
+ int                   search​(Object o)    Returns the 1-based position where an object 
+                                             is on this stack.
++--------------------+-------------------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------
+A partir de la definición de Lista doblemente enlazada y circular, 
+define una clase Pila que implemente los métodos definidos 
+por Oracle en 
+https://docs.oracle.com/javase/10/docs/api/java/util/Stack.html
+estos son:
+ Modifier and Type	    Method              Description
++--------------------+-------------------+-----------------------------------------------+
+ boolean               empty()             Tests if this stack is empty.
+ E                     peek()              Looks at the object at the top of this stack 
+                                             without removing it from the stack.
+ E                     pop()               Removes the object at the top of this stack 
+                                             and returns that object as the value of 
+                                             this function.
+ E                     push​(E item)        Pushes an item onto the top of this stack.
+ int                   search​(Object o)    Returns the 1-based position where an object 
+                                             is on this stack.
++--------------------+-------------------+-----------------------------------------------+

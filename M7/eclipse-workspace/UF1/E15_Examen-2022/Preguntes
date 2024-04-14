@@ -1,0 +1,76 @@
+PREGUNTA 01
+	*funcions.php \ generaDivsAmbProductes.
+	Defineix un bucle per tal de mostar el codi html de la pàgina principal.
+	No facis servir l'operador de concatenació (el punt)
+    El codi html del resultat, és el següent:
+     
+	$result = "<div class=\"item col-lg-4\"><div class=\"thumbnail\"><div class=\"caption\">
+	<h4 class=\"list-group-item-heading\">Producte 1</h4>
+	<p class=\"list-group-item-text\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+		sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+	<div class=\"row\"><div class=\"col-md-6\">
+	<p class=\"lead\">15.3 EUR</p>
+	</div>
+	<div class=\"col-md-6\">
+	<a class=\"btn btn-success\" href=\"accioCarro.php?action=addToCart&id=0\">Afegir al Carro</a>
+	</div></div></div></div></div>";
+
+PREGUNTA 02
+	*funcions.php \ generaTBody
+	La funció generaTBody, reb per paràmetre l'array com els elements del carro.
+	Si el carro no està buit (total_items>0), ha de girar l'array, eliminar les dues
+	posicions de totals (total_items i cart_total) i mostrar cada element amb l'html 
+	següent.
+	
+	<tr><td>Producte 2</td>
+    <td>12.4 EUR</td>
+    <td><input type="number" class="form-control text-center" value="1" onchange="updateCartItem(this, 'c81e728d9d4c2f636f067f89cc14862c')"></td>
+    <td>12.4 EUR</td>
+    <td><a href="accioCarro.php?action=removeCartItem&id=c81e728d9d4c2f636f067f89cc14862c" class="btn btn-danger" onclick="return confirm('Confirma eliminar?')"><i class="glyphicon glyphicon-trash"></i></a>
+    </td></tr>
+	
+	Si està buit mostrarà l'html següent:
+	
+	<tr><td colspan="5"><p>El teu carro està buit.....</p></td>
+	
+
+PREGUNTA 03
+	*productes.php
+	Fes un webscrapping contra la pàgina https://www.balay.es/catalogo-electrodomesticos/frigorificos-y-congeladores
+	i afegieix els registres a productes[ ].
+	productes["id"] està a "productIndex"
+	procutes["name"] està en la concatenació de "title" i "sku"
+	productes["price"] està a "price":{"value"
+	productes["description"] està en la concatenació dels "plainText" dins de "keyBenefits".
+	productes["created"] i ["modified"] eś la data d'aquest moment en format YYYY-MM-DD hh-mm
+	productes["status"] és sempre 1. 
+
+PREGUNTA 04
+	*index.php
+	Defineix algun sistema per comptar les vegades que un usuari ha accedit a la pàgina web.
+	Només comptarà la primera vegada que accedeix a index.php. 
+
+PREGUNTA 05
+	*pagaments.php
+	Realitza els controls de validació dels camps del formulari:
+	tarjeta: obligatori.
+		El contingut ha de tenir 16 caràcters numèrics.
+		El primer numero ha de ser 4 (Visa) o 5 (Mastercard)
+		No poden haver tres dígits iguals conscutius.
+		No poden haver tres dígits consecutius incrementats o decrementats.
+	data de caducitat: obligatori
+		6 valors numèrics
+		Els dos primers dígits són el mes
+		Els 4 darrers dígits són l'any i no pot ser anterior a l'actual ni més gran de 4 anys.
+	CVC: obligatori.
+		3 valors numèrics.
+
+PREGUNTA 06
+	*mantenimentProductes.php
+	Defineix l'alta i la baixa d'un producte.
+	No és necessari fer les verificacions de validessa dels camps.
+
+PREGUNTA 07
+	* mantenimentProductes.php
+	Fes que les dades de productes es mantiguin actualitzades un cop es dona d'alta un
+	producte o s'elimini.

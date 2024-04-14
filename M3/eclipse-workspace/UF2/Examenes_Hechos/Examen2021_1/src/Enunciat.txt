@@ -1,0 +1,23 @@
+PREGUNTA 1 (1 punts)
+Modifica el que creguis convenient per tal que el tractament d'Excepcions sigui correcte.
+
+PREGUNTA 2 (1 punts)
+Des del controlador es carrega el fitxer xml. 
+Defineix la col.lecció (no pot ser ArrayList) que creguis convenient per emmagatzemar la informació i justifica la seva elecció.
+
+PREGUNTA 3 (2 punts)
+Implementa el mètodes push, pop i peek d'una classe Pila.
+
+PREGUNTA 4 (2 punt) 
+Defineix el SAX per realitzar la càrrega de les dades del fitxer xml proporcionat.
+Només podràs crear objectes al mètode startElement.
+
+pregunta 5 (1 punts)
+El temporitzador només es mostra centrat horitzontalment. Fes que també ho estigui verticalment.
+
+PREGUNTA 6 (1 punts)
+Carrega al textField la font CursedTimerULiL.ttf amb tamany 40 .... i si no és possible, que es carregui "Ani" italic i tamany 40.
+als butons posa la font Chilanka, itàlica, negreta i tamany 25.
+
+PREGUNTA 7 (2 punts)
+Al programa, tenim dos listeners (un per cada butó), Modifica'l de forma que hi hagi numés un que tracti tots els events.

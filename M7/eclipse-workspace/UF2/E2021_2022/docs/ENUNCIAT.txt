@@ -1,0 +1,29 @@
+PREGUNTA 1 (1 punt)
+Crea un autoload de classes.
+
+PREGUNTA 2 (2 punts)
+Crea una classe configuració per llegir les dades que tenim a 
+config/config.php
+Inclou-la a la carpeta més adient.
+Aquesta classe implementarà el patró Singleton.
+Fes-la servir a la classe Model. 
+
+PREGUNTA 3 (2 punts)
+Aquesta aplicació està formada per diverses pàgines estàtiques.
+Modifica el que creguis convenient per tal que l'aplicació només 
+tingui una única pàgina dinàmica. 
+
+PREGUNTA 4 (2 punts)
+Implementa el patró Front-Controller en aquesta aplicació. 
+
+PREGUNTA 5 (1 punt)
+Implementa el canvi d'idioma, mantenint la informació entre 
+peticions. 
+
+PREGUNTA 6 (1 punt)
+Afegeix de forma dinàmica el mètode màgic per duplicar un objecte 
+FormTagsLang, de forma que faci una copia profunda.
+
+PREGUNTA 7 (1 punt)
+Què diferència hi ha entre mysqli i PDO per treballar la persistència
+en base de dades.

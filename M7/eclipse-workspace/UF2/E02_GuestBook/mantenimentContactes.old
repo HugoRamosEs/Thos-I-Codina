@@ -1,0 +1,60 @@
+<?php 
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
+
+spl_autoload_register(function ($clase) {
+    include 'classes/' . strtolower($clase) . '.class.php';
+});
+    
+
+spl_autoload_register('my_autoloader');
+
+
+session_set_cookie_params(0);
+session_start();
+
+include "functions.php";
+
+if (isset($_COOKIE["lang"])) {
+    $lang = $_COOKIE["lang"];
+} else {
+    $lang = "ca";
+}
+$fitxerDeTraduccions = "languages/{$lang}_traduccio.php";
+require_once $fitxerDeTraduccions;
+
+$html_opacityLang[$lang]="style=\"opacity:1;\"";
+
+
+if ($_SERVER["REQUEST_METHOD"]=="GET" && isset($_GET["remove"])) {
+    ContactModel::delete(sanitize($_GET["remove"]));
+}
+
+$contactes = ContactModel::read();
+
+$capcelera = "<tr><th>Missatge</th><th>Nom</th><th>Mail</th><th>Data</th><th></th></th>\n";
+    
+foreach ($contactes as $key => $value) {
+    $cos .= "<tr><td>{$value->getMissatge()}</td><td>{$value->getNom()}</td><td>{$value->getEmail()}</td><td>{$value->getData()}</td><td><a href='?remove=$key'><img src='img/delete.png' width='30px'></a></td></tr>\n";
+}
+
+$resultat = "<table><thead>$capcelera</thead><tbody>$cos</tbody></table>";
+    
+
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<?php include "templates/head.tpl.php";?>
+<body>
+	<?php include "templates/header.tpl.php";?>
+	<?php include "templates/info_guestbookmant.tpl.php";?>
+	<?php include "templates/footer.tpl.php";?>
+</body>
+</html>
+
+

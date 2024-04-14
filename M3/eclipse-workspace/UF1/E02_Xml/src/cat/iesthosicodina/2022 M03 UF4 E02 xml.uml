@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_OINFIDypEe243Lz_qtQ8Qg" name="_2022_M03_UF4_E02_xml">
+    <eAnnotations xmi:id="_OQ5uIDypEe243Lz_qtQ8Qg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_OQ6VMDypEe243Lz_qtQ8Qg" source="codegen">
+        <details xmi:id="_OQ6VMTypEe243Lz_qtQ8Qg" key="codegenDirectory" value="/2022 M03 UF4 E02 xml/src"/>
+        <details xmi:id="_PAc7wDypEe243Lz_qtQ8Qg" key="AssociatedSourceCode" value="/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/Atribut.java;1730771810/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/Document.java;1790396948/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/ElementComplex.java;1421707043/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/ElementSimple.java;3501821799/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/ElementText.java;567650430/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/Html.java;3043156519/1;/2022 M03 UF4 E02 xml/src/cat/iesthosicodina/Element.java;2760239588/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_OlNxQDypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_OlOYUDypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_OlOYUTypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_OlOYUjypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_OlOYUzypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_OlO_YDypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_OlO_YTypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_OlO_YjypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_OlPmcDypEe243Lz_qtQ8Qg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_OkR9IDypEe243Lz_qtQ8Qg" name="cat">
+      <packagedElement xmi:type="uml:Package" xmi:id="_OkexcDypEe243Lz_qtQ8Qg" name="iesthosicodina">
+        <packagedElement xmi:type="uml:Class" xmi:id="_OlJf0DypEe243Lz_qtQ8Qg" name="Atribut">
+          <ownedAttribute xmi:id="_OrKBMDypEe243Lz_qtQ8Qg" name="nom">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_OrKoQDypEe243Lz_qtQ8Qg" name="valor">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrTLIDypEe243Lz_qtQ8Qg" name="Atribut" specification="_OlRboDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrTLITypEe243Lz_qtQ8Qg" name="nom">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrTLIjypEe243Lz_qtQ8Qg" name="valor">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrTLIzypEe243Lz_qtQ8Qg" type="_OlJf0DypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.nom = nom;
+		this.valor = valor;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrTyMDypEe243Lz_qtQ8Qg" name="toString" specification="_OlSpwDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrTyMTypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return this.nom + &quot;=\&quot;&quot; + this.valor + &quot;\&quot;&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OlRboDypEe243Lz_qtQ8Qg" name="Atribut" method="_OrTLIDypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_OlSCsDypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_OlSCsTypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_OlRboTypEe243Lz_qtQ8Qg" name="nom">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OlRbojypEe243Lz_qtQ8Qg" name="valor">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OlSCsjypEe243Lz_qtQ8Qg" type="_OlJf0DypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OlSpwDypEe243Lz_qtQ8Qg" name="toString" method="_OrTyMDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OlTQ0DypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OlVtEDypEe243Lz_qtQ8Qg" name="Document">
+          <ownedAttribute xmi:id="_OrLPUDypEe243Lz_qtQ8Qg" name="proleg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_OrL2YDypEe243Lz_qtQ8Qg" name="cos" type="_OlqdMDypEe243Lz_qtQ8Qg" association="_OrbuADypEe243Lz_qtQ8Qg"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrUZQDypEe243Lz_qtQ8Qg" name="Document" specification="_Oq-bADypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrUZQTypEe243Lz_qtQ8Qg" name="proleg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrUZQjypEe243Lz_qtQ8Qg" name="cos" type="_OlqdMDypEe243Lz_qtQ8Qg"/>
+            <ownedParameter xmi:id="_OrUZQzypEe243Lz_qtQ8Qg" type="_OlVtEDypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.proleg = proleg;
+		this.cos = cos;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrVAUDypEe243Lz_qtQ8Qg" name="toString" specification="_OlXiQDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrVAUTypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>String resultat = (this.proleg==null) ? &quot;&quot; : this.proleg + &quot;\n&quot;;
+		resultat += this.cos;
+		return resultat;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OlXiQDypEe243Lz_qtQ8Qg" name="toString" method="_OrVAUDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OlYJUDypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Oq-bADypEe243Lz_qtQ8Qg" name="Document" method="_OrUZQDypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_Oq_CEDypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_Oq_CETypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_Oq-bATypEe243Lz_qtQ8Qg" name="proleg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Oq-bAjypEe243Lz_qtQ8Qg" name="cos" type="_OlqdMDypEe243Lz_qtQ8Qg"/>
+            <ownedParameter xmi:id="_Oq_CEjypEe243Lz_qtQ8Qg" type="_OlVtEDypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OlbMoDypEe243Lz_qtQ8Qg" name="ElementComplex">
+          <generalization xmi:id="_Oq_pIDypEe243Lz_qtQ8Qg" general="_OlqdMDypEe243Lz_qtQ8Qg"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrVnYDypEe243Lz_qtQ8Qg" name="ElementComplex" specification="_OlbzsDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrVnYTypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrVnYjypEe243Lz_qtQ8Qg" type="_OlbMoDypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.tag = tag;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OlbzsDypEe243Lz_qtQ8Qg" name="ElementComplex" method="_OrVnYDypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_OlcawTypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_OlcawjypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_OlcawDypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OlcawzypEe243Lz_qtQ8Qg" type="_OlbMoDypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Oldo4DypEe243Lz_qtQ8Qg" name="ElementSimple">
+          <generalization xmi:id="_OrBeUTypEe243Lz_qtQ8Qg" general="_OlqdMDypEe243Lz_qtQ8Qg"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrVnYzypEe243Lz_qtQ8Qg" name="ElementSimple" specification="_OleP8DypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrVnZDypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrVnZTypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.tag = tag;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrWOcDypEe243Lz_qtQ8Qg" name="ElementSimple" specification="_OlgFIDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrWOcTypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrWOcjypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrWOczypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.tag = tag;
+		this.setContingut(contingut);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrWOdDypEe243Lz_qtQ8Qg" name="ElementSimple" specification="_OrAQMDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrWOdTypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrWOdjypEe243Lz_qtQ8Qg" name="atributs" type="_OlJf0DypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrWOdzypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrWOeDypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrWOeTypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.tag = tag;
+		this.setAtributs(atributs);
+		this.setContingut(contingut);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrW1gDypEe243Lz_qtQ8Qg" name="setContingut" specification="_Olh6UDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrW1gTypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>if (contingut != null) {
+			this.contingut = new Element[1];
+			this.contingut[0] = new ElementText(contingut);
+		}
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OleP8DypEe243Lz_qtQ8Qg" name="ElementSimple" method="_OrVnYzypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_Ole3ADypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_Ole3ATypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_OleP8TypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Ole3AjypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OlgFIDypEe243Lz_qtQ8Qg" name="ElementSimple" method="_OrWOcDypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_OlgFIzypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_OlgFJDypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_OlgFITypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OlgFIjypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OlgsMDypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Olh6UDypEe243Lz_qtQ8Qg" name="setContingut" method="_OrW1gDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_Olh6UTypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OrAQMDypEe243Lz_qtQ8Qg" name="ElementSimple" method="_OrWOdDypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_OrA3QjypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_OrA3QzypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_OrAQMTypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrA3QDypEe243Lz_qtQ8Qg" name="atributs" type="_OlJf0DypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrBeUDypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrA3QTypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrA3RDypEe243Lz_qtQ8Qg" type="_Oldo4DypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OljvgDypEe243Lz_qtQ8Qg" name="ElementText">
+          <generalization xmi:id="_OrCFYDypEe243Lz_qtQ8Qg" general="_OlqdMDypEe243Lz_qtQ8Qg"/>
+          <ownedAttribute xmi:id="_OrMdcDypEe243Lz_qtQ8Qg" name="text" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrW1gjypEe243Lz_qtQ8Qg" name="ElementText" specification="_Olk9oDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrW1gzypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OrW1hDypEe243Lz_qtQ8Qg" type="_OljvgDypEe243Lz_qtQ8Qg" direction="return"/>
+            <language>java</language>
+            <body>this.tag = null;
+		this.atributs = null;
+		this.text = contingut;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrXckDypEe243Lz_qtQ8Qg" name="toString" specification="_OllkszypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrXckTypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return this.text;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_Olk9oDypEe243Lz_qtQ8Qg" name="ElementText" method="_OrW1gjypEe243Lz_qtQ8Qg">
+            <eAnnotations xmi:id="_OllksDypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_OllksTypEe243Lz_qtQ8Qg" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_Olk9oTypEe243Lz_qtQ8Qg" name="contingut">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_OllksjypEe243Lz_qtQ8Qg" type="_OljvgDypEe243Lz_qtQ8Qg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OllkszypEe243Lz_qtQ8Qg" name="toString" method="_OrXckDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OlmLwDypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OlooADypEe243Lz_qtQ8Qg" name="Html">
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrYDoDypEe243Lz_qtQ8Qg" name="main" specification="_OlpPEDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrYDoTypEe243Lz_qtQ8Qg" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrYDojypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>// TODO Auto-generated method stub
+		
+/*
+&lt;HTML>
+&lt;HEAD>
+	&lt;TITLE>Un Títol per al Browser de torn &lt;/TITLE>
+&lt;/HEAD>
+&lt;BODY>
+	&lt;H1>Un altre títol, aquesta vegada més llarg.&lt;/H1>
+ 	&lt;P> &lt;IMG SRC= &quot;./toni.gif &quot;ALIGN= &quot;MIDDLE &quot; ALT= &quot;EL Gato Felix &quot;/>Hoola.&lt;/P>
+	&lt;P>Això és un paràgraf amb información super-important. 
+	Has de veure que les línies surten enganxades fins i tot deixant
+	espais, salts de línia, etc. &lt;BR/> &amp;#161 Si poso això
+	si &lt;STRONG>que canvia &lt;/STRONG> de línia!
+	&lt;/P>
+	&lt;P>Un altre parÀGRAF, això ja és una mica rotllo.
+	&lt;H3>Posem un subtítol&lt;H3>
+	&lt;P>Per cert, &amp;#191 que pas amb les &lt;A HREF= &quot;#pepe &quot;>ancores&lt;/A>?&lt;/P>
+	&lt;HR/>
+	&lt;UL>
+		&lt;LI> Això és una llista no ordenada.&lt;/LI>
+		&lt;LI> Les llistes queden millor si tenen diversos elements.&lt;/LI>
+	&lt;/UL>
+	&lt;/P>
+&lt;/BODY>
+&lt;/HTML> 
+*/
+
+//PROBES SIMPLES
+/*
+		ElementSimple title0 = new ElementSimple(&quot;title&quot;);		
+		System.out.println(title0);
+		
+		ElementSimple title1 = new ElementSimple(&quot;title&quot;);
+		title1.setContingut(&quot;Un contingut&quot;);
+		System.out.println(title1);
+		
+		Atribut[] att = {new Atribut(&quot;src&quot;,&quot;./toni.gif&quot;), new Atribut(&quot;align&quot;,&quot;middle&quot;), new Atribut(&quot;alt&quot;,&quot;el gato Felix&quot;)};
+		ElementSimple title2 = new ElementSimple(&quot;title&quot;);
+		title2.setAtributs(att);
+		title2.setContingut(&quot;Un Titulo per al Browser de torn&quot;);		
+		System.out.println(title2);
+		
+
+ 		Element[] eleLI =  {
+				new ElementSimple(&quot;li&quot;, null, &quot;Això és una llista no ordenada.&quot;),
+				new ElementSimple(&quot;li&quot;, null, &quot;Les llistes queden millor si tenen diversos elements.&quot;)
+		};
+		
+		ElementComplex ul1 = new ElementComplex(&quot;ul&quot;);
+		ul1.setContingut(eleLI);
+		System.out.println(ul1);
+
+
+		ElementComplex ul2 = new ElementComplex(&quot;ul&quot;);
+		ul2.setAtributs(att);
+		ul2.setContingut(eleLI);
+		System.out.println(ul2);
+
+*/
+		
+		
+		//Definició del head
+		ElementSimple title1 = new ElementSimple(&quot;title&quot;, &quot;Un Títol per al Browser de torn&quot;);		
+		Element[] contingutCapcelera = {title1};
+		ElementComplex head = new ElementComplex(&quot;head&quot;);
+		head.setContingut(contingutCapcelera);
+		
+		//definició del body
+		ElementSimple h11 = new ElementSimple (&quot;h1&quot;, &quot;Un altre títol, aquesta vegada més llarg.. &quot;);
+		
+		Atribut[] atributs = {new Atribut(&quot;src&quot;,&quot;./toni.gif&quot;), new Atribut(&quot;align&quot;,&quot;middle&quot;), new Atribut(&quot;alt&quot;,&quot;el gato Felix&quot;) };
+		ElementSimple img = new ElementSimple(&quot;img&quot;, atributs, null);
+		ElementText hola = new ElementText(&quot;Hoola.&quot;);
+		Element[] contingutP11 = {img, hola};
+		ElementComplex p11 = new ElementComplex(&quot;p&quot;);
+		p11.setContingut(contingutP11);
+		
+		ElementText p21 = new ElementText(&quot;Això és un paràgraf amb información super-important.&quot;);
+		ElementText p22 = new ElementText(&quot;Has de veure que les línies surten enganxades fins i tot deixant&quot;);
+		ElementText p23 = new ElementText(&quot;espais, salts de línia, etc. &quot;);
+		ElementSimple br = new ElementSimple(&quot;br&quot;);
+		ElementText p24 = new ElementText(&quot;&amp;#161 Si poso això&quot;);
+		ElementText p25 = new ElementText(&quot;si&quot;);		
+		ElementSimple strong = new ElementSimple(&quot;strong&quot;,&quot;que canvia&quot;);
+		ElementText p26 = new ElementText(&quot; de línia!&quot;);
+		Element[] contingutP2 = {p21,p22, p23, br, p24, p25, strong, p26};
+		ElementComplex p2 = new ElementComplex(&quot;p&quot;);
+		p2.setContingut(contingutP2);
+		
+		ElementText primerText = new ElementText(&quot;Un altre paràgraf, això ja és una mica rotllo.&quot;);
+		ElementSimple h3Ultim = new ElementSimple(&quot;h3&quot;, &quot;Posem un subtítol&quot;);
+		
+		ElementText abansA = new ElementText(&quot;Per cert, &amp;#191 que pas amb les&quot;);
+		Atribut[] attaPultim = {new Atribut(&quot;href&quot;, &quot;#pepe&quot;)};
+		ElementSimple aPultim = new ElementSimple(&quot;a&quot;, attaPultim, &quot;ancores&quot;);
+		ElementText interrogant = new ElementText(&quot;?&quot;);
+		Element[] pamba = {abansA, aPultim, interrogant};
+		ElementComplex pPultim = new ElementComplex(&quot;p&quot;);
+		pPultim.setContingut(pamba);
+		
+		ElementSimple hr = new ElementSimple (&quot;hr&quot;);
+		
+		ElementSimple li1 =new ElementSimple(&quot;li&quot;, &quot;Això és una llista no ordenada.&quot;);
+		ElementSimple li2 =new ElementSimple(&quot;li&quot;, &quot;Les llistes queden millor si tenen diversos elements.&quot;);
+		Element[] lis = {li1, li2};
+		ElementComplex ul = new ElementComplex(&quot;ul&quot;);
+		ul.setContingut(lis);
+		
+		Element[] ultimContingut = { primerText, h3Ultim, pPultim, hr, ul};
+		ElementComplex ultim = new ElementComplex(&quot;p&quot;);
+		ultim.setContingut(ultimContingut);
+		
+		Element[] contingutBody = {h11, p11, p2, ultim};
+		ElementComplex body = new ElementComplex(&quot;body&quot;);
+		body.setContingut(contingutBody);
+		
+		//Definició del document
+		Element[] contingut = {head,body};
+		ElementComplex html = new ElementComplex(&quot;html&quot;);
+		html.setContingut(contingut);
+		Document elMeuHTML = new Document(null,html);	
+				
+		System.out.println(elMeuHTML);
+
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OlpPEDypEe243Lz_qtQ8Qg" name="main" isStatic="true" method="_OrYDoDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_Olp2IDypEe243Lz_qtQ8Qg" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Olp2ITypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OlqdMDypEe243Lz_qtQ8Qg" name="Element" isAbstract="true">
+          <ownedAttribute xmi:id="_OrOSoDypEe243Lz_qtQ8Qg" name="tag" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_OrPgwTypEe243Lz_qtQ8Qg" name="atributs" visibility="protected" type="_OlJf0DypEe243Lz_qtQ8Qg" association="_OrexUDypEe243Lz_qtQ8Qg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrPgwjypEe243Lz_qtQ8Qg" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_OrQu4DypEe243Lz_qtQ8Qg" name="contingut" visibility="protected" type="_OlqdMDypEe243Lz_qtQ8Qg" association="_Orf_cTypEe243Lz_qtQ8Qg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrQu4TypEe243Lz_qtQ8Qg" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrYDozypEe243Lz_qtQ8Qg" name="getTag" specification="_OlrrUDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrYDpDypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return tag;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrYqsDypEe243Lz_qtQ8Qg" name="getAtributs" specification="_Ols5cDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrYqsTypEe243Lz_qtQ8Qg" type="_OlJf0DypEe243Lz_qtQ8Qg" direction="return">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrYqsjypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return atributs;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrYqszypEe243Lz_qtQ8Qg" name="getContingut" specification="_OluHkDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrYqtDypEe243Lz_qtQ8Qg" type="_OlqdMDypEe243Lz_qtQ8Qg" direction="return">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrYqtTypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return contingut;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrZRwDypEe243Lz_qtQ8Qg" name="setTag" specification="_OlvVsDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrZRwTypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>this.tag = tag;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrZRwjypEe243Lz_qtQ8Qg" name="setAtributs" specification="_OrFvwDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrZRwzypEe243Lz_qtQ8Qg" name="atributs" type="_OlJf0DypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrZRxDypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>this.atributs = atributs;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrZ40DypEe243Lz_qtQ8Qg" name="setContingut" specification="_OrGW0TypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrZ40TypEe243Lz_qtQ8Qg" name="contingut" type="_OlqdMDypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrZ40jypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>this.contingut = contingut;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OrZ40zypEe243Lz_qtQ8Qg" name="toString" specification="_Olwj0DypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrZ41DypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>String resultat=&quot;&quot;;
+		// Definim l'etiqueta d'inici, si n'hi ha.
+		if (this.tag != null) {
+			resultat = &quot;&lt;&quot; + this.tag;
+			// afegim atributs, si n´hi ha
+			if (this.atributs != null) {
+				for (Atribut at : this.atributs) {
+					resultat += &quot; &quot; + at.toString();
+				}
+			}
+			// Si no hi ha contingut, afegin una etiqueta
+			// auto-ancada
+			resultat += (this.contingut == null) ? &quot;/>&quot; : &quot;>&quot;;
+		}
+		
+		// Si hi ha contingut, afegim el contingut i tamquem l'etiqueta
+		if (this.contingut != null) {
+			for (Element el : this.contingut) {
+				resultat += el.toString();
+			}
+			resultat += &quot;&lt;/&quot; + this.tag + &quot;>&quot;;
+		}
+
+		return resultat;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_OlrrUDypEe243Lz_qtQ8Qg" name="getTag" method="_OrYDozypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OlsSYDypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Ols5cDypEe243Lz_qtQ8Qg" name="getAtributs" method="_OrYqsDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_Ols5cTypEe243Lz_qtQ8Qg" type="_OlJf0DypEe243Lz_qtQ8Qg" direction="return">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ols5cjypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OluHkDypEe243Lz_qtQ8Qg" name="getContingut" method="_OrYqszypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OluuoDypEe243Lz_qtQ8Qg" type="_OlqdMDypEe243Lz_qtQ8Qg" direction="return">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OluuoTypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OlvVsDypEe243Lz_qtQ8Qg" name="setTag" method="_OrZRwDypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_Olv8wDypEe243Lz_qtQ8Qg" name="tag">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Olwj0DypEe243Lz_qtQ8Qg" name="toString" method="_OrZ40zypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_Olwj0TypEe243Lz_qtQ8Qg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OrFvwDypEe243Lz_qtQ8Qg" name="setAtributs" method="_OrZRwjypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrFvwTypEe243Lz_qtQ8Qg" name="atributs" type="_OlJf0DypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrGW0DypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_OrGW0TypEe243Lz_qtQ8Qg" name="setContingut" method="_OrZ40DypEe243Lz_qtQ8Qg">
+            <ownedParameter xmi:id="_OrGW0jypEe243Lz_qtQ8Qg" name="contingut" type="_OlqdMDypEe243Lz_qtQ8Qg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OrG94DypEe243Lz_qtQ8Qg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_OrbuADypEe243Lz_qtQ8Qg" name="" memberEnd="_OrL2YDypEe243Lz_qtQ8Qg _OrbuATypEe243Lz_qtQ8Qg">
+          <ownedEnd xmi:id="_OrbuATypEe243Lz_qtQ8Qg" name="" type="_OlVtEDypEe243Lz_qtQ8Qg" association="_OrbuADypEe243Lz_qtQ8Qg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_OrexUDypEe243Lz_qtQ8Qg" name="" memberEnd="_OrexUTypEe243Lz_qtQ8Qg _OrPgwTypEe243Lz_qtQ8Qg">
+          <ownedEnd xmi:id="_OrexUTypEe243Lz_qtQ8Qg" name="" type="_OlqdMDypEe243Lz_qtQ8Qg" association="_OrexUDypEe243Lz_qtQ8Qg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Orf_cTypEe243Lz_qtQ8Qg" name="" memberEnd="_Orf_cjypEe243Lz_qtQ8Qg _OrQu4DypEe243Lz_qtQ8Qg">
+          <ownedEnd xmi:id="_Orf_cjypEe243Lz_qtQ8Qg" name="" type="_OlqdMDypEe243Lz_qtQ8Qg" association="_Orf_cTypEe243Lz_qtQ8Qg"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ok3L8DypEe243Lz_qtQ8Qg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ok3L8TypEe243Lz_qtQ8Qg" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_OrCscDypEe243Lz_qtQ8Qg" name="Arrays"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_OQ7jUDypEe243Lz_qtQ8Qg">
+      <eAnnotations xmi:id="_OT1tYDypEe243Lz_qtQ8Qg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_OUFlADypEe243Lz_qtQ8Qg" base_Package="_OINFIDypEe243Lz_qtQ8Qg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OlTQ0TypEe243Lz_qtQ8Qg" base_Element="_OlSpwDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Annotations xmi:id="_OlUe8DypEe243Lz_qtQ8Qg" base_Element="_OlSpwDypEe243Lz_qtQ8Qg">
+    <annotations xmi:id="_OlUe8TypEe243Lz_qtQ8Qg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OlYwYDypEe243Lz_qtQ8Qg" base_Element="_OlXiQDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Annotations xmi:id="_OlYwYTypEe243Lz_qtQ8Qg" base_Element="_OlXiQDypEe243Lz_qtQ8Qg">
+    <annotations xmi:id="_OlYwYjypEe243Lz_qtQ8Qg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Olmy0DypEe243Lz_qtQ8Qg" base_Element="_OllkszypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Annotations xmi:id="_OlnZ4DypEe243Lz_qtQ8Qg" base_Element="_OllkszypEe243Lz_qtQ8Qg">
+    <annotations xmi:id="_OlnZ4TypEe243Lz_qtQ8Qg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Array xmi:id="_OltggDypEe243Lz_qtQ8Qg" base_Element="_Ols5cDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Array xmi:id="_OluuojypEe243Lz_qtQ8Qg" base_Element="_OluHkDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OlxK4DypEe243Lz_qtQ8Qg" base_Element="_Olwj0DypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Annotations xmi:id="_OlxK4TypEe243Lz_qtQ8Qg" base_Element="_Olwj0DypEe243Lz_qtQ8Qg">
+    <annotations xmi:id="_OlxK4jypEe243Lz_qtQ8Qg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_OrD6kDypEe243Lz_qtQ8Qg" base_Element="_OrCscDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OrNrkDypEe243Lz_qtQ8Qg" base_Element="_OrMdcDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OrPgwDypEe243Lz_qtQ8Qg" base_Element="_OrOSoDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Array xmi:id="_OrQH0DypEe243Lz_qtQ8Qg" base_Element="_OrPgwTypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OrQH0TypEe243Lz_qtQ8Qg" base_Element="_OrPgwTypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Array xmi:id="_OrRV8DypEe243Lz_qtQ8Qg" dimensions="1" base_Element="_OrQu4DypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_OrR9ADypEe243Lz_qtQ8Qg" base_Element="_OrQu4DypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Reference xmi:id="_Orf_cDypEe243Lz_qtQ8Qg" base_Element="_OrexUDypEe243Lz_qtQ8Qg"/>
+  <UMLLabProfile:Reference xmi:id="_OrhNkDypEe243Lz_qtQ8Qg" base_Element="_Orf_cTypEe243Lz_qtQ8Qg"/>
+</xmi:XMI>

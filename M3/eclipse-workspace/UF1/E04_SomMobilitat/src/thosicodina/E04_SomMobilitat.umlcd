@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_fVS8MGUjEe6P6NoShy-tAQ">
+  <modelElement href="E04_SomMobilitat.uml#_fw4E8GUjEe6P6NoShy-tAQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hLpZ0GUjEe6P6NoShy-tAQ" sourceAnchor="341.0,0.0" targetAnchor="196.0,0.0" target="_hLwukGUjEe6P6NoShy-tAQ" source="_hTDpYGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4yDwWUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkqWwGUjEe6P6NoShy-tAQ" sourceY="-90" targetX="-1157" targetY="-153"/>
+    <bendpoints xmi:id="_hkqWwWUjEe6P6NoShy-tAQ" sourceX="1157" sourceY="-90" targetY="-153"/>
+    <stereotypes xmi:id="_hLpZ0WUjEe6P6NoShy-tAQ" name="Reference">
+      <modelElement href="E04_SomMobilitat.uml#_f4zR4GUjEe6P6NoShy-tAQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_hLpZ0mUjEe6P6NoShy-tAQ" text="">
+      <visualProperties xmi:id="_hky5oGUjEe6P6NoShy-tAQ" position="389.0,-9.499999999999915"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hLpZ02UjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4yDwmUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkxrgGUjEe6P6NoShy-tAQ" position="-20.5,-54.0"/>
+      <visibility xmi:id="_hLpZ1GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLpZ1WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hLpZ1mUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="registreOcupacio" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f4GuUGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkzgsGUjEe6P6NoShy-tAQ" position="-130.00000000000023,-53.500000000000085"/>
+      <stereotypes xmi:id="_hLpZ12UjEe6P6NoShy-tAQ" name="LegacyStyledElement">
+        <modelElement href="E04_SomMobilitat.uml#_f4HVYGUjEe6P6NoShy-tAQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hLpZ2GUjEe6P6NoShy-tAQ" name="Array">
+        <modelElement href="E04_SomMobilitat.uml#_f4H8cWUjEe6P6NoShy-tAQ"/>
+      </stereotypes>
+      <visibility xmi:id="_hLqA4GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLqA4WUjEe6P6NoShy-tAQ" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hLu5YGUjEe6P6NoShy-tAQ" sourceAnchor="0.0,82.0" targetAnchor="392.0,29.0" target="_hLwukGUjEe6P6NoShy-tAQ" source="_hS3cIGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4o50GUjEe6P6NoShy-tAQ"/>
+    <nameVisual xmi:id="_hLu5YWUjEe6P6NoShy-tAQ" text="">
+      <visualProperties xmi:id="_hkxEcGUjEe6P6NoShy-tAQ" position="-15.5,-9.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hLu5YmUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="soci" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f3zzYGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkv2UGUjEe6P6NoShy-tAQ" position="-45.5,1.5"/>
+      <visibility xmi:id="_hLu5Y2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLu5ZGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hLu5ZWUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4pg4GUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkxEcWUjEe6P6NoShy-tAQ" position="5.0,-50.5"/>
+      <visibility xmi:id="_hLu5ZmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLu5Z2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hLwHgGUjEe6P6NoShy-tAQ" sourceAnchor="681.0,92.0" targetAnchor="0.0,29.0" target="_hLwukGUjEe6P6NoShy-tAQ" source="_hTDpYGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4qH8GUjEe6P6NoShy-tAQ"/>
+    <nameVisual xmi:id="_hLwHgWUjEe6P6NoShy-tAQ" text="">
+      <visualProperties xmi:id="_hk1V4GUjEe6P6NoShy-tAQ" position="-187.5,-9.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hLwHgmUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="vehicle" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f31BgGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hk0u0GUjEe6P6NoShy-tAQ" position="5.5,-50.5"/>
+      <visibility xmi:id="_hLwHg2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLwHhGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hLwHhWUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4qvAGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hk1V4WUjEe6P6NoShy-tAQ" position="-20.0,1.5"/>
+      <visibility xmi:id="_hLwHhmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLwHh2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hNfz8GUjEe6P6NoShy-tAQ" sourceAnchor="523.0,0.0" targetAnchor="580.0,104.0" superClass="_hN3AUGUjEe6P6NoShy-tAQ" subClass="_hNWqAGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3S2AGUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hknTcGUjEe6P6NoShy-tAQ" sourceY="-23" targetX="1040" targetY="26"/>
+    <bendpoints xmi:id="_hknTcWUjEe6P6NoShy-tAQ" sourceX="-1040" sourceY="-23" targetY="26"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hOQo8GUjEe6P6NoShy-tAQ" sourceAnchor="516.0,0.0" targetAnchor="580.0,104.0" superClass="_hN3AUGUjEe6P6NoShy-tAQ" subClass="_hOTFMGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3VSQGUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkohkWUjEe6P6NoShy-tAQ" sourceY="-36" targetX="-26" targetY="26"/>
+    <bendpoints xmi:id="_hkohkmUjEe6P6NoShy-tAQ" sourceX="26" sourceY="-36" targetY="26"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hP3ygGUjEe6P6NoShy-tAQ" sourceAnchor="376.0,0.0" targetAnchor="533.0,57.0" superClass="_hQQ0EGUjEe6P6NoShy-tAQ" subClass="_hMz3cGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3SO8GUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkmFUGUjEe6P6NoShy-tAQ" sourceY="-23" targetX="819" targetY="37"/>
+    <bendpoints xmi:id="_hkmsYGUjEe6P6NoShy-tAQ" sourceX="-819" sourceY="-23" targetY="37"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hQKGYGUjEe6P6NoShy-tAQ" sourceAnchor="420.0,0.0" targetAnchor="533.0,57.0" superClass="_hQQ0EGUjEe6P6NoShy-tAQ" subClass="_hOMXgGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3UrMGUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkn6gmUjEe6P6NoShy-tAQ" sourceY="-23" targetX="-871" targetY="37"/>
+    <bendpoints xmi:id="_hkohkGUjEe6P6NoShy-tAQ" sourceX="871" sourceY="-23" targetY="37"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hQLUgGUjEe6P6NoShy-tAQ" sourceAnchor="418.0,0.0" targetAnchor="533.0,57.0" superClass="_hQQ0EGUjEe6P6NoShy-tAQ" subClass="_hPvPoGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3ZjsGUjEe6P6NoShy-tAQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hQYI0GUjEe6P6NoShy-tAQ" sourceAnchor="580.0,0.0" targetAnchor="514.0,164.0" superClass="_hR_SYGUjEe6P6NoShy-tAQ" subClass="_hN3AUGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3TdEGUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkn6gGUjEe6P6NoShy-tAQ" sourceY="-91" targetX="-26" targetY="35"/>
+    <bendpoints xmi:id="_hkn6gWUjEe6P6NoShy-tAQ" sourceX="26" sourceY="-91" targetY="35"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hQtgAGUjEe6P6NoShy-tAQ" sourceAnchor="533.0,0.0" targetAnchor="514.0,164.0" superClass="_hR_SYGUjEe6P6NoShy-tAQ" subClass="_hQQ0EGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3aKwGUjEe6P6NoShy-tAQ"/>
+    <bendpoints xmi:id="_hkpIoGUjEe6P6NoShy-tAQ" sourceY="-23" targetX="1872" targetY="35"/>
+    <bendpoints xmi:id="_hkpIoWUjEe6P6NoShy-tAQ" sourceX="-1872" sourceY="-23" targetY="35"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_hQuHEGUjEe6P6NoShy-tAQ" sourceAnchor="514.0,0.0" targetAnchor="341.0,184.0" superClass="_hTDpYGUjEe6P6NoShy-tAQ" subClass="_hR_SYGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f3cnAGUjEe6P6NoShy-tAQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hR2IcGUjEe6P6NoShy-tAQ" sourceAnchor="1027.0,82.0" targetAnchor="0.0,62.0" target="_hSqn0GUjEe6P6NoShy-tAQ" source="_hR_SYGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4wOkGUjEe6P6NoShy-tAQ"/>
+    <stereotypes xmi:id="_hR2IcWUjEe6P6NoShy-tAQ" name="Reference">
+      <modelElement href="E04_SomMobilitat.uml#_f4yDwGUjEe6P6NoShy-tAQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_hR2IcmUjEe6P6NoShy-tAQ" text="">
+      <visualProperties xmi:id="_hktaEGUjEe6P6NoShy-tAQ" position="-73.0,-9.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hR2Ic2UjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4wOkWUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkszAGUjEe6P6NoShy-tAQ" position="5.5,-50.5"/>
+      <visibility xmi:id="_hR2IdGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR2IdWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hR2IdmUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="registreReserves" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f33dwGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkuoMGUjEe6P6NoShy-tAQ" position="-129.5,1.5"/>
+      <stereotypes xmi:id="_L8LeYGbDEe6rRe-zXjpyKA" name="LegacyStyledElement">
+        <modelElement href="E04_SomMobilitat.uml#_f34E0GUjEe6P6NoShy-tAQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_L8MFcGbDEe6rRe-zXjpyKA" name="Array">
+        <modelElement href="E04_SomMobilitat.uml#_f35S8GUjEe6P6NoShy-tAQ"/>
+      </stereotypes>
+      <visibility xmi:id="_hR2Id2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR2IeGUjEe6P6NoShy-tAQ" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hSMtwGUjEe6P6NoShy-tAQ" sourceAnchor="196.0,57.0" targetAnchor="369.0,0.0" target="_hSqn0GUjEe6P6NoShy-tAQ" source="_hLwukGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4rWEGUjEe6P6NoShy-tAQ"/>
+    <nameVisual xmi:id="_hSPxEGUjEe6P6NoShy-tAQ" text="">
+      <visualProperties xmi:id="_hksL8GUjEe6P6NoShy-tAQ" position="-5.5,-5.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hSQYIGUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="ocupacio" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f3_ZkGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hkq90GUjEe6P6NoShy-tAQ" position="1.0,5.5"/>
+      <visibility xmi:id="_hSSNUGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSRmQGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hSQYIWUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4r9IGUjEe6P6NoShy-tAQ"/>
+      <visualProperties xmi:id="_hksL8WUjEe6P6NoShy-tAQ" position="-20.5,-54.0"/>
+      <visibility xmi:id="_hSSNUmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSSNUWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hSWewGUjEe6P6NoShy-tAQ" target="_hSqn0GUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4r9IWUjEe6P6NoShy-tAQ"/>
+    <nameVisual xmi:id="_hSWewWUjEe6P6NoShy-tAQ" text=""/>
+    <sourceRole xmi:id="_hSWewmUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="dataInicialReserva" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f4AAoGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSWew2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSWexGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hSWexWUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4skMGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSWexmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSWex2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hSqAwGUjEe6P6NoShy-tAQ" target="_hSqn0GUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_f4skMWUjEe6P6NoShy-tAQ"/>
+    <nameVisual xmi:id="_hSqAwWUjEe6P6NoShy-tAQ" text=""/>
+    <sourceRole xmi:id="_hSqAwmUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="dataFinalReserva" navigable="true">
+      <modelElement href="E04_SomMobilitat.uml#_f4BOwGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqAw2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqAxGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hSqAxWUjEe6P6NoShy-tAQ" aggregationKind="NONE" name="">
+      <modelElement href="E04_SomMobilitat.uml#_f4tLQGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqAxmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqAx2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hLwukGUjEe6P6NoShy-tAQ" name="Ocupacio" associationsIn="_hLpZ0GUjEe6P6NoShy-tAQ _hLu5YGUjEe6P6NoShy-tAQ _hLwHgGUjEe6P6NoShy-tAQ" associationsOut="_hSMtwGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hLwukWUjEe6P6NoShy-tAQ" position="1578.0,183.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hLwukmUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hLwuk2UjEe6P6NoShy-tAQ" name="soci">
+      <modelElement href="E04_SomMobilitat.uml#_f3zzYGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hLwulGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLwulWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hLwulmUjEe6P6NoShy-tAQ" name="Soci">
+        <modelElement href="E04_SomMobilitat.uml#_fzhJQGUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hLwul2UjEe6P6NoShy-tAQ" name="vehicle">
+      <modelElement href="E04_SomMobilitat.uml#_f31BgGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hLwumGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLwumWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hLwummUjEe6P6NoShy-tAQ" name="Vehicle">
+        <modelElement href="E04_SomMobilitat.uml#_fzn28GUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hLwum2UjEe6P6NoShy-tAQ" name="Ocupacio">
+      <modelElement href="E04_SomMobilitat.uml#_f3QZwGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hLwunGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hLwunWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hLwunmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hLwun2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_f3Rn4mUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hLwuoGUjEe6P6NoShy-tAQ" name="Ocupacio">
+          <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hLwuoWUjEe6P6NoShy-tAQ" name="soci">
+        <modelElement href="E04_SomMobilitat.uml#_f3RA0GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hLwuomUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hLwuo2UjEe6P6NoShy-tAQ" name="Soci">
+          <modelElement href="E04_SomMobilitat.uml#_fzhJQGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hLwupGUjEe6P6NoShy-tAQ" name="vehicle">
+        <modelElement href="E04_SomMobilitat.uml#_f3RA0WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hLwupWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hLwupmUjEe6P6NoShy-tAQ" name="Vehicle">
+          <modelElement href="E04_SomMobilitat.uml#_fzn28GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hMz3cGUjEe6P6NoShy-tAQ" name="Bicicleta" generalizations="_hP3ygGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fyQlAGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hMz3cWUjEe6P6NoShy-tAQ" position="2932.0,755.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hMz3cmUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hMz3c2UjEe6P6NoShy-tAQ" name="Bicicleta">
+      <modelElement href="E04_SomMobilitat.uml#_fySaMGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hMz3dGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hMz3dWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hMz3dmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hMz3d2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fyU2cGUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hMz3eGUjEe6P6NoShy-tAQ" name="Bicicleta">
+          <modelElement href="E04_SomMobilitat.uml#_fyQlAGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hMz3eWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fySaMWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hMz3emUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hMz3e2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hMz3fGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fySaMmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hMz3fWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hMz3fmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hMz3f2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fyTBQGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hMz3gGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hM0egGUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hM0egWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fyTBQWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hM0egmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hM0eg2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hM0ehGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fyTBQmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hM0ehWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hM0ehmUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hNWqAGUjEe6P6NoShy-tAQ" name="CamioPetit" generalizations="_hNfz8GUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fyXSsGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hNWqAWUjEe6P6NoShy-tAQ" position="1108.0,859.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hNWqAmUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hNWqA2UjEe6P6NoShy-tAQ" name="CamioPetit">
+      <modelElement href="E04_SomMobilitat.uml#_fyZH4GUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hNWqBGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hNWqBWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hNWqBmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hNWqB2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fya9EWUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hNWqCGUjEe6P6NoShy-tAQ" name="CamioPetit">
+          <modelElement href="E04_SomMobilitat.uml#_fyXSsGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hNWqCWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fyZH4WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqCmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqC2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqDGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fyZu8GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqDWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqDmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqD2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fyZu8WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqEGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqEWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqEmUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fyZu8mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqE2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqFGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqFWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fyZu82UjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqFmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqF2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqGGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fyaWAGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqGWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqGmUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqG2UjEe6P6NoShy-tAQ" name="tara">
+        <modelElement href="E04_SomMobilitat.uml#_fyaWAWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqHGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqHWUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hNWqHmUjEe6P6NoShy-tAQ" name="pma">
+        <modelElement href="E04_SomMobilitat.uml#_fyaWAmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hNWqH2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hNWqIGUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hN3AUGUjEe6P6NoShy-tAQ" name="Carrega" abstractClass="true" generalizations="_hQYI0GUjEe6P6NoShy-tAQ" subclassedBy="_hNfz8GUjEe6P6NoShy-tAQ _hOQo8GUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fycLMGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hN3AUWUjEe6P6NoShy-tAQ" position="11.0,706.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hN3AUmUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hN3AU2UjEe6P6NoShy-tAQ" name="tara">
+      <modelElement href="E04_SomMobilitat.uml#_f31okGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hN3AVGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hN3AVWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hN3AVmUjEe6P6NoShy-tAQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hN3AV2UjEe6P6NoShy-tAQ" name="pma">
+      <modelElement href="E04_SomMobilitat.uml#_f322sGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hN3AWGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hN3AWWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hN3AWmUjEe6P6NoShy-tAQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hN3AW2UjEe6P6NoShy-tAQ" name="Carrega">
+      <modelElement href="E04_SomMobilitat.uml#_fyencGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hN3AXGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hN3AXWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hN3AXmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hN3AX2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fyhqwWUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hN3AYGUjEe6P6NoShy-tAQ" name="Carrega">
+          <modelElement href="E04_SomMobilitat.uml#_fycLMGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hN3AYWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fyencWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AYmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AY2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AZGUjEe6P6NoShy-tAQ" name="carnetNecesari">
+        <modelElement href="E04_SomMobilitat.uml#_fyencmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AZWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AZmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AZ2UjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fyfOgGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AaGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AaWUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AamUjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fyfOgWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3Aa2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AbGUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AbWUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fyf1kGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AbmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3Ab2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AcGUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fyf1kWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AcWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AcmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3Ac2UjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fygcoGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AdGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AdWUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AdmUjEe6P6NoShy-tAQ" name="tara">
+        <modelElement href="E04_SomMobilitat.uml#_fygcoWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3Ad2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3AeGUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hN3AeWUjEe6P6NoShy-tAQ" name="pma">
+        <modelElement href="E04_SomMobilitat.uml#_fyhDsGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hN3AemUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hN3Ae2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hOMXgGUjEe6P6NoShy-tAQ" name="Cotxe" generalizations="_hQKGYGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fykHAGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hOMXgWUjEe6P6NoShy-tAQ" position="1198.0,755.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hOMXgmUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hOMXg2UjEe6P6NoShy-tAQ" name="Cotxe">
+      <modelElement href="E04_SomMobilitat.uml#_fylVIGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hOMXhGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hOMXhWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hOMXhmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hOMXh2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fynKUWUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hOMXiGUjEe6P6NoShy-tAQ" name="Cotxe">
+          <modelElement href="E04_SomMobilitat.uml#_fykHAGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hOMXiWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fyl8MGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXimUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXi2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOMXjGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fyl8MWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXjWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXjmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOMXj2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fyl8MmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXkGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXkWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOMXkmUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fymjQGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXk2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXlGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOMXlWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fymjQWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXlmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXl2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOMXmGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fymjQmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOMXmWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOMXmmUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hOTFMGUjEe6P6NoShy-tAQ" name="Furgoneta" generalizations="_hOQo8GUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fyoYcGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hOTFMWUjEe6P6NoShy-tAQ" position="49.0,872.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hOTFMmUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hOTFM2UjEe6P6NoShy-tAQ" name="Furgoneta">
+      <modelElement href="E04_SomMobilitat.uml#_fyrbwGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hOTFNGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hOTFNWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hOTFNmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hOTFN2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fysp5GUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hOTFOGUjEe6P6NoShy-tAQ" name="Furgoneta">
+          <modelElement href="E04_SomMobilitat.uml#_fyoYcGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hOTFOWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fyrbwWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFOmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFO2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFPGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fysC0GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFPWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFPmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFP2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fysC0WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFQGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFQWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFQmUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fysC0mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFQ2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFRGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFRWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fysC02UjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFRmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFR2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFSGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fysC1GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFSWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFSmUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFS2UjEe6P6NoShy-tAQ" name="tara">
+        <modelElement href="E04_SomMobilitat.uml#_fysp4GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFTGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFTWUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hOTFTmUjEe6P6NoShy-tAQ" name="pma">
+        <modelElement href="E04_SomMobilitat.uml#_fysp4WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hOTFT2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hOTFUGUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hPPgYGUjEe6P6NoShy-tAQ" name="Main">
+    <modelElement href="E04_SomMobilitat.uml#_fyufEGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hPQHcGUjEe6P6NoShy-tAQ" position="12.0,989.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hPQHcWUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hPQHcmUjEe6P6NoShy-tAQ" name="main" staticOperation="true">
+      <modelElement href="E04_SomMobilitat.uml#_fyvGIGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hPQHc2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hPQHdGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hPQHdWUjEe6P6NoShy-tAQ" name="args">
+        <modelElement href="E04_SomMobilitat.uml#_fyvtMGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPQHdmUjEe6P6NoShy-tAQ" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_hPQHd2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hPvPoGUjEe6P6NoShy-tAQ" name="Moto" generalizations="_hQLUgGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fyw7UGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hPvPoWUjEe6P6NoShy-tAQ" position="2071.0,768.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hPvPomUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hPvPo2UjEe6P6NoShy-tAQ" name="Moto">
+      <modelElement href="E04_SomMobilitat.uml#_fzG5kGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hPvPpGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hPvPpWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hPvPpmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hPvPp2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzJ84mUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hPvPqGUjEe6P6NoShy-tAQ" name="Moto">
+          <modelElement href="E04_SomMobilitat.uml#_fyw7UGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hPvPqWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fzG5kWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPqmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPq2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hPvPrGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fzIuwGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPrWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPrmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hPvPr2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fzJV0GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPsGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPsWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hPvPsmUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fzJV0WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPs2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPtGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hPvPtWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fzJV0mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPtmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPt2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hPvPuGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fzJV02UjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hPvPuWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hPvPumUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hQQ0EGUjEe6P6NoShy-tAQ" name="NoCarrega" abstractClass="true" generalizations="_hQtgAGUjEe6P6NoShy-tAQ" subclassedBy="_hP3ygGUjEe6P6NoShy-tAQ _hQKGYGUjEe6P6NoShy-tAQ _hQLUgGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fzLyEGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hQQ0EWUjEe6P6NoShy-tAQ" position="1956.0,638.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hQQ0EmUjEe6P6NoShy-tAQ" label="+"/>
+    <operations xmi:id="_hQQ0E2UjEe6P6NoShy-tAQ" name="NoCarrega">
+      <modelElement href="E04_SomMobilitat.uml#_fzNnQGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hQQ0FGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hQQ0FWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hQQ0FmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hQQ0F2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzO1ZGUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hQQ0GGUjEe6P6NoShy-tAQ" name="NoCarrega">
+          <modelElement href="E04_SomMobilitat.uml#_fzLyEGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hQQ0GWUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fzOOUGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0GmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0G2UjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0HGUjEe6P6NoShy-tAQ" name="carnetNecesari">
+        <modelElement href="E04_SomMobilitat.uml#_fzOOUWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0HWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0HmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0H2UjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fzOOUmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0IGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0IWUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0ImUjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fzOOU2UjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0I2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0JGUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0JWUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fzOOVGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0JmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0J2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0KGUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fzO1YGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0KWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0KmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hQQ0K2UjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fzO1YWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hQQ0LGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hQQ0LWUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hR_SYGUjEe6P6NoShy-tAQ" name="AMotor" abstractClass="true" associationsOut="_hR2IcGUjEe6P6NoShy-tAQ" generalizations="_hQuHEGUjEe6P6NoShy-tAQ" subclassedBy="_hQYI0GUjEe6P6NoShy-tAQ _hQtgAGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fzQDgGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hR_5cGUjEe6P6NoShy-tAQ" position="103.0,416.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hR_5cWUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hR_5cmUjEe6P6NoShy-tAQ" name="registreReserves">
+      <modelElement href="E04_SomMobilitat.uml#_f33dwGUjEe6P6NoShy-tAQ"/>
+      <stereotypes xmi:id="_L8vfEGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L8wGIGbDEe6rRe-zXjpyKA" name="Array"/>
+      <stereotypes xmi:id="_L8xUQGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L8x7UGbDEe6rRe-zXjpyKA" name="Array"/>
+      <stereotypes xmi:id="_L82MwGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L82z0GbDEe6rRe-zXjpyKA" name="Array"/>
+      <visibility xmi:id="_hR_5dWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5dmUjEe6P6NoShy-tAQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_hR_5d2UjEe6P6NoShy-tAQ" name="Reserva">
+        <modelElement href="E04_SomMobilitat.uml#_fzabkGUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hR_5eGUjEe6P6NoShy-tAQ" name="matricula">
+      <modelElement href="E04_SomMobilitat.uml#_f389UGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hR_5eWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5emUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hR_5e2UjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hR_5fGUjEe6P6NoShy-tAQ" name="motor">
+      <modelElement href="E04_SomMobilitat.uml#_f39kYGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hR_5fWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5fmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hR_5f2UjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hR_5gGUjEe6P6NoShy-tAQ" name="kilometres">
+      <modelElement href="E04_SomMobilitat.uml#_f3-LcGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hR_5gWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5gmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hR_5g2UjEe6P6NoShy-tAQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hR_5hGUjEe6P6NoShy-tAQ" name="AMotor">
+      <modelElement href="E04_SomMobilitat.uml#_fzSfwGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hR_5hWUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hR_5hmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5h2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hR_5iGUjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzUU8mUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hR_5iWUjEe6P6NoShy-tAQ" name="AMotor">
+          <modelElement href="E04_SomMobilitat.uml#_fzQDgGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hR_5imUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fzTG0GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5i2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5jGUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5jWUjEe6P6NoShy-tAQ" name="carnetNecesari">
+        <modelElement href="E04_SomMobilitat.uml#_fzTG0WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5jmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5j2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5kGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fzTG0mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5kWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5kmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5k2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fzTt4GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5lGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5lWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5lmUjEe6P6NoShy-tAQ" name="matricula">
+        <modelElement href="E04_SomMobilitat.uml#_fzTt4WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5l2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5mGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5mWUjEe6P6NoShy-tAQ" name="motor">
+        <modelElement href="E04_SomMobilitat.uml#_fzTt4mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5mmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5m2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hR_5nGUjEe6P6NoShy-tAQ" name="kilometres">
+        <modelElement href="E04_SomMobilitat.uml#_fzTt42UjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5nWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5nmUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hR_5n2UjEe6P6NoShy-tAQ" name="eliminarReserva">
+      <modelElement href="E04_SomMobilitat.uml#_fzU8AGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hR_5oGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5oWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_hR_5omUjEe6P6NoShy-tAQ" name="afegirReserva">
+      <modelElement href="E04_SomMobilitat.uml#_f3b_8GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hR_5o2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hR_5pGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hR_5pWUjEe6P6NoShy-tAQ" name="r">
+        <modelElement href="E04_SomMobilitat.uml#_f3b_8WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hR_5pmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hR_5p2UjEe6P6NoShy-tAQ" name="Reserva">
+          <modelElement href="E04_SomMobilitat.uml#_fzabkGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hSqn0GUjEe6P6NoShy-tAQ" name="Reserva" associationsIn="_hSMtwGUjEe6P6NoShy-tAQ _hR2IcGUjEe6P6NoShy-tAQ _hSWewGUjEe6P6NoShy-tAQ _hSqAwGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fzabkGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hSqn0WUjEe6P6NoShy-tAQ" position="1405.0,436.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hSqn0mUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hSqn02UjEe6P6NoShy-tAQ" name="ocupacio">
+      <modelElement href="E04_SomMobilitat.uml#_f3_ZkGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqn1GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqn1WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hSqn1mUjEe6P6NoShy-tAQ" name="Ocupacio">
+        <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hSqn12UjEe6P6NoShy-tAQ" name="dataInicialReserva">
+      <modelElement href="E04_SomMobilitat.uml#_f4AAoGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqn2GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqn2WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hSqn2mUjEe6P6NoShy-tAQ" name="LocalDate">
+        <modelElement href="E04_SomMobilitat.uml#_f3WgYGUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hSqn22UjEe6P6NoShy-tAQ" name="dataFinalReserva">
+      <modelElement href="E04_SomMobilitat.uml#_f4BOwGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqn3GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqn3WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hSqn3mUjEe6P6NoShy-tAQ" name="LocalDate">
+        <modelElement href="E04_SomMobilitat.uml#_f3WgYGUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hSqn32UjEe6P6NoShy-tAQ" name="dataSuperior">
+      <modelElement href="E04_SomMobilitat.uml#_fzc30GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hSqn4GUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqn4WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hSqn4mUjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzde4GUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hSqn42UjEe6P6NoShy-tAQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hSqn5GUjEe6P6NoShy-tAQ" name="Reserva">
+      <modelElement href="E04_SomMobilitat.uml#_f3u64GUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hSqn5WUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hSqn5mUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hSqn52UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hSqn6GUjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_f3wJAmUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hSqn6WUjEe6P6NoShy-tAQ" name="Reserva">
+          <modelElement href="E04_SomMobilitat.uml#_fzabkGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hSqn6mUjEe6P6NoShy-tAQ" name="ocupacio">
+        <modelElement href="E04_SomMobilitat.uml#_f3vh8GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hSqn62UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hSqn7GUjEe6P6NoShy-tAQ" name="Ocupacio">
+          <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hSqn7WUjEe6P6NoShy-tAQ" name="dataInicialReserva">
+        <modelElement href="E04_SomMobilitat.uml#_f3vh8WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hSqn7mUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hSqn72UjEe6P6NoShy-tAQ" name="LocalDate">
+          <modelElement href="E04_SomMobilitat.uml#_f3WgYGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hSqn8GUjEe6P6NoShy-tAQ" name="dataFinalReserva">
+        <modelElement href="E04_SomMobilitat.uml#_f3vh8mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hSqn8WUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hSqn8mUjEe6P6NoShy-tAQ" name="LocalDate">
+          <modelElement href="E04_SomMobilitat.uml#_f3WgYGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hS3cIGUjEe6P6NoShy-tAQ" name="Soci" associationsOut="_hLu5YGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fzhJQGUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hS3cIWUjEe6P6NoShy-tAQ" position="2145.0,130.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hS3cImUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hS3cI2UjEe6P6NoShy-tAQ" name="nom">
+      <modelElement href="E04_SomMobilitat.uml#_f4B10GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hS3cJGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cJWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hS3cJmUjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hS3cJ2UjEe6P6NoShy-tAQ" name="cognom">
+      <modelElement href="E04_SomMobilitat.uml#_f4Cc4GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hS3cKGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cKWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hS3cKmUjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hS3cK2UjEe6P6NoShy-tAQ" name="dni">
+      <modelElement href="E04_SomMobilitat.uml#_f4DD8GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hS3cLGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cLWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hS3cLmUjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hS3cL2UjEe6P6NoShy-tAQ" name="tipusCarnet">
+      <modelElement href="E04_SomMobilitat.uml#_f4DD8WUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hS3cMGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cMWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hS3cMmUjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hS3cM2UjEe6P6NoShy-tAQ" name="Soci">
+      <modelElement href="E04_SomMobilitat.uml#_fzi-cGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hS3cNGUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hS3cNWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cNmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hS3cN2UjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzkzomUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hS3cOGUjEe6P6NoShy-tAQ" name="Soci">
+          <modelElement href="E04_SomMobilitat.uml#_fzhJQGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hS3cOWUjEe6P6NoShy-tAQ" name="nom">
+        <modelElement href="E04_SomMobilitat.uml#_fzi-cWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cOmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cO2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hS3cPGUjEe6P6NoShy-tAQ" name="cognom">
+        <modelElement href="E04_SomMobilitat.uml#_fzjlgGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cPWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cPmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hS3cP2UjEe6P6NoShy-tAQ" name="dni">
+        <modelElement href="E04_SomMobilitat.uml#_fzjlgWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cQGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cQWUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hS3cQmUjEe6P6NoShy-tAQ" name="tipusCarnet">
+        <modelElement href="E04_SomMobilitat.uml#_fzkMkGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cQ2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cRGUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hS3cRWUjEe6P6NoShy-tAQ" name="alquilarVehicle">
+      <modelElement href="E04_SomMobilitat.uml#_f3lJ4GUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hS3cRmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hS3cR2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hS3cSGUjEe6P6NoShy-tAQ" name="vehicle">
+        <modelElement href="E04_SomMobilitat.uml#_f3lw8GUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cSWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cSmUjEe6P6NoShy-tAQ" name="AMotor">
+          <modelElement href="E04_SomMobilitat.uml#_fzQDgGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hS3cS2UjEe6P6NoShy-tAQ" name="reserva">
+        <modelElement href="E04_SomMobilitat.uml#_f3lw8WUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cTGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cTWUjEe6P6NoShy-tAQ" name="Reserva">
+          <modelElement href="E04_SomMobilitat.uml#_fzabkGUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hS3cTmUjEe6P6NoShy-tAQ" name="ocupacio">
+        <modelElement href="E04_SomMobilitat.uml#_f3lw8mUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hS3cT2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hS3cUGUjEe6P6NoShy-tAQ" name="Ocupacio">
+          <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hTDpYGUjEe6P6NoShy-tAQ" name="Vehicle" abstractClass="true" associationsOut="_hLpZ0GUjEe6P6NoShy-tAQ _hLwHgGUjEe6P6NoShy-tAQ" subclassedBy="_hQuHEGUjEe6P6NoShy-tAQ">
+    <modelElement href="E04_SomMobilitat.uml#_fzn28GUjEe6P6NoShy-tAQ"/>
+    <visualProperties xmi:id="_hTDpYWUjEe6P6NoShy-tAQ" position="276.0,120.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hTDpYmUjEe6P6NoShy-tAQ" label="+"/>
+    <attributes xmi:id="_hTDpY2UjEe6P6NoShy-tAQ" name="id">
+      <modelElement href="E04_SomMobilitat.uml#_f4ESEGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTDpZGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTDpZWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hTDpZmUjEe6P6NoShy-tAQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hTDpZ2UjEe6P6NoShy-tAQ" name="carnetNecesari">
+      <modelElement href="E04_SomMobilitat.uml#_f4E5IGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTDpaGUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTDpaWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hTDpamUjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hTEQcGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+      <modelElement href="E04_SomMobilitat.uml#_f4FgMGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTEQcWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQcmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hTEQc2UjEe6P6NoShy-tAQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hTEQdGUjEe6P6NoShy-tAQ" name="preuLloger">
+      <modelElement href="E04_SomMobilitat.uml#_f4FgMWUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTEQdWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQdmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hTEQd2UjEe6P6NoShy-tAQ" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hTEQeGUjEe6P6NoShy-tAQ" name="ocupacio">
+      <modelElement href="E04_SomMobilitat.uml#_f4GHQGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTEQeWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQemUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <type xmi:id="_hTEQe2UjEe6P6NoShy-tAQ" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hTEQfGUjEe6P6NoShy-tAQ" name="registreOcupacio">
+      <modelElement href="E04_SomMobilitat.uml#_f4GuUGUjEe6P6NoShy-tAQ"/>
+      <stereotypes xmi:id="_L8oKUGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L8p_gGbDEe6rRe-zXjpyKA" name="Array"/>
+      <stereotypes xmi:id="_L8r0sGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L8sbwGbDEe6rRe-zXjpyKA" name="Array"/>
+      <stereotypes xmi:id="_L86eMGbDEe6rRe-zXjpyKA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_L86eMWbDEe6rRe-zXjpyKA" name="Array"/>
+      <visibility xmi:id="_hTEQfWUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQfmUjEe6P6NoShy-tAQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_hTEQf2UjEe6P6NoShy-tAQ" name="Ocupacio">
+        <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hTEQgGUjEe6P6NoShy-tAQ" name="Vehicle">
+      <modelElement href="E04_SomMobilitat.uml#_fzqTMGUjEe6P6NoShy-tAQ"/>
+      <keywords xmi:id="_hTEQgWUjEe6P6NoShy-tAQ" keyword="create"/>
+      <visibility xmi:id="_hTEQgmUjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQg2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hTEQhGUjEe6P6NoShy-tAQ">
+        <modelElement href="E04_SomMobilitat.uml#_fzsIYWUjEe6P6NoShy-tAQ"/>
+        <type xmi:id="_hTEQhWUjEe6P6NoShy-tAQ" name="Vehicle">
+          <modelElement href="E04_SomMobilitat.uml#_fzn28GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hTEQhmUjEe6P6NoShy-tAQ" name="id">
+        <modelElement href="E04_SomMobilitat.uml#_fzq6QGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hTEQh2UjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hTEQiGUjEe6P6NoShy-tAQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hTEQiWUjEe6P6NoShy-tAQ" name="carnetNecesari">
+        <modelElement href="E04_SomMobilitat.uml#_fzq6QWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hTEQimUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hTEQi2UjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hTEQjGUjEe6P6NoShy-tAQ" name="geolocalizacio">
+        <modelElement href="E04_SomMobilitat.uml#_fzq6QmUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hTEQjWUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hTEQjmUjEe6P6NoShy-tAQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hTEQj2UjEe6P6NoShy-tAQ" name="preuLloger">
+        <modelElement href="E04_SomMobilitat.uml#_fzrhUGUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hTEQkGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hTEQkWUjEe6P6NoShy-tAQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hTEQkmUjEe6P6NoShy-tAQ" name="afegirOcupacio">
+      <modelElement href="E04_SomMobilitat.uml#_f3nmIGUjEe6P6NoShy-tAQ"/>
+      <visibility xmi:id="_hTEQk2UjEe6P6NoShy-tAQ" label="+"/>
+      <cardinality xmi:id="_hTEQlGUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hTEQlWUjEe6P6NoShy-tAQ" name="o">
+        <modelElement href="E04_SomMobilitat.uml#_f3nmIWUjEe6P6NoShy-tAQ"/>
+        <cardinality xmi:id="_hTEQlmUjEe6P6NoShy-tAQ" label="1" max="1" min="1"/>
+        <type xmi:id="_hTEQl2UjEe6P6NoShy-tAQ" name="Ocupacio">
+          <modelElement href="E04_SomMobilitat.uml#_fyE-0GUjEe6P6NoShy-tAQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

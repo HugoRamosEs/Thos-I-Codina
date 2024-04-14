@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arxius>
+	<path>src/slider/imgs/</path>
+	<arxiu>
+		<path>1.jpg</path>
+		<descripcio>El pont de la teva vida</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>2.jpg</path>
+		<descripcio>Sortida de sol al llac</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>3.jpg</path>
+		<descripcio>Vista des de l'espai</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>4.jpg</path>
+		<descripcio>Ens anem a esquiar?</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>5.jpg</path>
+		<descripcio>Reunió de treball</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>6.jpg</path>
+		<descripcio>Treballant fins altes hores de la nit</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>7.jpg</path>
+		<descripcio>De vacances a la platja</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>8.jpg</path>
+		<descripcio>aurora boreal</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>9.jpg</path>
+		<descripcio>Cel rogent....</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>10.gif</path>
+		<descripcio>Refrescar-te al riu</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>11.gif</path>
+		<descripcio>Espiral infinita</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>12.jpg</path>
+		<descripcio>Agafar l'onada</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>13.jpg</path>
+		<descripcio>On vols anar?</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>14.jpeg</path>
+		<descripcio>I quan arriba la nit....</descripcio>
+	</arxiu>
+	<arxiu>
+		<path>15.jpg</path>
+		<descripcio>Espiral infinita</descripcio>
+	</arxiu>
+</arxius>

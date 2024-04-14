@@ -1,0 +1,7 @@
+Defineix el mètode inserir(ArbreBinari e) modificant tot alló que
+consideris necessari del projecte.
+Si creus que no és possible definir el mètode, justifica la resposta.
+/****************************************************************
+Define el método insertar(ArbreBinari e) modificando todo aquello que
+consideres necesario del proyecto.
+Si crees que no es posible definir el método, justifica la respuesta.

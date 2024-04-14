@@ -1,0 +1,11 @@
+/* 
+Pregunta 09 ( 1 punt )
+
+En el mètode "logIn" de la classe UserController, no hi ha cap validació
+de les dades entrades.
+
+Valida la existència (que no sigui null) i la valideça (que sigui un email 
+correcte) d'usuari i contrasenya.
+
+Hi ha un mètode esMail() .... fes-ho servir.
+*/

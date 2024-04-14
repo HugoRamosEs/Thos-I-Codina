@@ -1,0 +1,25 @@
+Defineix els elements gràfics següents:
+1.- Els menús segons la imatge proporcionada: Menus.png
+2.- Un únic listener per tos els esdeveniments de tipus "mouse".
+3.- Quan es faci un clic sobre el botó Green, la label haurà de canviar el color de fons a blanc, 
+el color de la lletra a verd, i la font de lletra a "Liberation Mono", tipus "bold" i tamany 20.
+4.- Quan es faci clic sobre el botó Yellow, la label haurà de canviar el fons al color 238,245,11 
+i el color de la lletra haurà se ser alternativament (canviant en cada clic) el gris 63 i el gris 238, 
+amb un alfa de 160. La font serà "Rubick buned" proporcionada al .ttf, de tipus "plain" i tamany 20 .... 
+en cas de no estar disponible, seleccionarem la "Arial" de tipus bold i tamany 20.
+5.- Quan es faci click al botó Red s'obrirà una finestra about amb el nom de l'autor de l'examen i 
+la data. Al tancar-se aquesta finestra no es tancarà la principal,
+
+/***************************************************************************
+
+Define los elementos gráficos siguientes:
+1.- Los menús según la imagen proporcionada: Menus.png
+2.- Un único listener por tos los acontecimientos de tipos "mouse".
+3.- Cuando se haga un clic sobre el botón Green, la labelo tendrá que cambiar el color de fondo a blanco, 
+el color de la letra a verde, y la fuente de letra a "Liberation Mono", tipo "bold" y tamaño 20.
+4.- Cuando se haga clic sobre el botón Yellow, la labelo tendrá que cambiar el fondo al color 238,245,11 
+y el color de la letra habrá se ser alternativamente (cambiante en cada clic) el gris 63 y el gris 238, 
+con un alfa de 160. La fuente será "*Rubick *buned" proporcionada al .*ttf, de tipo "*plain" y tamaño 20 .... 
+en caso de no estar disponible, seleccionaremos la "Arial" de tipo bold y tamaño 20.
+5.- Cuando se haga click al botón Red se abrirá una ventana about con el nombre del autor del examen y 
+la fecha. Al cerrarse esta ventana no se cerrará la principal,

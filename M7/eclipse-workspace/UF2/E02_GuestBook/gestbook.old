@@ -1,0 +1,139 @@
+<?php 
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
+session_set_cookie_params(0);
+session_start();
+
+include 'classes/config/Autoloader.php';
+spl_autoload_register("Autoloader::load");
+    
+
+include "functions.php";
+
+if (isset($_COOKIE["lang"])) {
+    $lang = $_COOKIE["lang"];
+} else {
+    $lang = "ca";
+}
+$fitxerDeTraduccions = "languages/{$lang}_traduccio.php";
+require_once $fitxerDeTraduccions;
+
+$html_opacityLang[$lang]="style=\"opacity:1;\"";
+
+
+
+$opcionsExperiencia = [
+    "MB" => "Molt bona",
+    "B" => "Bona",
+    "R" => "Regular",
+    "D" => "Dolenta",
+    "MD" => "Molt dolenta"
+];
+
+if ($_SERVER["REQUEST_METHOD"]=="POST" && (isset($_POST["boto"]))) {
+    $frmNom = sanitize($_POST["nom"],4);
+    $frmMail = sanitize($_POST["email"],1);
+    $frmExperiencia = sanitize($_POST["experiencia"],0);
+    $frmMsg = sanitize($_POST["missatge"],3);
+    
+    if (strlen($frmNom)==0) {
+        $errorsDetectats["nom"] = "Has d'informar un nom";
+    }
+    if (!filter_var($frmMail, FILTER_VALIDATE_EMAIL)) {
+        $errorsDetectats["mail"] = "L'adreça de correu no és vàlida";
+    }
+    if (!in_array($frmExperiencia, array_keys($opcionsExperiencia))) {
+        $errorsDetectats["missatge"] = "Error en selecció experiencia";
+    }
+    if (strlen($frmMsg)==0) {
+        $errorsDetectats["missatge"] = "Has d'escriure el comentari que vols enviar";
+    }
+    
+    if (!isset($errorsDetectats)) {
+        $mComentari = new ComentariModel();
+        if ($mComentari->create(new Comentari($frmNom, $frmMail, $frmExperiencia, $frmMsg))) {
+            unset($frmNom, $frmMail, $frmExperiencia, $frmMsg);
+            $missatgeOK="El comentari s'ha enviat correctament";
+        }
+        
+    }
+}
+
+
+
+
+$options = [
+    "type" => "text",
+    "name" => "nom",
+    "placeholder" => "Digue'ns el teu nom",
+    "value" => $frmNom,
+    "class" => (isset($errorsDetectats["nom"])) ? "invalid" : "",
+    "span" => $errorsDetectats["nom"]
+];
+$input_nom = html_generaInput($options);
+
+$options = [
+    "type" => "text",
+    "name" => "email",
+    "placeholder" => "Digue'ns el teu mail per pasar-nos en contacte",
+    "value" => $frmMail,
+    "class" => (isset($errorsDetectats["mail"])) ? "invalid" : "",
+    "span" => $errorsDetectats["mail"]
+];
+$input_mail = html_generaInput($options);
+
+$atributs = [
+    "name" => "experiencia",
+    "span" => $errorsDetectats["experiencia"]
+];
+$seleccionat = (isset($frmExperiencia)) ? $frmExperiencia : "MB";
+$select_Experiencia = html_generateSelect($opcionsExperiencia, $seleccionat, $atributs);
+
+$options = [
+    "type" => "textarea",
+    "rows" => "4",
+    "name" => "missatge",
+    "placeholder" => "Què ens vols dir?",
+    "value" => $frmMsg,
+    "class" => (isset($errorsDetectats["missatge"])) ? "invalid" : "",
+    "span" => $errorsDetectats["missatge"]
+];
+$input_missatge = html_generaInput($options);
+
+try {
+    $mComentari = new ComentariModel();
+    $comentaris = $mComentari->read();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die;
+}
+if ($comentaris!=null) {
+//     $mComentari = new ComentariModel();
+    $items = array_reverse($comentaris);
+}
+
+$capcelera = "<tr><th>Missatge</th><th>Experiència</th><th>Nom</th><th>Mail</th><th>Data</th></tr>";
+
+$formulari = "<form action=\"\" method=\"post\" target=\"blank\">";
+$formulari .= "<tr><td>$input_missatge</td><td>$select_Experiencia</td><td>$input_nom</td><td>$input_mail</td>";
+$formulari .= "<td><input type=\"submit\" name=\"boto\" value=\"$contacteEnviar\" class=\"btn\"></td></tr>";
+$formulari .= "</form>";
+
+foreach ($items as $key => $value) {
+    $cos .= "<tr><td>{$value->getMissatge()}</td><td>{$value->getExperiencia()}</td><td>{$value->getNom()}</td><td>{$value->getMail()}</td><td>{$value->getData()}</td></tr>\n";
+}
+
+$resultat = "<table><thead>$capcelera</thead>$formulari<tbody>$cos</tbody></table>";
+    
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<?php include "templates/head.tpl.php";?>
+<body>
+	<?php include "templates/header.tpl.php";?>
+	<?php include "templates/info_guestbook.tpl.php";?>
+	<?php include "templates/footer.tpl.php";?>
+</body>
+</html>
+

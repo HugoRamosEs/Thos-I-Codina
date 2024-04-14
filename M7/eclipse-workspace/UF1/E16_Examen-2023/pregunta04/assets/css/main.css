@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    line-height: 1.4;
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
+}
+
+
+header {
+    width: 100%;
+    min-height: 520px;
+    background-image: url('https://www.gettemplate.com/demo/progressus/assets/images/bg_header.jpg');
+    background-size: cover;
+}
+
+
+nav { 
+  background-color: #040204;
+  display: flex;
+/*home wili tahto kano tahét uiwlaw m3a jnabéhom*/
+  justify-content: space-around;
+  /*idnaw 3a limin chwaya, and img idanét 3a limin chwaya
+  -kano mi lowél wra b3athéhom*/
+  align-items: center;
+  /*img kanét fo9 walét fi wosét background, en height*/
+  font-family: 'Helvetica', 'Arial',sans-serif;
+  height:100px;
+  /*s5arna fil height*/
+  border-bottom: 2px solid #2a292a;
+}
+
+#logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+/*Home - about - More Pages - Sign in / sign up*/
+#menu-container li {
+  display: inline-block;
+  /*home wala m3a jnabéha about
+  contact wala m3a janbo button*/
+  list-style: none;
+  /*msat chay*/
+  margin-right: 20px;
+  /*m3a jnab b3athéhom bi3do 3ala b3athéhom*/
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#menu-container li a {
+  color: #5f5f5f;
+  text-decoration: none;
+  /*nahina li5tout*/
+}
+
+#menu-container li a:visited {
+  color: #5f5f5f;
+}
+
+#menu-container li a:visited{
+    color: white;
+  /*about, more pages, contact, kano gray wlaw white*/
+}
+
+#menu-container li a:hover {
+  color: white;
+}
+
+#menu-container li a:active{
+  color: white;
+}
+
+.fa-caret-down{ /*more pages, mta3 bootstarp*/
+  margin-left: 2px;
+}
+ 
+/*button sign in/sign up*/
+#sign-in-out {
+  background-color: transparent;
+  color: #5f5f5f;
+  padding: 8px;
+  /*zidna fih*/
+  border: 2px solid #5f5f5f;
+  font-size: 14px;
+  font-weight: 750;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#sign-in-out:hover{
+    color: white;
+    border: 2px solid  white;
+}
+
+/******** Drop down pages menue *********/
+
+/*MOre page*/
+#dropdown-more-pages {
+  position: relative;
+/*msar chay*/
+  display: inline-block;
+  /*kanét home m3a jnabéha About, tahitéha More page, tahitéha,Left right tagitéhom contact and sign in
+- walét Home m3a jnabéha about m3a jnabéha More Pages Tahitéhom left right, m3a jnabéhom contact, m3a jnabéhom sign in*/
+}
+
+/*left sidebar and right sidebar*/
+#dropdown-more-pages-content {
+  display: none;
+  /*n7itéhom*/
+  position: absolute;
+  /*kano m3a jnab b3a thhéom wlaw tahit b3athéhom*/
+  background-color: #040204;
+  /*a3titéhom noir*/
+  min-width: 160px;
+/*kilmét right walét m3a jnab Ledt sidebar*/
+  z-index: 1;
+  /*msar chay*/
+}
+
+#dropdown-more-pages-content a {
+  color:white;
+  padding: 12px 16px;
+  /*raditéhom tahit b3athéhom*/
+  text-decoration: none;
+  display: block;
+/*kano tahit b3athéhom bithabéét, kol wahét 5thé espace bahia*/
+  font-size: 13px;
+}
+
+/*left and, right sidebar*/
+ #dropdown-more-pages-content a:hover {
+   background-color: rgb(34, 30, 33); 
+} 
+
+#dropdown-more-pages:hover #dropdown-more-pages-content{
+  display: block; 
+  /*ki ninzél 3al more pages wlaw to5irjouli*/
+}
+/*-------------------------------------------------*/
+/*il kol*/
+#h-div1 { 
+  width: 100%;
+  height: 400px;
+  display: flex;
+  /*<p>PROGRESSUS kanét tahit h1 walét m3a jnabéha m3a jnabéhom button*/
+  flex-direction: column;
+  /*raj3ét kima kanét*/
+  justify-content: center;
+  /*wlaw fil wosét en height*/
+  align-items: center;
+  /*wlaw fil wosét en height*/
+}
+
+/*<h1>Awesome, customizable, free*/
+#h-div1-heading {
+  margin: 0;
+  /*ili tahto tla3 chwaya*/
+  text-transform: uppercase;
+  font-size: 44px;
+   /*kbarét fih*/
+  font-weight: 200;
+   /*n9asét*/
+  line-height: 1.15em;
+  margin-bottom: 6px;
+  /*a3tito chwaya*/
+  color: white;
+}
+
+/*<p>PROGRESSUS and GetTemplate*/
+#h-div1-desc,
+#h-div1-desc-link {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+/*tla3 lfou9 chwaya*/
+  margin-bottom: 32px;
+  /*button ili tahto habto louta chwaya*/
+}
+
+/*GetTEmplate*/
+  #h-div1-desc-link{
+    color: white;
+    /*m3adésh yitra*/
+    text-decoration: none;
+}
+
+#h-div1-desc-link:hover {
+    text-decoration: underline;
+  /*thit sorie 3lih yita3mal 5at ili tahto*/
+}
+
+/*button: More info*/
+#h-div1-moreinfo{
+    background-color: transparent;
+    padding: 14px 62px;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#h-div1-downlaoad{
+    background-color: rgba(255,149,21,0.8);
+    padding: 18px 80px;
+    border: none;
+    color: rgb(255, 239, 215);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#h-div1-moreinfo:hover{
+    border: 4px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#h-div1-downlaoad:hover{
+    background-color: rgba(255,149,21,1);
+    color: white;
+}
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+    
+
+
+  
+
+
+
+  
+
+
+
+

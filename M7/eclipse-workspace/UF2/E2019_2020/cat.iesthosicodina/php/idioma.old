@@ -1,0 +1,21 @@
+<?php
+// Definició de l'idioma
+if (isset($_COOKIE['lang'])) {
+    $idiomaDeLaPagina = sanitize($_COOKIE['lang'],0);
+} else {
+    $idiomaDeLaPagina = IDIOMA_PER_DEFECTE;
+}
+
+foreach ($idiomesDelFormulari as $clau => $valor) {
+    $idiomes [] = $clau;
+}
+
+if ( (isset($_GET['lang'])) && (in_array($_GET['lang'], $idiomes)) ) {
+    $idiomaDeLaPagina = sanitize($_GET['lang'],0);
+    $resultat = setcookie("lang", $idiomaDeLaPagina,time() + 60*60*24*30);
+    $_COOKIE['lang'] = $idiomaDeLaPagina;
+}
+$fitxerDeTraduccions = "languages/{$idiomaDeLaPagina}_traduccio.php";
+require_once $fitxerDeTraduccions;
+
+?>

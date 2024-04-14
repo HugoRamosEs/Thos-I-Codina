@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REGISTRES>
+	<REGISTRE>
+		<DATA>2022-11-22</DATA>
+		<NOM>Toni</NOM>
+		<MAIL>jantonio.aguilar@iesthosicodina.cat</MAIL>
+		<EXPERIENCIA>R</EXPERIENCIA>
+		<COMENTARI>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. suspendisse at eleifend magna,
+			quis volutpat ligula. pellentesque vel vulputate odio
+		</COMENTARI>
+	</REGISTRE>
+	<REGISTRE>
+		<DATA>2022-11-25</DATA>
+		<NOM>Ivan</NOM>
+		<MAIL>dede@gmail.com</MAIL>
+		<EXPERIENCIA>B</EXPERIENCIA>
+		<COMENTARI>Hola</COMENTARI>
+	</REGISTRE>
+	<REGISTRE>
+		<DATA>2022-11-25</DATA>
+		<NOM>Toni</NOM>
+		<MAIL>janrtoni@aaa.cat</MAIL>
+		<EXPERIENCIA>MB</EXPERIENCIA>
+		<COMENTARI>There are many variations of passages of lorem ipsum
+			available</COMENTARI>
+	</REGISTRE>
+	<REGISTRE>
+		<DATA>2023-11-17</DATA>
+		<NOM>Aaa</NOM>
+		<MAIL>toni@gmail.com</MAIL>
+		<EXPERIENCIA>D</EXPERIENCIA>
+		<COMENTARI>
+			It is a long established fact that a reader will be distracted by the readable content
+			of a page when looking at its layout. the point of using lorem ipsum is that it
+			has a more-or-less normal distribution of letters, as opposed to using &#039;content
+			here, content here&#039;, making it look like readable english. many desktop publishing
+			packages and web page editors now use lorem ipsum as their default model text,
+			and a search for &#039;lorem ipsum&#039; will uncover many web sites still in their
+			infancy. various versions have evolved over the years, sometimes by accident, sometimes
+			on purpose (injected humour and the like).
+		</COMENTARI>
+	</REGISTRE>
+	<REGISTRE>
+		<DATA>2023-11-17</DATA>
+		<NOM>Toni</NOM>
+		<MAIL>toni@gmail.com</MAIL>
+		<EXPERIENCIA>B</EXPERIENCIA>
+		<COMENTARI>Nam commodo diam non massa placerat,</COMENTARI>
+	</REGISTRE>
+<REGISTRE><DATA>27/11/2023</DATA><NOM>Ddd</NOM><MAIL>to@gmail.com</MAIL><EXPERIENCIA>R</EXPERIENCIA><COMENTARI>Res</COMENTARI></REGISTRE><REGISTRE><DATA>2023-11-27</DATA><NOM>Manel</NOM><MAIL>manel@ies.cat</MAIL><EXPERIENCIA>Md</EXPERIENCIA><COMENTARI>Un altre missatge</COMENTARI></REGISTRE><REGISTRE><DATA>2023-11-27</DATA><NOM>Ddd</NOM><MAIL>to@gmail.com</MAIL><EXPERIENCIA>D</EXPERIENCIA><COMENTARI>Un altre missatge</COMENTARI></REGISTRE></REGISTRES>
