@@ -459,7 +459,7 @@ local.properties
 #.project
 
 # Ignore specifics directories
-M7/eclipse-workspace/phpmyadmin/
-M3/M3-DAW1/
-M3/M5-DAW1/
+DAW-2/M7/eclipse-workspace/phpmyadmin/
+DAW-2/M3/M3-DAW1/
+DAW-2/M3/M5-DAW1/
 
