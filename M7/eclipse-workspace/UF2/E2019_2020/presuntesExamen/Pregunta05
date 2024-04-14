@@ -1,7 +1,0 @@
-/*
-Pregunta 05 ( 1 punts)
-
-Modifica la classe Comentari ( cat.thosicodina/classes/model ) afegint-ne el mètode 
-màgic correponenet, per tal que es pugui duplicar un objecte, mitjançant
-una copia superficial, excepte del camp identificador, que quedarà sense valor. 
-*/

@@ -1,7 +1,0 @@
-PDO:
-- Es una capa de abstraccion, separa la aplicacion de la base de datos
-- Funciona a partir de PHP 5.1
-- Tiene dos partes
-	- CORE: Define interfaces (classes i metodos) (es de PDO)
-	- DRIVER: Acceso a la base de datos (lo proporciona el fabricante)
-

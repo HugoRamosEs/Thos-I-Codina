@@ -1,6 +1,0 @@
-/*
-Pregunta 04 ( punts )
-
-Defineix una herència múltiple a la classe UserController per tal que hereti de User i de Controller. 
-Bloqueja els mètodes que creguis convenients.
-*/
