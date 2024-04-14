@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;E12_Arrays_Restantes&apos;" deleteContents="true" description="Delete resource &apos;E12_Arrays_Restantes&apos;" element1="/E12_Arrays_Restantes" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1668425735081"/>
-</session>

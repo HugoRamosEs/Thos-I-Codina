@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;f2&apos; in &apos;Fecha.esMenor(...)&apos; to &apos;data&apos;&#x0A;- Original project: &apos;E02_Fecha(métodos)&apos;&#x0A;- Original element: &apos;Fecha.esMenor(Fecha).f2&apos;&#x0A;- Renamed element: &apos;f2&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;f2&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{E02_Fecha.java[Fecha~esMenor~QFecha;@f2!760!767!766!767!QFecha;!0!true" name="data" references="true" stamp="1671391965343" version="1.0"/>
-</session>

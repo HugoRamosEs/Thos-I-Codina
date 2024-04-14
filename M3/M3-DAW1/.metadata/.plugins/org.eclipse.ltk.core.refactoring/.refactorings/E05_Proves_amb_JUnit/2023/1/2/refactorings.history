@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;E05_Proves_amb_JUnit&apos;&#x0A;- Original project: &apos;E05_Proves_amb_JUnit&apos;&#x0A;- Original element: &apos;cai.iesthosicodina.E02_Data_Naixement.java&apos;" description="Delete element" element1="/src&lt;cai.iesthosicodina{E02_Data_Naixement.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1673535450569" subPackages="false" version="1.0"/>
-</session>

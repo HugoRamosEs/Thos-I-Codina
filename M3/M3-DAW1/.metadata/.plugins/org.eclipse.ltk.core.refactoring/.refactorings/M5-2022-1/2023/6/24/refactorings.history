@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;Operacio.operandos&apos; in &apos;Operacio&apos;&#x0A;- Original project: &apos;M5-2022-1&apos;&#x0A;- Original element: &apos;Operacio.operandos&apos;&#x0A;- Getter method name: &apos;getOperandos&apos;&#x0A;- Setter method name: &apos;setOperandos&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;operandos&apos;" flags="589830" getter="getOperandos" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{Operacio.java[Operacio^operandos" insertion="1" setter="setOperandos" stamp="1686754237473" version="1.0" visibility="1"/>
-</session>

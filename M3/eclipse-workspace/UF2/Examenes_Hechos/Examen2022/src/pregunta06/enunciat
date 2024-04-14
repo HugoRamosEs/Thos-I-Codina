@@ -1,8 +1,0 @@
-Fent servir el SAX, implementa la lectura del fitxer xml per carregar les dades a 
-l'objecte de configuració, 
-sense modificar el codi donat.
-
-+------------------------------------------------------------------------------------------
-
-Usando el SAX, implementa la lectura del fichero xml para cargar los datos en
-el objeto de configuración, sin modificar el código dado.

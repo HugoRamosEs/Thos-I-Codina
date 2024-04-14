@@ -1,9 +1,0 @@
-Confeccionar una finestra que contingui tres objectes de la classe JButton 
-amb les etiquetes "1", "2" i "3". 
-En pressionar-se, canviar el títol del JFrame indicant quin botó s'ha pressionat.
-
-+-------------------------------------------------------------------------------
-
-Confeccionar una ventana que contenga tres objetos de la clase JButton 
-con las etiquetas "1", "2" y "3". 
-Al presionarse, cambiar el título del JFrame indicando qué botón se ha presionado.

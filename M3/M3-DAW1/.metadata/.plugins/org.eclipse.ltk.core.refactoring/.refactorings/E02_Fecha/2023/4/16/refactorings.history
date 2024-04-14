@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;E02_Fecha.java&apos; to &apos;EJER4_Biblioteca/src/Calculs&apos;&#x0A;- Original project: &apos;E02_Fecha&apos;&#x0A;- Destination element: &apos;EJER4_Biblioteca/src/Calculs&apos;&#x0A;- Original element: &apos;E02_Fecha.java&apos;" description="Copy compilation unit" destination="=EJER4_Biblioteca/src&lt;Calculs" element1="/src&lt;{E02_Fecha.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1681754203476" units="1" version="1.0"/>
-</session>

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"figures","l":"Cercle"},{"p":"figures","l":"Corona"},{"p":"figures","l":"Figura"},{"p":"figures","l":"Main"},{"p":"figures","l":"Pentagon"},{"p":"figures","l":"PoligonRegular"},{"p":"figures","l":"Quadrat"},{"p":"figures","l":"Rectangle"}];updateSearchResults();

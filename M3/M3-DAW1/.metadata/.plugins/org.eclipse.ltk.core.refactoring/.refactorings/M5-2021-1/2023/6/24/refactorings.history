@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;GestorArxiu.contenidor&apos; in &apos;GestorArxiu&apos;&#x0A;- Original project: &apos;M5-2021-1&apos;&#x0A;- Original element: &apos;GestorArxiu.contenidor&apos;&#x0A;- Getter method name: &apos;getContenidor&apos;&#x0A;- Setter method name: &apos;setContenidor&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;contenidor&apos;" flags="589830" getter="getContenidor" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{GestorArxiu.java[GestorArxiu^contenidor" insertion="5" setter="setContenidor" stamp="1686750082095" version="1.0" visibility="1"/>
-</session>

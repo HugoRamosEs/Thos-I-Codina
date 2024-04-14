@@ -1,9 +1,0 @@
-INDEX VERSION 1.132
-/home/hdarken/Thosi/M3 - Programacion/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/565665810.index
-/M8_rgbColor/src/main/java
-/home/hdarken/Thosi/M3 - Programacion/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4057848212.index
-/m8_minetest/src/main/java
-/home/hdarken/Thosi/M3 - Programacion/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3989122552.index
-/M8_minetest_HR/src/main/java
-/home/hdarken/Thosi/M3 - Programacion/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/292779028.index
-/M8_minetest_HR/src/main/java
