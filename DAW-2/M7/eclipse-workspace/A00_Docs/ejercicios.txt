@@ -4,5 +4,3 @@ E04_Frases --> Leer todos los objetos de la base de datos y mostrarlos
 E05_Frases --> Obtener objetos por nombre o id, modificarlos y insertarlos a la base de datos
 E06_Frases --> Crear objetos compuestos, frases. Insertarlos a la base de datos
 E07_Frases --> Leer un XML, e insertar todo lo que contiene
-E08_Frases --> DQL + Native Query + SQL Nativo
-E09_Frases --> Repositorios
