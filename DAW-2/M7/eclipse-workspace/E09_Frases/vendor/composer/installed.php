@@ -3,7 +3,7 @@
         'name' => 'frases/entity',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd3bffd9cbc448b4fea0e4ca4ea1de41c85f352c6',
+        'reference' => '0b8ae57052b5bbc0c1c840b4f2c59e0f3ee10861',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -130,7 +130,7 @@
         'frases/entity' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd3bffd9cbc448b4fea0e4ca4ea1de41c85f352c6',
+            'reference' => '0b8ae57052b5bbc0c1c840b4f2c59e0f3ee10861',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

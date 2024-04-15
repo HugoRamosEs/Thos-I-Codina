@@ -37,8 +37,8 @@
         $temes2 = $query2->getResult();
         
         // SQL NADIU (NATIVE QUERY)
-        $sql = "SELECT * from tbl_temes t left join tbl_frases_temes ft on t.id = fr.tema_id";
-        $oRSMB = new ResultSetMappingBuilder($entityManager);
+        $sql = "SELECT * FROM tbl_temes t LEFT JOIN tbl_frases_temes ft ON t.id = ft.tema_id";
+        $oRSMB = new \Doctrine\ORM\Query\ResultSetMappingBuilder($entityManager);
         $oRSMB->addRootEntityFromClassMetadata('Frases\Entity\Tema', 't');
         $oRSMB->addJoinedEntityFromClassMetadata('Frases\Entity\Frase', 'f', 't', 'frases', array('id' => 'frase_id'));
         $qNativa = $entityManager->createNativeQuery($sql, $oRSMB);

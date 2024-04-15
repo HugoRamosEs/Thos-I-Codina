@@ -398,6 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Ignore specified directories
+DAW-2/M3/eclipse-workspace/.metadata/
 DAW-2/M7/eclipse-workspace/.metadata/
 DAW-2/M7/eclipse-workspace/phpmyadmin/
 DAW-2/M3/M3-DAW1/
