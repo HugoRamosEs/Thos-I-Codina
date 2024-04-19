@@ -1,13 +1,15 @@
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.scss";
 import HeatMap from "../HeatMap/HeatMap";
+import DistrictsContext from "../../contexts/DistrictsContext";
 
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import FilterDistricts from "../FilterDistricts/FilterDistricts";
 
 function Map() {
   const [ position ] = useState([41.3851, 2.1734]);
-  const [ data, setData ] = useState([]);
+  const { districts, setDistricts } = useContext(DistrictsContext);
   const [ district_id, setDistrict_id ] = useState(null);
   const [ options, setOptions ] = useState({
     radius: 25,
@@ -50,23 +52,20 @@ function Map() {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
-        const data = await response.json();
-        console.log(data);
-        setData(data);
+        const districts = await response.json();
+        console.log(districts);
+        setDistricts(districts);
       } catch (error) {
         console.error("Error: " + error);
       }
     }
     fetchData();
-  }, []);
+  }, [setDistricts]);
 
-    // element={!auth ? <Login />) : (<Navigate replace to="/profile" />)}; --> Examen
   return (
     <>
       <div className={styles.map}>
         <h2 ref={titleRef}>Barcelona</h2>
-        
-
         <MapContainer className={styles.leaflet_container} center={[41.3851, 2.1734]} zoom={12} scrollWheelZoom={false}>
           <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
@@ -75,7 +74,7 @@ function Map() {
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
           </Marker>
-          {data && (<GeoJSON key={data.type} data={data} style={(feature) => ({
+          {districts && (<GeoJSON key={districts.type} data={districts} style={(feature) => ({
             color: "#868387",
             weight: 2,
             fillColor: feature.properties.C_Distri === district_id ? feature.properties.color : "#c1c1c1",
@@ -89,7 +88,6 @@ function Map() {
 
       <div className={styles.opcions}>
         <h2>Options</h2>
-        
         <div className={styles.sliders} onChange={handleConf}>
           <label htmlFor="radius">Radi</label>
           <input type="range" id="radius" name="radius" min="1" max="50" className={styles.slider} defaultValue={options.radius} />
@@ -99,6 +97,8 @@ function Map() {
           <input type="range" id="blur" name="blur" min="1" max="30" className={styles.slider} defaultValue={options.blur} />  
         </div>
       </div>
+
+      <FilterDistricts />
     </>
   );
 }

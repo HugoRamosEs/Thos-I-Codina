@@ -1,0 +1,18 @@
+.districts {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    
+
+    h2 {
+        font-size: 30px;
+        color: #15294e;
+        font-weight: bold;
+        height: 40px;
+    }
+
+    .districts_list{
+        width: 285px;
+        border: 5px solid #15294e;
+        padding: 10px;
+    }
+}
