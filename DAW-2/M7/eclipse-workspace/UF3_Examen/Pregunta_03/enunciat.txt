@@ -1,0 +1,17 @@
+(3 punts)
+
+1.- Crea un objecte de cada tipus amb la següent informació:
+      Data: 17/04/2024, 16:55
+      Event: Examen M07 UF3, Primera convocatoria, -
+      Localitzacio: IES Thos i Codina, Riera de Cirera 57 - 08304, Mataró
+      Pagament: 0049, 0555477310DB003669
+      Zona: Aula 19
+      
+      Mapeja la informació a la base de dades.
+2.- Crea una Entrada a partir de les dades que hi ha a la BBDD.
+3.- Mostra totes les entrades fent servir el mètode createQueryBuilder.
+4.- Crea una classe Repository per l'entitat Zona. Afegeix un mètode anomenat 
+      informacio() per realitzar la consulta DQL que mostri totes les dades que
+      continguin la paraula "Aula". 
+ 
+      

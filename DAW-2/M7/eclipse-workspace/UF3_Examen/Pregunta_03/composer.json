@@ -1,0 +1,12 @@
+{
+	"type" : "project",
+	"description" : "M07 UF3",
+	"require" : {
+		"doctrine/orm" : "2.8"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"" : "model/"
+		}
+	}
+}

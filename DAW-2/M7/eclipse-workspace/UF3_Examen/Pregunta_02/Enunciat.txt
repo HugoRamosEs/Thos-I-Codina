@@ -1,0 +1,23 @@
+(3 punts)
+
+Crea un projecte de Doctrine a partir del qual es generi una BBDD amb
+aquestes característiques a partir de les classes donades.
+
+1.- Defineix les taules de forma que:
+     a) Els noms de les taules siguin tbl_empleats, tbl_projectes, i tbl_clients,
+          corresponents a les classes Employee, Project, i Costumer
+     b) Els atributs tindran el nom en anglés i les columnes de la taula en català.
+     c) Client té com clau primària el camp cif, i empleat i projecte tenen una 
+        clau primària autoincremental.
+     d) Els empleats poden ser Caps de projecte o programadors.
+2.- Defineix les següents relacions:
+     a) Cada client pot tenir diversos projectes en els que participa, però 
+        on hi ha cap projecte multi-client. Ens interessa saber en quins projectes
+        intervé un client però també de quin client és el projecte.
+     b) Un projecte sempre està dirigit per un únic cap de projecte, i els caps
+        de projecte poden gestionar més d'un projecte. Només necessito saber qui
+        és el cap de projecte de cada projecte.
+     c) En un porjecte treballen molts programadors, i cada programador pot estar
+        assignat a més d'un projecte. Necesitaré saber quin programador estan en
+        u n projecte i en quins projectes intervé un programador. La relació que
+        es generi a la base de dades, ha de dir-ser rel_programador_projecte.

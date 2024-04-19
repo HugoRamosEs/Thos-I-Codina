@@ -1,22 +1,83 @@
-.main_map {
-    text-align: center;
+.map {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
 
     h2 {
         font-size: 30px;
         color: #15294e;
-        margin-left: -2px;
-        margin-top: -25px;
         font-weight: bold;
+        margin-top: -10px;
         height: 40px;
+        // text-align: center;
     }
 
     .leaflet_container {
-        height: 675px;
+        height: 705px;
         width: 100%;
-        border: 5px solid black;
+        border: 5px solid #15294e;
     }
 }
 
+.opcions {
+    grid-column: 1 / 2;
+    grid-row: 1;
 
+    h2 {
+        font-size: 30px;
+        color: #15294e;
+        font-weight: bold;
+        margin-top: -10px;
+        height: 40px;
+    }
 
+    .sliders {
+        display: flex;
+        flex-direction: column;
+        border: 5px solid #15294e;
+        padding: 10px;
 
+        input[type="range"].slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background-color: #465569;
+            border-radius: 10px;
+            outline: none;
+            margin: 10px 0;
+        }
+
+        input[type="range"].slider::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #367ebd;
+            border: 2px solid #367ebd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type="range"].slider_invested {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background-color: #465569;
+            border-radius: 10px;
+            outline: none;
+            margin: 10px 0;
+        }
+    
+        input[type="range"].slider_invested::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #367ebd;
+            border: 2px solid #367ebd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider.inverted {
+            transform: scaleX(-1);
+        }
+    }
+}

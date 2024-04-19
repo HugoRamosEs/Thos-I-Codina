@@ -1,0 +1,12 @@
+(4 punts)
+
+Defineix l'autoload per carregar les classes. No es poden carregar amb includes. 
+
+Implementa la classe UsuariModel i els seus mètodes getAll i getOneByName. Aqueta classe
+ha de definir les crecencials de la base de dades com constants.
+Tots els mètodes han de ser mètodes de classe i fer servir PDO amb prepared statements.
+
+Implementa una classe UsuariView per mostar el curriculum de l'usuari. Separa la classe
+i el tamplate, i recorda que al template només pots mostrar html i la instucció echo.  
+
+ 

@@ -1,0 +1,17 @@
+{
+	"name" : "empleats/entity",
+	"description" : "Primer projecte de Doctrine, Empleats",
+	"type" : "project",
+	"require" : {
+		"doctrine/orm" : "2.8"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Empleats\\Entity\\" : "src/Empleats/Entity"
+		}
+	},
+	"authors" : [{
+			"name" : "Hugo"
+		}
+	]
+}
