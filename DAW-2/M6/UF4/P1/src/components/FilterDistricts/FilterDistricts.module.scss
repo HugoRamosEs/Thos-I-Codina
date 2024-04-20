@@ -1,18 +1,39 @@
 .districts {
-    grid-column: 1 / 4;
-    grid-row: 2;
-    
+    .districts_title {
+        display: flex;
+        justify-content: space-between;
 
-    h2 {
-        font-size: 30px;
-        color: #15294e;
-        font-weight: bold;
-        height: 40px;
+        button {
+            background-color: #f6f6eb;
+            color: #15294e;
+            font-weight: bold;
+            padding: 0px 20px;
+            border: 5px solid #15294e;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fedb63;
+            border-color: #fedb63;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #15294e;
+            font-weight: bold;
+            height: 40px;
+        }    
     }
-
-    .districts_list{
-        width: 285px;
+    
+    .districts_list {
         border: 5px solid #15294e;
         padding: 10px;
+
+        .district {
+            input {
+                margin-right: 10px;
+            }
+        }
     }
 }

@@ -5,24 +5,8 @@
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
-    
-    /*
-    
-    try {
-        $sql= "SELECT * FROM TBL_NAME";
-        $dbh = new PDO('mysql:host=localhost;dbname=CSV_DB;charset=utf8', 'usr_generic', '2024@Thos');
-        $sth = $dbh->prepare($sql);
-        $sth->execute();
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        print "Error!: " . $e->getMessage() . "<br/>";
-        die();
-    }
-    
-    echo json_encode($result);
-    */
-    
-    $q = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    $q = json_decode(file_get_contents('php://input'), true);
     
     if ($q) {
         $data = [];
@@ -44,5 +28,20 @@
     }
     
     echo json_encode($result);
+    
+    /*
+     try {
+         $sql= "SELECT * FROM TBL_NAME";
+         $dbh = new PDO('mysql:host=localhost;dbname=CSV_DB;charset=utf8', 'usr_generic', '2024@Thos');
+         $sth = $dbh->prepare($sql);
+         $sth->execute();
+         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+     } catch (PDOException $e) {
+         print "Error!: " . $e->getMessage() . "<br/>";
+         die();
+     }
+     
+     echo json_encode($result);
+     */
     
     
