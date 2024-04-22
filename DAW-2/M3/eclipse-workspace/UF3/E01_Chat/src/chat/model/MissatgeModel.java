@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
+import chat.model.exceptions.ChatInvalidArgumentException;
 import chat.model.objectes.Missatge;
 
 public class MissatgeModel extends Model {
@@ -34,7 +37,7 @@ public class MissatgeModel extends Model {
 	        rs.close();
 	        super.printToConsole(missatges, "Missatges");
 		} catch (SQLException sqle) {
-			sqle.printStackTrace();
+			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (missatges.size() > 0) {
 				System.out.println("Missatges mostrats!");
@@ -44,20 +47,27 @@ public class MissatgeModel extends Model {
 		return missatges;
 	}
 	
-	public void send(Missatge m) {
+	public boolean send(Missatge m) {
 		boolean sent = false;
 		try {
+			if (m.getMessage().length() < 0 || m.getMessage().length() > 255 || m.getMessage().equals("Escriu un missatge...")) {
+				throw new ChatInvalidArgumentException("Has d'introduir un missatge vàlid!");
+			}
 			String sql = "{call send(?)}";
 			this.cstmt = this.mysql.prepareCall(sql);
 			this.cstmt.setString(1, m.getMessage());
 			this.cstmt.execute();
 			sent = true;
+		} catch (ChatInvalidArgumentException ciae) {
+			JOptionPane.showMessageDialog(null, ciae.getMessage(), "Error d'argument", JOptionPane.ERROR_MESSAGE);
 		} catch (SQLException sqle) {
-			sqle.printStackTrace();
+			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (sent) {
 				System.out.println("Missatge enviat!");
 			}
 		}
+		
+		return sent;
 	}
 }

@@ -4,11 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import chat.model.objectes.Config;
 import chat.model.objectes.UsuariDb;
 
 public class MySQLModel {
-	// private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	private UsuariDb usuariDb;
 	private Connection conn;
 	
@@ -16,12 +17,11 @@ public class MySQLModel {
 	
 	private MySQLModel() {
 		try {
-			// Class.forName(MySQL.JDBC_DRIVER);
 			this.usuariDb = Config.getInstance().getUsuariDb();
 			String url = "jdbc:mysql://" + this.usuariDb.getHost() + "/" + this.usuariDb.getDb();
 			this.conn = DriverManager.getConnection(url, this.usuariDb.getUser(), this.usuariDb.getPassword());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "No s'ha pogut connectar a la base de dades.", "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	

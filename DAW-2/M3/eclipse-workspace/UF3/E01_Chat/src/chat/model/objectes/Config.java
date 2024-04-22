@@ -9,14 +9,14 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Config {
-	private static final File CONFIG_FILE = new File("src/chat/docs/config.json");
+	private static final String CONFIG_FILE = "src/chat/docs/config.json";
 	private UsuariDb usuariDb;
 
 	private static Config _instance;
 
 	private Config() {
 		try {
-			File file = CONFIG_FILE;
+			File file = new File(CONFIG_FILE);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			StringBuilder jsonString = new StringBuilder();
 			String linia;

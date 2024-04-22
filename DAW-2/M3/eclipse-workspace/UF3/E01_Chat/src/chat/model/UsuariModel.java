@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
+import chat.model.exceptions.ChatInvalidArgumentException;
 import chat.model.objectes.Usuari;
 
 public class UsuariModel extends Model {
@@ -18,21 +21,28 @@ public class UsuariModel extends Model {
 		this.cstmt = null;
 	}
 	
-	public void connect(Usuari u) {
+	public boolean connect(Usuari u) {
 		boolean connected = false;
 		try {
+			if (u.getNick().length() < 0 || u.getNick().length() > 50 || u.getNick().equals("Escriu un nom d'usuari...")) {
+				throw new ChatInvalidArgumentException("Has d'introduir un nom vàlid!");
+			}
 			String sql = "{call connect(?)}";
 			this.cstmt = this.mysql.prepareCall(sql);
 			this.cstmt.setString(1, u.getNick());
 			this.cstmt.execute();
 			connected = true;
+		} catch (ChatInvalidArgumentException ciae) {
+			JOptionPane.showMessageDialog(null, ciae.getMessage(), "Error d'argument", JOptionPane.ERROR_MESSAGE);
 		} catch (SQLException sqle) {
-			sqle.printStackTrace();
+			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (connected) {
 				System.out.println("Usuari " + u.getNick() + " connectat!");
 			}
 		}
+		
+		return connected;
 	}
 	
 	public ArrayList<Usuari> getConnectedUsers() {
@@ -50,7 +60,7 @@ public class UsuariModel extends Model {
 	        rs.close();
 	        super.printToConsole(usuaris, "Usuaris");
 	    } catch (SQLException sqle) {
-	        sqle.printStackTrace();
+	    	JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 	    } finally {
 	    	if (usuaris.size() > 0) {
 	    		System.out.println("Usuaris connectats mostrats!");
@@ -60,7 +70,7 @@ public class UsuariModel extends Model {
 		return usuaris;
 	}
 	
-	public void disconnect() {
+	public boolean disconnect() {
 		boolean disconnected = false;
 		try {
 			String sql = "{call disconnect()}";
@@ -68,11 +78,13 @@ public class UsuariModel extends Model {
 			this.cstmt.execute();
 			disconnected = true;
 		} catch (SQLException sqle) {
-			sqle.printStackTrace();
+			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (disconnected) {
 				System.out.println("Usuari desconnectat!");
 			}
 		}
+		
+		return disconnected;
 	}
 }
