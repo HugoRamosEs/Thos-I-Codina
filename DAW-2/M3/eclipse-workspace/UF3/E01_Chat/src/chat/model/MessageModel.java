@@ -10,19 +10,19 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import chat.model.exceptions.ChatInvalidArgumentException;
-import chat.model.objectes.Missatge;
+import chat.model.objectes.Message;
 
-public class MissatgeModel extends Model {
+public class MessageModel extends Model {
 	private Connection mysql;
 	private CallableStatement cstmt;
 	
-	public MissatgeModel() {
+	public MessageModel() {
 		this.mysql = MySQLModel.getInstance().getConn();
 		this.cstmt = null;
 	}
 	
-	public ArrayList<Missatge> getMessages() {
-		ArrayList<Missatge> missatges = new ArrayList<Missatge>();
+	public ArrayList<Message> getMessages() {
+		ArrayList<Message> missatges = new ArrayList<Message>();
 		try {
 			String sql = "{call getMessages()}";
 			this.cstmt = this.mysql.prepareCall(sql);
@@ -31,7 +31,7 @@ public class MissatgeModel extends Model {
 				String nick = rs.getString("nick");
 				String message = rs.getString("message");
 				Timestamp ts = rs.getTimestamp("ts");
-				Missatge m = new Missatge(nick, message, ts);
+				Message m = new Message(nick, message, ts);
 				missatges.add(m);
 			}
 	        rs.close();
@@ -47,15 +47,16 @@ public class MissatgeModel extends Model {
 		return missatges;
 	}
 	
-	public boolean send(Missatge m) {
+	public boolean send(Message m) {
 		boolean sent = false;
 		try {
-			if (m.getMessage().length() < 0 || m.getMessage().length() > 255 || m.getMessage().equals("Escriu un missatge...")) {
+			String msg = m.getMessage().trim();
+			if (msg.isEmpty() || msg.length() > 255 || msg.equals("Escriu un missatge...")) {
 				throw new ChatInvalidArgumentException("Has d'introduir un missatge vàlid!");
 			}
 			String sql = "{call send(?)}";
 			this.cstmt = this.mysql.prepareCall(sql);
-			this.cstmt.setString(1, m.getMessage());
+			this.cstmt.setString(1, msg);
 			this.cstmt.execute();
 			sent = true;
 		} catch (ChatInvalidArgumentException ciae) {

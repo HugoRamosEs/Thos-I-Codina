@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,6 +28,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.Timer;
 
 import chat.model.*;
+import chat.model.interfaces.ThemeUpdatable;
 import chat.model.objectes.*;
 
 import javax.swing.JLabel;
@@ -36,7 +38,6 @@ import java.awt.GridLayout;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JSeparator;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JSplitPane;
@@ -64,6 +65,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private JPanel pnl_center_center_center_west;
 	private JSplitPane pnl_center_center_center;
 	private JScrollPane scrollPane_1;
+	private JScrollPane scrollPane_2;
 	private JLabel lbl_3;
 	private JLabel lbl_usuaris;
 	private JLabel lbl_center_center;
@@ -75,30 +77,33 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private JCheckBoxMenuItem chckbxmntm_1;
 	private JSeparator separator_1;
 	private JMenuItem mntm_sortir;
-	
-	private UsuariModel usuariModel;
-	private ArrayList<Usuari> usuaris;
-	private MissatgeModel missatgeModel;
-	private ArrayList<Missatge> missatges;
-	private ArrayList<String> usuarisConectats;
+	private UserModel userModel;
+	private MessageModel messageModel;
+	private HashMap<String, User> users;
+	private ArrayList<Message> messages;
 	
 	private Timer timer;
-	private boolean usuariConectat;
+	private boolean connectedUser;
 	private boolean darkMode;
-	private String usuariNick;
-	private int pnl_usuaris_height;
+	private String userNick;
+	private int pnl_users_height;
+	private int pnl_messages_height;
+	private int numMessages;
+	private int numUsers;
 	
 	public ChatView() {
-		this.usuariModel = new UsuariModel();
-		this.usuaris = new ArrayList<Usuari>();
-		this.missatgeModel = new MissatgeModel();
-		this.missatges = new ArrayList<Missatge>();
-		this.usuarisConectats = new ArrayList<String>();
+		this.userModel = new UserModel();
+		this.messageModel = new MessageModel();
+		this.users = new HashMap<String, User>();
+		this.messages = new ArrayList<Message>();
 		
-		this.usuariConectat = false;
+		this.connectedUser = false;
 		this.darkMode = false;
-		this.usuariNick = "";
-		this.pnl_usuaris_height = 0;
+		this.userNick = "";
+		this.pnl_users_height = 0;
+		this.pnl_messages_height = 0;
+		this.numMessages = 0;
+		this.numUsers = 0;
 		
 		init();
 	}
@@ -106,12 +111,130 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private void init() {
 		generateWindow();
 		addComponents();
-		addUsuariViews();
-		addUsuarisToLabel();
+		addUsersViews();
+		addUsersToLabel();
 		addTimer();
 		changeTheme();
 		this.setVisible(true);
 	}
+	
+	// MÉTODES CONTROLADORS
+	
+	public void connect() {
+		this.userNick = this.textField_user.getText();
+		User u = new User(this.userNick);
+		boolean connected = this.userModel.connect(u);
+		
+		if (connected) {
+			this.textField_user.setText("Escriu un nom d'usuari...");
+			this.textField_user.setEnabled(false);
+			this.btn_enviar.addMouseListener(this);
+			this.connectedUser = true;
+			this.textField_message.setEnabled(true);
+			this.btn_connection.setText("Desconectar-se");
+			refresh();
+		}
+	}
+	
+	public void disconnect() {
+	    boolean disconnected = this.userModel.disconnect();
+	    if (disconnected) {
+	    	this.pnl_center_center_center_west.removeAll();
+	    	this.pnl_center_center_center_east.removeAll();
+	        this.textField_message.setText("Escriu un missatge...");
+	        this.textField_message.setEnabled(false);
+	        this.btn_enviar.removeMouseListener(this);
+	        this.connectedUser = false;
+	        this.textField_user.setEnabled(true);
+	        this.pnl_messages_height = 0;
+			this.numMessages = 0;
+	        this.btn_connection.setText("Conectar-se");
+	        refresh();
+	    }
+	}
+	
+	public void send() {
+		Message m = new Message(this.textField_message.getText());
+		boolean sent = this.messageModel.send(m);
+		if (sent) {
+			this.textField_message.setText("");
+		    moveScrollToBottom();
+		}
+	}
+	
+	public void addTimer() {
+		this.timer = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                refresh();
+            }
+        });
+        this.timer.start();
+	}
+	
+	public void addUsersViews() {
+	    this.users = this.userModel.getConnectedUsers();
+	    for (User u : this.users.values()) {
+	    	boolean added = false;
+	    	for (Component component : this.pnl_west_center_center.getComponents()) {
+	            if (component instanceof UserView) {
+	                UserView userView = (UserView) component;
+	                if (userView.getUser().getNick().equals(u.getNick())) {
+	                	added = true;
+	                    break;
+	                }
+	            }
+	        }
+	    	
+	    	if (!added) {
+	    		UserView uv = new UserView(u, this.darkMode);
+		        this.pnl_west_center_center.add(uv);
+		        this.pnl_users_height += uv.getPreferredSize().height + (this.numUsers < 9 ? 6 : 0);
+	    	}
+	    }
+
+	    for (Component component : this.pnl_west_center_center.getComponents()) {
+	        if (component instanceof UserView) {
+	            UserView userView = (UserView) component;
+	            if (!this.users.containsKey(userView.getUser().getNick())) {
+	                this.pnl_west_center_center.remove(component);
+	                this.pnl_users_height -= userView.getPreferredSize().height + (this.numUsers < 9 ? 6 : 0);
+	            }
+	        }
+	    }
+
+	    recalculatePnlHeights();
+	}
+
+	
+	public void addMissatgeViews() {
+	    this.messages = this.messageModel.getMessages();
+	    for (Message m : this.messages) {
+	        MessageView mv;
+	        JLabel lbl = new JLabel();
+	        if (m.getNick().equals(this.userNick)) {
+	            mv = new MessageView(m, this.darkMode, true);
+	            this.pnl_center_center_center_west.add(mv);
+	            lbl.setPreferredSize(new Dimension(mv.getPreferredSize().width, mv.getPreferredSize().height));
+	            lbl.setBorder(null);
+	            this.pnl_center_center_center_east.add(lbl);
+	            this.numMessages++;
+	        } else {
+	            mv = new MessageView(m, this.darkMode, false);
+	            this.pnl_center_center_center_east.add(mv);
+	            lbl.setPreferredSize(new Dimension(mv.getPreferredSize().width, mv.getPreferredSize().height));
+	            lbl.setBorder(null);
+	            this.pnl_center_center_center_west.add(lbl);
+	            this.numMessages++;
+	        }
+	        
+	        this.pnl_messages_height += mv.getPreferredSize().height + (this.numMessages < 6 ? 9 : 5);
+	    }
+
+	    recalculatePnlHeights();
+	}
+	
+	// MÉTODES VISUALS
 	
 	private void generateWindow() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -125,11 +248,17 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-				if (usuariConectat) {
-					disconnect();
+            	boolean disconnected;
+				if (connectedUser) {
+					disconnected = userModel.disconnect();
+					if (disconnected) {
+						MySQLModel.close();
+						dispose();
+					}
+				} else {
+					MySQLModel.close();
+					dispose();
 				}
-				MySQLModel.close();
-                dispose();
             }
         });
 	}
@@ -167,7 +296,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.pnl_west_north_center.setLayout(new GridLayout(0, 1, 0, 15));
 	    
 	    this.btn_connection = new JButton("Conectar-se");
-		this.btn_connection.setFont(Utils.carregarFont("bold", 16));
+		this.btn_connection.setFont(Utils.loadFont("bold", 16));
 		this.btn_connection.setForeground(new Color(17, 27, 33));
 	    this.btn_connection.setBackground(new Color(37, 211, 102));
 	    this.btn_connection.setBorder(null);
@@ -197,7 +326,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.textField_user.setBorder(new EmptyBorder(0, 10, 0, 10));
 	    this.textField_user.setPreferredSize(new Dimension(10, 10));
 	    this.textField_user.setForeground(new Color(233, 237, 239));
-	    this.textField_user.setFont(Utils.carregarFont("italic", 16));
+	    this.textField_user.setFont(Utils.loadFont("plain", 16));
 	    this.textField_user.setText("Escriu un nom d'usuari...");
 	    this.textField_user.addKeyListener(this);
 	    this.textField_user.addFocusListener(new FocusAdapter() {
@@ -205,14 +334,14 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 			public void focusLost(FocusEvent e) {
 				if (textField_user.getText().isEmpty()) {
 					textField_user.setText("Escriu un nom d'usuari...");
-					textField_user.setFont(Utils.carregarFont("italic", 16));
+					textField_user.setFont(Utils.loadFont("plain", 16));
 				}
 			}
 			@Override
 			public void focusGained(FocusEvent e) {
 				if (textField_user.getText().equals("Escriu un nom d'usuari...")) {
 					textField_user.setText("");
-					textField_user.setFont(Utils.carregarFont("plain", 16));
+					textField_user.setFont(Utils.loadFont("plain", 16));
 				}
 			}
 		});
@@ -226,7 +355,6 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.pnl_west_center_north.add(this.textField_user, BorderLayout.CENTER);
 	    
 	    JPanel pnl_center = new JPanel();
-	    pnl_center.setBackground(Color.ORANGE);
 	    pnl_main.add(pnl_center, BorderLayout.CENTER);
 	    pnl_center.setLayout(new BorderLayout(0, 0));
 	    
@@ -254,12 +382,12 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    
 	    this.lbl_3 = new JLabel("Chat");
 	    this.lbl_3.setBorder(new EmptyBorder(0, -1, 0, 0));
-	    this.lbl_3.setFont(Utils.carregarFont("bold", 18));
+	    this.lbl_3.setFont(Utils.loadFont("bold", 18));
 	    this.lbl_3.setForeground(new Color(233, 237, 239));
 	    this.pnl_center_north_center.add(this.lbl_3);
 	    
 	    this.lbl_usuaris = new JLabel("");
-	    this.lbl_usuaris.setFont(Utils.carregarFont("plain", 12));
+	    this.lbl_usuaris.setFont(Utils.loadFont("plain", 12));
 	    this.lbl_usuaris.setForeground(new Color(134, 150, 160));
 	    this.pnl_center_north_center.add(this.lbl_usuaris);
 	    
@@ -275,7 +403,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.textField_message.setBackground(new Color(42, 57, 66));
 	    this.textField_message.setForeground(new Color(233, 237, 239));
 	    this.textField_message.setEnabled(false);
-	    this.textField_message.setFont(Utils.carregarFont("italic", 16));
+	    this.textField_message.setFont(Utils.loadFont("plain", 16));
 	    this.textField_message.setText("Escriu un missatge...");
 	    this.textField_message.addKeyListener(this);
 	    this.textField_message.addFocusListener(new FocusAdapter() {
@@ -283,14 +411,14 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    	public void focusLost(FocusEvent e) {
 	    		if (textField_message.getText().isEmpty()) {
 	    		    textField_message.setText("Escriu un missatge...");
-	    		    textField_message.setFont(Utils.carregarFont("italic", 16));
+	    		    textField_message.setFont(Utils.loadFont("plain", 16));
 	    		}
 	    	}
 	    	@Override
 	    	public void focusGained(FocusEvent e) {
 				if (textField_message.getText().equals("Escriu un missatge...")) {
 					textField_message.setText("");
-					textField_message.setFont(Utils.carregarFont("plain", 16));
+					textField_message.setFont(Utils.loadFont("plain", 16));
 				}
 	    	}
 	    });
@@ -301,7 +429,6 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.btn_enviar.setBackground(new Color(32, 43, 51));
 	    this.btn_enviar.setIcon(new ImageIcon(ChatView.class.getResource("/chat/vista/resources/enviar_64px.png")));
 	    this.pnl_center_bottom.add(this.btn_enviar, BorderLayout.EAST);
-	    this.btn_enviar.addMouseListener(this);
 	    
 	    this.lbl_center_center = new JLabel("");
 	    this.lbl_center_center.setIcon(new ImageIcon(ChatView.class.getResource("/chat/vista/resources/whatsapp_1388px.png")));
@@ -309,33 +436,46 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    pnl_center.add(this.lbl_center_center, BorderLayout.CENTER);
 	    
 	    this.pnl_center_center_center_east = new JPanel();
-	    FlowLayout flowLayout = (FlowLayout) pnl_center_center_center_east.getLayout();
+	    FlowLayout flowLayout = (FlowLayout) this.pnl_center_center_center_east.getLayout();
 	    flowLayout.setAlignment(FlowLayout.LEFT);
-	    pnl_center_center_center_east.setBorder(null);
+	    this.pnl_center_center_center_east.setBorder(null);
 	    this.pnl_center_center_center_east.setOpaque(false);
 
 	    this.pnl_center_center_center_west = new JPanel();
-	    pnl_center_center_center_west.setBorder(null);
-	    FlowLayout flowLayout_1 = (FlowLayout) pnl_center_center_center_west.getLayout();
+	    FlowLayout flowLayout_1 = (FlowLayout) this.pnl_center_center_center_west.getLayout();
 	    flowLayout_1.setAlignment(FlowLayout.RIGHT);
+	    this.pnl_center_center_center_west.setBorder(null);
 	    this.pnl_center_center_center_west.setOpaque(false);
 
-	    this.pnl_center_center_center = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, this.pnl_center_center_center_east, this.pnl_center_center_center_west);
-	    this.pnl_center_center_center.setBorder(new EmptyBorder(10, 50, 10, 50));
+	    this.pnl_center_center_center = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 	    this.pnl_center_center_center.setOpaque(false);
 	    this.pnl_center_center_center.setResizeWeight(0.5);
 	    this.pnl_center_center_center.setEnabled(false);
 	    this.pnl_center_center_center.setDividerSize(0);
-	    
-	    this.lbl_center_center.add(this.pnl_center_center_center, BorderLayout.CENTER);
-	    
+	    this.pnl_center_center_center.setBorder(BorderFactory.createEmptyBorder(10, 30, 10, 35));
+	    this.pnl_center_center_center_east.setOpaque(false);
+	    this.pnl_center_center_center_west.setOpaque(false);
+
+	    this.pnl_center_center_center.setLeftComponent(this.pnl_center_center_center_east);
+	    this.pnl_center_center_center.setRightComponent(this.pnl_center_center_center_west);
+
+	    this.scrollPane_2 = new JScrollPane(this.pnl_center_center_center);
+	    this.scrollPane_2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+	    this.scrollPane_2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	    this.scrollPane_2.setOpaque(false);
+	    this.scrollPane_2.setBorder(null);
+	    this.scrollPane_2.getViewport().setOpaque(false);
+	    this.scrollPane_2.getVerticalScrollBar().setPreferredSize(new Dimension(13, 0));
+	    this.scrollPane_2.getVerticalScrollBar().setBackground(new Color(240, 242, 245));
+	    this.lbl_center_center.add(this.scrollPane_2, BorderLayout.CENTER);
+
 	    this.menuBar_1 = new JMenuBar();
 	    this.menuBar_1.setBackground(new Color(255, 255, 255));
 	    this.menuBar_1.setBorder(new EmptyBorder(0, 12, 0, 12));
 		this.setJMenuBar(this.menuBar_1);
 		
 		this.mnMen_1 = new JMenu("Menú");
-		this.mnMen_1.setFont(Utils.carregarFont("bold", 14));
+		this.mnMen_1.setFont(Utils.loadFont("bold", 14));
 		this.mnMen_1.setForeground(new Color(233, 237, 239));
 		this.mnMen_1.setBorder(null);
 		this.menuBar_1.add(mnMen_1);
@@ -344,7 +484,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.mntm_about.setPreferredSize(new Dimension(160, 30));
 		this.mntm_about.setBackground(new Color(255, 255, 255));
 		this.mntm_about.setForeground(new Color(17, 27, 33));
-		this.mntm_about.setFont(Utils.carregarFont("plain", 14));
+		this.mntm_about.setFont(Utils.loadFont("plain", 14));
 		this.mntm_about.setAccelerator(KeyStroke.getKeyStroke("control A"));
 		this.mntm_about.setBorder(null);
 		this.mntm_about.addActionListener(new ActionListener() {
@@ -358,7 +498,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.chckbxmntm_1.setPreferredSize(new Dimension(160, 30));
 		this.chckbxmntm_1.setBackground(new Color(255, 255, 255));
 		this.chckbxmntm_1.setForeground(new Color(17, 27, 33));
-		this.chckbxmntm_1.setFont(Utils.carregarFont("plain", 14));
+		this.chckbxmntm_1.setFont(Utils.loadFont("plain", 14));
 		this.chckbxmntm_1.setAccelerator(KeyStroke.getKeyStroke("control T"));
 		this.chckbxmntm_1.setBorder(null);
 		this.chckbxmntm_1.addItemListener(new ItemListener() {
@@ -376,21 +516,40 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.mntm_sortir.setPreferredSize(new Dimension(160, 30));
 		this.mntm_sortir.setBackground(new Color(255, 255, 255));
 		this.mntm_sortir.setForeground(new Color(17, 27, 33));
-		this.mntm_sortir.setFont(Utils.carregarFont("plain", 14));
-		this.mntm_sortir.setAccelerator(KeyStroke.getKeyStroke("control S"));
+		this.mntm_sortir.setFont(Utils.loadFont("plain", 14));
+		this.mntm_sortir.setAccelerator(KeyStroke.getKeyStroke("control Q"));
 		this.mntm_sortir.setBorder(new EmptyBorder(0, 16, 0, 0));
 		this.mntm_sortir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (usuariConectat) {
-					disconnect();
-				}
-				MySQLModel.close();
+				disconnect();
 				dispose();
+				System.exit(0);
 			}
 		});
 		
 		this.mnMen_1.add(this.mntm_sortir);
 		this.mnMen_1.getPopupMenu().setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+	}
+	
+	public void addUsersToLabel() {
+	    StringBuilder sb = new StringBuilder();
+	    for (User u : this.users.values()) {
+	        if (!u.getNick().equals(this.userNick)) {
+	            if (sb.length() > 0) {
+	                sb.append(", ");
+	            }
+	            sb.append(u.getNick());
+	        }
+	    }
+
+	    if (this.connectedUser) {
+	        if (sb.length() > 0) {
+	            sb.append(", ");
+	        }
+	        sb.append("Tú");
+	    }
+
+	    this.lbl_usuaris.setText(sb.toString());
 	}
 	
 	public void changeTheme() {
@@ -414,9 +573,6 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		    this.btn_enviar.setIcon(new ImageIcon(ChatView.class.getResource("/chat/vista/resources/enviar_64px.png")));
 		    this.lbl_3.setForeground(new Color(233, 237, 239));
 		    this.lbl_usuaris.setForeground(new Color(134, 150, 160));
-		    changeThemeForMissatgeViews(this.pnl_center_center_center_east);
-		    changeThemeForMissatgeViews(this.pnl_center_center_center_west);
-		    changeThemeForUsuariViews();
 		    this.menuBar_1.setBackground(new Color(42, 57, 66));
 		    this.mnMen_1.setForeground(new Color(233, 237, 239));
 		    this.mntm_about.setBackground(new Color(42, 57, 66));
@@ -427,6 +583,10 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		    this.mntm_sortir.setForeground(new Color(233, 237, 239));
 		    this.mnMen_1.getPopupMenu().setBorder(BorderFactory.createLineBorder(new Color(233, 237, 239), 3));
 		    this.scrollPane_1.getVerticalScrollBar().setBackground(new Color(32, 43, 51));
+		    this.scrollPane_2.getVerticalScrollBar().setBackground(new Color(32, 43, 51));
+		    updateThemeForCanvas(this.pnl_center_center_center_east);
+			updateThemeForCanvas(this.pnl_center_center_center_west);
+			updateThemeForCanvas(this.pnl_west_center_center);
 		} else {
 			this.pnl_west.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, new Color(209, 215, 219)));
 			this.pnl_west_north_west.setBackground(new Color(240, 242, 245));
@@ -447,9 +607,6 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 			this.btn_enviar.setIcon(new ImageIcon(ChatView.class.getResource("/chat/vista/resources/enviar-white_64px.png")));
 			this.lbl_3.setForeground(new Color(17, 27, 33));
 			this.lbl_usuaris.setForeground(new Color(112, 128, 138));
-			changeThemeForMissatgeViews(this.pnl_center_center_center_east);
-			changeThemeForMissatgeViews(this.pnl_center_center_center_west);
-			changeThemeForUsuariViews();
 			this.menuBar_1.setBackground(new Color(255, 255, 255));
 			this.mnMen_1.setForeground(new Color(17, 27, 33));
 			this.mntm_about.setBackground(new Color(255, 255, 255));
@@ -460,187 +617,96 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 			this.mntm_sortir.setForeground(new Color(17, 27, 33));
 			this.mnMen_1.getPopupMenu().setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
 			this.scrollPane_1.getVerticalScrollBar().setBackground(new Color(240, 242, 245));
+			this.scrollPane_2.getVerticalScrollBar().setBackground(new Color(240, 242, 245));
+			updateThemeForCanvas(this.pnl_center_center_center_east);
+			updateThemeForCanvas(this.pnl_center_center_center_west);
+			updateThemeForCanvas(this.pnl_west_center_center);
 		}
 	}
 	
-	private void changeThemeForMissatgeViews(Container panel) {
+	private void updateThemeForCanvas(Container panel) {
 	    Component[] components = panel.getComponents();
 	    for (Component component : components) {
-	        if (component instanceof MissatgeView) {
-	            ((MissatgeView) component).updateTheme(this.darkMode);
+	        if (component instanceof ThemeUpdatable) {
+	            ((ThemeUpdatable) component).updateTheme(this.darkMode);
 	        }
 	    }
 	}
 	
-	private void changeThemeForUsuariViews() {
-	    Component[] components = this.pnl_west_center_center.getComponents();
-	    for (Component component : components) {
-	        if (component instanceof UsuariView) {
-	            ((UsuariView) component).updateTheme(this.darkMode);
-	        }
-	    }
-	}
-	
-	public void addUsuariViews() {
-	    this.usuaris = this.usuariModel.getConnectedUsers();
-	    for (Usuari u : this.usuaris) {
-	        if (!this.usuarisConectats.contains(u.getNick())) {
-	            UsuariView uv = new UsuariView(u, this.darkMode);
-	            this.pnl_west_center_center.add(uv);
-	            this.usuarisConectats.add(u.getNick());
-	            this.pnl_usuaris_height += uv.getPreferredSize().height + 6;
-	            System.out.println(this.pnl_usuaris_height);
-	        }
-	    }
-	    
-	    this.pnl_west_center_center.setPreferredSize(new Dimension(410, this.pnl_usuaris_height));
-	    this.pnl_west_center_center.revalidate();
-	    this.pnl_west_center_center.repaint();
-	}
-	
-	public void addUsuarisToLabel() {
-	    StringBuilder sb = new StringBuilder();
-	    for (int i = 0; i < this.usuaris.size(); i++) {
-	        Usuari u = this.usuaris.get(i);
-	        if (!u.getNick().equals(this.usuariNick)) {
-	            sb.append(u.getNick());
-	            if (i < this.usuaris.size() - 1) {
-	            	sb.append(", ");
-	            }
-	        }
-	    }
-
-	    if (this.usuariConectat) {
-	        sb.append(", Tú");
-	    }
-
-	    this.lbl_usuaris.setText(sb.toString());
-	}
-
-	public void addMissatgeViews() {
-		this.missatges = this.missatgeModel.getMessages();
-		for (Missatge m : this.missatges) {
-			if (m.getNick().equals(this.usuariNick)) {
-				MissatgeView mv = new MissatgeView(m, this.darkMode, true);
-				this.pnl_center_center_center_west.add(mv);
-			} else {
-				MissatgeView mv = new MissatgeView(m, this.darkMode, false);
-				this.pnl_center_center_center_east.add(mv);
-			}	
-		}
-	}
-	
-	public void connect() {
-		this.usuariNick = this.textField_user.getText();
-		Usuari u = new Usuari(this.usuariNick);
-		boolean connected = this.usuariModel.connect(u);
+	private void recalculatePnlHeights() {
+		this.pnl_west_center_center.setPreferredSize(new Dimension(410, this.pnl_users_height));
+        this.pnl_west_center_center.revalidate();
+        this.pnl_west_center_center.repaint();
 		
-		if (connected) {
-			this.textField_user.setText("");
-			this.textField_user.setEnabled(false);
-			this.usuariConectat = true;
-			this.textField_message.setEnabled(true);
-			this.btn_enviar.addMouseListener(this);
-			this.btn_connection.setText("Desconectar-se");
-			refresh();
-		} else {
-			JOptionPane.showMessageDialog(null, "No t'has pogut conectar!", "Error de connexió", JOptionPane.ERROR_MESSAGE);
-		}
+		this.scrollPane_2.setPreferredSize(new Dimension(510, this.pnl_messages_height));
+		this.scrollPane_2.revalidate();
+		this.scrollPane_2.repaint();
+		
+		this.pnl_center_center_center.setPreferredSize(new Dimension(510, this.pnl_messages_height));
+		this.pnl_center_center_center.revalidate();
+		this.pnl_center_center_center.repaint();
+	    
+		this.pnl_center_center_center_west.setPreferredSize(new Dimension(510, this.pnl_messages_height));
+	    this.pnl_center_center_center_west.revalidate();
+	    this.pnl_center_center_center_west.repaint();
+	    
+	    this.pnl_center_center_center_east.setPreferredSize(new Dimension(510, this.pnl_messages_height));
+	    this.pnl_center_center_center_east.revalidate();
+	    this.pnl_center_center_center_east.repaint();
 	}
 	
-	public void disconnect() {
-		boolean disconnected = this.usuariModel.disconnect();
-		if (disconnected) {
-			this.textField_user.setText("");
-			this.textField_message.setEnabled(false);
-			this.btn_enviar.removeMouseListener(this);
-			this.usuariConectat = false;
-			this.textField_user.setEnabled(true);
-			this.pnl_center_center_center_east.removeAll();
-			this.pnl_center_center_center_west.removeAll();
-			this.pnl_center_center_center_east.revalidate();
-			this.pnl_center_center_center_east.repaint();
-			this.pnl_center_center_center_west.revalidate();
-			this.pnl_center_center_center_west.repaint();
-			this.btn_connection.setText("Conectar-se");
-			if (this.usuarisConectats.contains(this.usuariNick)) {
-				this.usuarisConectats.remove(this.usuariNick);
-			}
-			
-			Component[] components = this.pnl_west_center_center.getComponents();
-			for (Component component : components) {
-				if (component instanceof UsuariView) {
-					if (((UsuariView) component).getUsuari().getNick().equals(this.usuariNick)) {
-						this.pnl_west_center_center.remove(component);
-					}
+	private void moveScrollToBottom() {
+		int targetValue = this.scrollPane_2.getVerticalScrollBar().getMaximum();
+		Timer timer = new Timer(1, new ActionListener() {
+			int currentValue = scrollPane_2.getVerticalScrollBar().getValue();
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (currentValue < targetValue) {
+					currentValue += 1;
+					scrollPane_2.getVerticalScrollBar().setValue(currentValue);
+				} else {
+					((Timer) e.getSource()).stop();
 				}
 			}
-
-			this.pnl_west_center_center.revalidate();
-			this.pnl_west_center_center.repaint();
-		} else {
-			JOptionPane.showMessageDialog(null, "No t'has pogut desconectar!", "Error de desconnexió", JOptionPane.ERROR_MESSAGE);
-		}
-	}
-	
-	public void send() {
-		Missatge m = new Missatge(this.textField_message.getText());
-		boolean sent = this.missatgeModel.send(m);
-		if (sent) {
-			this.textField_message.setText("");
-		} else {
-			JOptionPane.showMessageDialog(null, "No s'ha pogut enviar el missatge!", "Error d'enviament", JOptionPane.ERROR_MESSAGE);
-		}
-	}
-	
-	public void addTimer() {
-		this.timer = new Timer(1500, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                refresh();
-            }
-        });
-        this.timer.start();
+		});
+		
+		timer.start();
 	}
 	
 	private void refresh() {
-        addUsuariViews();
-        addUsuarisToLabel();
+        addUsersViews();
+        addUsersToLabel();
         
-		if (this.usuariConectat) {
+		if (this.connectedUser) {
 			addMissatgeViews();
-			this.pnl_center_center_center_east.revalidate();
-			this.pnl_center_center_center_east.repaint();
-			this.pnl_center_center_center_west.revalidate();
-			this.pnl_center_center_center_west.repaint();
 		}
 		
-		this.pnl_west_center_center.setPreferredSize(new Dimension(410, this.pnl_usuaris_height));
-        this.pnl_west_center_center.revalidate();
-        this.pnl_west_center_center.repaint();
+		recalculatePnlHeights();
 	}
-
+	
+	// MÉTODES IMPLEMENTATS
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if (e.getSource() == this.btn_connection) {
-			if (!this.usuariConectat) {
-				this.connect();
-			} else {
-				this.disconnect();
-			}
-		} else if (e.getSource() == this.btn_enviar) {
-			this.send();
-		}
+	    if (e.getSource() == this.btn_connection) {
+	        if (!this.connectedUser) {
+	            this.connect();
+	        } else {
+	            this.disconnect();
+	        }
+	    } else if (e.getSource() == this.btn_enviar) {
+	    	this.send();
+	    }
 	}
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-			if (this.textField_user.isEnabled() && !this.textField_user.getText().isEmpty()){
+			if (this.textField_user.isEnabled()) {
 				this.connect();
-			} else if (this.textField_message.isEnabled() && !this.textField_message.getText().isEmpty()) {
+			} else if (this.textField_message.isEnabled()) {
 				this.send();
-				
 			}
 		}
 	}

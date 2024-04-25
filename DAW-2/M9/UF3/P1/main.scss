@@ -8,13 +8,16 @@
 
 @import 'base/reset';
 @import 'base/typography';
+@import 'base/header';
+@import 'base/base';
 
 @import 'layout/navigation';
-@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
+@import 'layout/container';
+@import 'layout/main-home';
 
 @import 'components/buttons';
 @import 'components/carousel';

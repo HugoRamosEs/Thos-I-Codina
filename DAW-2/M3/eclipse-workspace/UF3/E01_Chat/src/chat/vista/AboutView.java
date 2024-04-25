@@ -41,19 +41,19 @@ public class AboutView extends JDialog {
         lbl_aBackground.add(pnl_sAbout, BorderLayout.SOUTH);
 
         JLabel lbl_a1 = new JLabel("CHAT");
-        lbl_a1.setFont(Utils.carregarFont("bold", 24));
+        lbl_a1.setFont(Utils.loadFont("bold", 24));
         lbl_a1.setForeground(Color.WHITE);
         lbl_a1.setHorizontalAlignment(SwingConstants.CENTER);
         pnl_sAbout.add(lbl_a1);
 
         JLabel lbl_a2 = new JLabel("Versió 1.0");
-        lbl_a2.setFont(Utils.carregarFont("plain", 14));
+        lbl_a2.setFont(Utils.loadFont("plain", 14));
         lbl_a2.setForeground(Color.WHITE);
         lbl_a2.setHorizontalAlignment(SwingConstants.CENTER);
         pnl_sAbout.add(lbl_a2);
 
         JLabel lbl_a3 = new JLabel("© Hugo Ramos (2024)");
-        lbl_a3.setFont(Utils.carregarFont("plain", 14));
+        lbl_a3.setFont(Utils.loadFont("plain", 14));
         lbl_a3.setForeground(Color.WHITE);
         lbl_a3.setHorizontalAlignment(SwingConstants.CENTER);
         pnl_sAbout.add(lbl_a3);

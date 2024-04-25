@@ -2,23 +2,23 @@ package chat.model.objectes;
 
 import java.sql.Timestamp;
 
-public class Missatge {
+public class Message {
 	private int id_message;
 	private String nick;
 	private String message;
 	private Timestamp ts;
 	
-	public Missatge(String message) {
+	public Message(String message) {
 		this.message = message;
 	}
 	
-	public Missatge(String nick, String message, Timestamp ts) {
+	public Message(String nick, String message, Timestamp ts) {
 		this.nick = nick;
 		this.message = message;
 		this.ts = ts;
 	}
 	
-	public Missatge(int id_message, String nick, String message, Timestamp ts) {
+	public Message(int id_message, String nick, String message, Timestamp ts) {
 		this.id_message = id_message;
 		this.nick = nick;
 		this.message = message;
@@ -52,7 +52,7 @@ public class Missatge {
 	
 	@Override
 	public String toString() {
-		return "Missatge: [id_message: " + this.id_message
+		return "Message: [id_message: " + this.id_message
 				+ ", nick: " +  this.nick
 				+ ", message: " + this.message
 				+ ", ts: " + this.ts

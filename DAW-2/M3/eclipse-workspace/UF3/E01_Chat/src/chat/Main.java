@@ -11,7 +11,6 @@ public class Main {
 			ChatView cv = new ChatView();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Error fatal, posa't en contacte amb l'administrador.", "Error fatal", JOptionPane.ERROR_MESSAGE);
-			e.printStackTrace();
 		}
 	}
 }

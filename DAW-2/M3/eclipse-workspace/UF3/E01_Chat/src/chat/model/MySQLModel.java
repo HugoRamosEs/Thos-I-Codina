@@ -7,20 +7,20 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import chat.model.objectes.Config;
-import chat.model.objectes.UsuariDb;
+import chat.model.objectes.UserDb;
 
 public class MySQLModel {
-	private UsuariDb usuariDb;
+	private UserDb userDb;
 	private Connection conn;
 	
 	private static MySQLModel _instance;
 	
 	private MySQLModel() {
 		try {
-			this.usuariDb = Config.getInstance().getUsuariDb();
-			String url = "jdbc:mysql://" + this.usuariDb.getHost() + "/" + this.usuariDb.getDb();
-			this.conn = DriverManager.getConnection(url, this.usuariDb.getUser(), this.usuariDb.getPassword());
-		} catch (SQLException e) {
+			this.userDb = Config.getInstance().getUserDb();
+			String url = "jdbc:mysql://" + this.userDb.getHost() + "/" + this.userDb.getDb();
+			this.conn = DriverManager.getConnection(url, this.userDb.getUser(), this.userDb.getPassword());
+		} catch (SQLException sqle) {
 			JOptionPane.showMessageDialog(null, "No s'ha pogut connectar a la base de dades.", "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		}
 	}
@@ -36,7 +36,7 @@ public class MySQLModel {
 		try {
 			_instance.getConn().close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "No s'ha pogut desconnectar de la base de dades.", "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	

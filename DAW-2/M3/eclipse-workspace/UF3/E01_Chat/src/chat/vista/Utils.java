@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 public class Utils {
 	
-	public static int estilFont(String estil) {
+	public static int styleFont(String estil) {
 		switch (estil.toLowerCase()) {
 		case "plain":
 			return Font.PLAIN;
@@ -22,12 +22,12 @@ public class Utils {
 		}
 	}
 
-	public static Font carregarFont(String estil, int tamany) {
+	public static Font loadFont(String estil, int tamany) {
 		try (InputStream is = Utils.class.getResourceAsStream("/chat/vista/resources/Helvetica-Now-Var.ttf")) {
-			return Font.createFont(Font.TRUETYPE_FONT, is).deriveFont(estilFont(estil), tamany);
+			return Font.createFont(Font.TRUETYPE_FONT, is).deriveFont(Utils.styleFont(estil), tamany);
 		} catch (IOException | FontFormatException e) {
 			e.printStackTrace();
-			return new Font("Arial", estilFont(estil), tamany);
+			return new Font("Arial", Utils.styleFont(estil), tamany);
 		}
 	}
 }

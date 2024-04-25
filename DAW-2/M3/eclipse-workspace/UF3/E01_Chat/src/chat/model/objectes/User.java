@@ -2,22 +2,22 @@ package chat.model.objectes;
 
 import java.sql.Timestamp;
 
-public class Usuari {
+public class User {
 	private String nick;
 	private String user_host;
 	private Timestamp date_con;
 	private int last_read;
 	
-	public Usuari(String nick) {
+	public User(String nick) {
 		this.nick = nick;
 	}
 	
-	public Usuari(String nick, Timestamp date_con) {
+	public User(String nick, Timestamp date_con) {
 		this.nick = nick;
 		this.date_con = date_con;
 	}
 	
-	public Usuari(String nick, String user_host, Timestamp date_con, int last_read) {
+	public User(String nick, String user_host, Timestamp date_con, int last_read) {
 		this.nick = nick;
 		this.user_host = user_host;
 		this.date_con = date_con;
@@ -51,7 +51,7 @@ public class Usuari {
 
 	@Override
 	public String toString() {
-		return "Usuari: [nick: " + this.nick 
+		return "User: [nick: " + this.nick 
 				+ ", user_host: " +  this.user_host 
 				+ ", date_con: " + this.date_con 
 				+ ", last_read: " + this.last_read 

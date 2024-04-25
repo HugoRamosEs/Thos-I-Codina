@@ -5,31 +5,32 @@ import java.sql.Connection;
 import java.sql.Timestamp;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
 import chat.model.exceptions.ChatInvalidArgumentException;
-import chat.model.objectes.Usuari;
+import chat.model.objectes.User;
 
-public class UsuariModel extends Model {
+public class UserModel extends Model {
 	private Connection mysql;
 	private CallableStatement cstmt;
 	
-	public UsuariModel() {
+	public UserModel() {
 		this.mysql = MySQLModel.getInstance().getConn();
 		this.cstmt = null;
 	}
 	
-	public boolean connect(Usuari u) {
+	public boolean connect(User u) {
 		boolean connected = false;
 		try {
-			if (u.getNick().length() < 0 || u.getNick().length() > 50 || u.getNick().equals("Escriu un nom d'usuari...")) {
+			String nick = u.getNick().trim();
+			if (nick.isEmpty() || nick.length() > 50 || nick.equals("Escriu un nom d'usuari...")) {
 				throw new ChatInvalidArgumentException("Has d'introduir un nom vàlid!");
 			}
 			String sql = "{call connect(?)}";
 			this.cstmt = this.mysql.prepareCall(sql);
-			this.cstmt.setString(1, u.getNick());
+			this.cstmt.setString(1, nick);
 			this.cstmt.execute();
 			connected = true;
 		} catch (ChatInvalidArgumentException ciae) {
@@ -45,29 +46,29 @@ public class UsuariModel extends Model {
 		return connected;
 	}
 	
-	public ArrayList<Usuari> getConnectedUsers() {
-		ArrayList<Usuari> usuaris = new ArrayList<Usuari>();
+	public HashMap<String, User> getConnectedUsers() {
+	    HashMap<String, User> users = new HashMap<String, User>();
 	    try {
 	        String sql = "{call getConnectedUsers()}";
 	        this.cstmt = this.mysql.prepareCall(sql);
 	        ResultSet rs = this.cstmt.executeQuery();
-			while (rs.next()) {
-				String nick = rs.getString("nick");
-				Timestamp date_con = rs.getTimestamp("date_con");
-				Usuari u = new Usuari(nick, date_con);
-				usuaris.add(u);
-			}
+	        while (rs.next()) {
+	            String nick = rs.getString("nick");
+	            Timestamp date_con = rs.getTimestamp("date_con");
+	            User u = new User(nick, date_con);
+	            users.put(nick, u);
+	        }
 	        rs.close();
-	        super.printToConsole(usuaris, "Usuaris");
+	        super.printToConsole(users.values(), "Usuaris");
 	    } catch (SQLException sqle) {
-	    	JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
+	        JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 	    } finally {
-	    	if (usuaris.size() > 0) {
-	    		System.out.println("Usuaris connectats mostrats!");
-	    	}
+	        if (!users.isEmpty()) {
+	            System.out.println("Usuaris connectats mostrats!");
+	        }
 	    }
 	    
-		return usuaris;
+	    return users;
 	}
 	
 	public boolean disconnect() {

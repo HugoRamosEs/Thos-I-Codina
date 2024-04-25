@@ -8,15 +8,16 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-import chat.model.objectes.Missatge;
+import chat.model.interfaces.ThemeUpdatable;
+import chat.model.objectes.Message;
 
-public class MissatgeView extends Canvas {
+public class MessageView extends Canvas implements ThemeUpdatable {
     private static final long serialVersionUID = 1L;
-    private Missatge missatge;
+    private Message missatge;
     private boolean darkMode;
     private boolean isOwner;
 
-    public MissatgeView(Missatge missatge, boolean darkMode, boolean isOwner) {
+    public MessageView(Message missatge, boolean darkMode, boolean isOwner) {
         this.missatge = missatge;
         this.darkMode = darkMode;
         this.isOwner = isOwner;
@@ -24,35 +25,35 @@ public class MissatgeView extends Canvas {
     }
 
     private void init() {
-        this.setPreferredSize(new Dimension(428, 95));
+        this.setPreferredSize(new Dimension(510, 140));
         this.setVisible(true);
     }
     
-    private int drawStringMultiLine(Graphics g, String text, int x, int y, int maxWidth) {
+    private void drawStringMultiLine(Graphics g, String text, int x, int y, int maxWidth) {
         FontMetrics metrics = g.getFontMetrics();
         int lineHeight = metrics.getHeight();
         String[] words = text.split("\\s+");
         StringBuilder line = new StringBuilder();
-        int totalHeight = 0;
-        
+        int currentWidth = 0;
+
         for (String word : words) {
-            if (metrics.stringWidth(line.toString() + " " + word) < maxWidth) {
-                line.append(word).append(" ");
-            } else {
-                g.drawString(line.toString(), x, y + totalHeight);
-                totalHeight += lineHeight;
-                line = new StringBuilder(word + " ");
+            char[] chars = word.toCharArray();
+            for (char c : chars) {
+                int charWidth = metrics.charWidth(c);
+                if (currentWidth + charWidth <= maxWidth) {
+                    line.append(c);
+                    currentWidth += charWidth;
+                } else {
+                    g.drawString(line.toString(), x, y);
+                    line = new StringBuilder(String.valueOf(c));
+                    y += lineHeight;
+                    currentWidth = charWidth;
+                }
             }
+            line.append(" ");
+            currentWidth += metrics.charWidth(' ');
         }
-        g.drawString(line.toString(), x, y + totalHeight);
-        totalHeight += lineHeight;
-        
-        return totalHeight;
-    }
-    
-    public void updateTheme(boolean darkMode) {
-        this.darkMode = darkMode;
-        this.repaint();
+        g.drawString(line.toString(), x, y);
     }
 
     @Override
@@ -80,20 +81,22 @@ public class MissatgeView extends Canvas {
         g.setColor(backgroundColor);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
-        g.setFont(Utils.carregarFont("bold", 16));
+        g.setFont(Utils.loadFont("bold", 16));
         g.setColor(textColor);
         g.drawString(this.missatge.getNick(), 10, 22);
 
-        g.setFont(Utils.carregarFont("bold", 14));
+        g.setFont(Utils.loadFont("plain", 14));
         g.setColor(textColor);
-        int msgHeight = drawStringMultiLine(g, this.missatge.getMessage(), 10, 45, getWidth() - 15);
+        drawStringMultiLine(g, this.missatge.getMessage(), 10, 42, getWidth() - 15);
 
-        g.setFont(Utils.carregarFont("bold", 12));
+        g.setFont(Utils.loadFont("plain", 12));
         g.setColor(timeColor);
-        g.drawString(this.missatge.getTs().toString().substring(11, 16), getWidth() - 45, 40 + msgHeight + 10);
-
-        int newHeight = 40 + msgHeight + 5 + 15;
-        this.setPreferredSize(new Dimension(this.getWidth(), newHeight));
-        this.revalidate();
+        g.drawString(this.missatge.getTs().toString().substring(11, 16), getWidth() - 42, this.getHeight() - 7);
+    }
+    
+    @Override
+    public void updateTheme(boolean darkMode) {
+    	this.darkMode = darkMode;
+        this.repaint();
     }
 }

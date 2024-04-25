@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class Config {
 	private static final String CONFIG_FILE = "src/chat/docs/config.json";
-	private UsuariDb usuariDb;
+	private UserDb userDb;
 
 	private static Config _instance;
 
@@ -19,9 +19,9 @@ public class Config {
 			File file = new File(CONFIG_FILE);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			StringBuilder jsonString = new StringBuilder();
-			String linia;
-			while ((linia = br.readLine()) != null) {
-				jsonString.append(linia);
+			String line;
+			while ((line = br.readLine()) != null) {
+				jsonString.append(line);
 			}
 			br.close();
 
@@ -31,7 +31,7 @@ public class Config {
 			String password = parts[11];
 			String db = parts[15];
 
-			this.usuariDb = new UsuariDb(host, user, password, db);
+			this.userDb = new UserDb(host, user, password, db);
 
 			br.close();
 		} catch (FileNotFoundException e) {
@@ -48,10 +48,10 @@ public class Config {
 		return _instance;
 	}
 
-	public UsuariDb getUsuariDb() {
-		return usuariDb;
+	public UserDb getUserDb() {
+		return userDb;
 	}
-
+	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException("Aquest objecte no es pot clonar.");

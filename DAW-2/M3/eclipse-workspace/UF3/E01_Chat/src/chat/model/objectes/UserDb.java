@@ -1,12 +1,12 @@
 package chat.model.objectes;
 
-public class UsuariDb {
+public class UserDb {
 	private String host;
 	private String user;
 	private String password;
 	private String db;
 	
-	public UsuariDb(String host, String user, String password, String db) {
+	public UserDb(String host, String user, String password, String db) {
 		this.host = host;
 		this.user = user;
 		this.password = password;

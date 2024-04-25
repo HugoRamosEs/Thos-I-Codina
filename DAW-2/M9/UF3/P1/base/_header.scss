@@ -1,0 +1,15 @@
+header {
+    background-color: var(--dark-2);
+    color: var(--gray-2);
+    
+    img {
+        width: 125px;
+        height: auto;
+    }
+
+    .title {
+        span {
+            font-size: 3rem;
+        }
+    }
+}

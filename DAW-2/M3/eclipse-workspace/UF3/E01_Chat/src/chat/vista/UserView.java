@@ -10,16 +10,17 @@ import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import java.text.SimpleDateFormat;
 
-import chat.model.objectes.Usuari;
+import chat.model.interfaces.ThemeUpdatable;
+import chat.model.objectes.User;
 
-public class UsuariView extends Canvas {
+public class UserView extends Canvas implements ThemeUpdatable {
     private static final long serialVersionUID = 1L;
-    private Usuari usuari;
+    private User user;
     private boolean darkMode;
     private Image img;
 
-    public UsuariView(Usuari usuari, boolean darkMode) {
-        this.usuari = usuari;
+    public UserView(User usuari, boolean darkMode) {
+        this.user = usuari;
         this.darkMode = darkMode;
         this.img = Toolkit.getDefaultToolkit().getImage(ChatView.class.getResource("/chat/vista/resources/avatar_49px.png"));
         init();
@@ -30,13 +31,8 @@ public class UsuariView extends Canvas {
         this.setVisible(true);
     }
     
-    public void updateTheme(boolean darkMode) {
-        this.darkMode = darkMode;
-        this.repaint();
-    }
-    
-	public Usuari getUsuari() {
-		return this.usuari;
+	public User getUser() {
+		return this.user;
 	}
 	
 	@Override
@@ -72,19 +68,25 @@ public class UsuariView extends Canvas {
 
         g.drawImage(this.img, 25, 12, this.img.getWidth(this), this.img.getHeight(this), this);
 
-        g.setFont(Utils.carregarFont("bold", 18));
+        g.setFont(Utils.loadFont("bold", 18));
         g.setColor(nameColor);
-        g.drawString(this.usuari.getNick(), 88, 33);
+        g.drawString(this.user.getNick(), 88, 33);
 
         SimpleDateFormat hourFormat = new SimpleDateFormat("HH:mm");
-        g.setFont(Utils.carregarFont("plain", 12));
+        g.setFont(Utils.loadFont("plain", 12));
         g.setColor(dateAndHourColor);
-        g.drawString(hourFormat.format(this.usuari.getDate_con()), 375, 35);
+        g.drawString(hourFormat.format(this.user.getDate_con()), 375, 35);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        g.setFont(Utils.carregarFont("plain", 14));
+        g.setFont(Utils.loadFont("plain", 14));
         g.setColor(dateAndHourColor);
-        g.drawString(dateFormat.format(this.usuari.getDate_con()), 88, 53);
+        g.drawString(dateFormat.format(this.user.getDate_con()), 88, 53);
+    }
+	
+	@Override
+    public void updateTheme(boolean darkMode) {
+    	this.darkMode = darkMode;
+        this.repaint();
     }
 }
 
