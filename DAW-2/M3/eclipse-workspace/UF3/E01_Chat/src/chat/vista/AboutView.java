@@ -11,9 +11,23 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+/**
+ * Finestra de diàleg amb informació sobre l'aplicació.
+ * 
+ * @version 1.0
+ * @author Hugo
+ */
 public class AboutView extends JDialog {
+	/**
+	 * Serial version UID.
+	 */
     private static final long serialVersionUID = 1L;
-
+    
+	/**
+	 * Constructor de la finestra de diàleg.
+	 * 
+	 * @param frame Finestra principal de l'aplicació.
+	 */
     public AboutView(JFrame frame) {
         super(frame, "About", true);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -23,7 +37,10 @@ public class AboutView extends JDialog {
         addComponents();
         this.setVisible(true);
     }
-
+    
+    /**
+     * Afegeix els components a la finestra de diàleg.
+     */
     public void addComponents() {
         JLabel lbl_aBackground = new JLabel("");
         lbl_aBackground.setIcon(new ImageIcon(AboutView.class.getResource("/chat/vista/resources/whatsapp-green_265px.jpg")));

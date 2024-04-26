@@ -13,28 +13,68 @@ import java.text.SimpleDateFormat;
 import chat.model.interfaces.ThemeUpdatable;
 import chat.model.objectes.User;
 
+/**
+ * Classe que representa un usuari en la vista del xat.
+ * 
+ * @version 1.0
+ * @author Hugo
+ */
 public class UserView extends Canvas implements ThemeUpdatable {
+	/**
+	 * Serial version UID.
+	 */
     private static final long serialVersionUID = 1L;
+    
+	/**
+	 * Usuari a mostrar.
+	 */
     private User user;
+    
+    /**
+     * Indica si el mode fosc està activat.
+     */
     private boolean darkMode;
+    
+    /**
+     * Imatge de l'avatar de l'usuari.
+     */
     private Image img;
-
+    
+	/**
+	 * Constructor que crea una instancia de la vista de l'usuari.
+	 * 
+	 * @param usuari Usuari a mostrar.
+	 * @param darkMode Indica si el mode fosc està activat.
+	 */
     public UserView(User usuari, boolean darkMode) {
         this.user = usuari;
         this.darkMode = darkMode;
         this.img = Toolkit.getDefaultToolkit().getImage(ChatView.class.getResource("/chat/vista/resources/avatar_49px.png"));
         init();
     }
-
+    
+    /**
+     * Mètode que inicialitza de la vista de l'usuari.
+     */
     private void init() {
         this.setPreferredSize(new Dimension(428, 75));
         this.setVisible(true);
     }
     
+    /**
+     * Getter que retorna l'usuari al que pertany la vista.
+     * 
+     * @return Usuari al que pertany la vista.
+     */
 	public User getUser() {
 		return this.user;
 	}
 	
+    /**
+     * Mètode que pinta l'usuari en la vista.
+     * 
+     * @param g Gràfics.
+     */
 	@Override
     public void paint(Graphics g) {
         Color backgroundColor;
@@ -83,6 +123,11 @@ public class UserView extends Canvas implements ThemeUpdatable {
         g.drawString(dateFormat.format(this.user.getDate_con()), 88, 53);
     }
 	
+	/** 
+     * Mètode implementat de l'interficie `ThemeUpdatable` que actualitza el tema de la vista.
+     * 
+     * @param darkMode Indica si el mode fosc està activat.
+     */
 	@Override
     public void updateTheme(boolean darkMode) {
     	this.darkMode = darkMode;

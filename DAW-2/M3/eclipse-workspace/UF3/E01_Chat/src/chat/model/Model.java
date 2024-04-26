@@ -4,8 +4,23 @@ import java.util.Collection;
 
 import javax.swing.JOptionPane;
 
+/**
+ * Classe model que gestiona té mètodes estatics utils per altres classes model.
+ * 
+ * @version 1.0
+ * @author Hugo
+ */
 public abstract class Model {
-
+	
+	/**
+	 * Mètode que imprimeix una col·lecció a la consola.
+	 * 
+	 * @param col Col·lecció a imprimir.
+	 * @param title Títol de la col·lecció.
+	 * 
+	 * @version 1.0
+	 * @author Hugo
+	 */
 	public static void printToConsole(Collection<?> col, String title) {
 		try {
 			if (col == null) {

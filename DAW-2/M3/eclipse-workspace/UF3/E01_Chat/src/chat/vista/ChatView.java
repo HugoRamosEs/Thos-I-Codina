@@ -49,10 +49,27 @@ import java.awt.event.ItemEvent;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
+/**
+ * Vista principal de l'aplicació. Implementa els mètodes de les interfícies MouseListener i KeyListener.
+ * 
+ * @version 1.0
+ * @author Hugo
+ */
 public class ChatView extends JFrame implements MouseListener, KeyListener {
+	/**
+	 * Serial version UID.
+	 */
 	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * Camps de text de la finestra.
+	 */
 	private JTextField textField_message;
 	private JTextField textField_user;
+	
+	/**
+	 * JPanels de la finestra.
+	 */
 	private JPanel pnl_west;
 	private JPanel pnl_west_center_center;
 	private JPanel pnl_west_north_center;
@@ -63,25 +80,56 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private JPanel pnl_center_north_west;
 	private JPanel pnl_center_center_center_east;
 	private JPanel pnl_center_center_center_west;
+	
+	/**
+	 * JSplitPane que separa els missatges finestra.
+	 */
 	private JSplitPane pnl_center_center_center;
+	
+	/**
+	 * JScrollPane de la finestra, per pujar o baixar els panels.
+	 */
 	private JScrollPane scrollPane_1;
 	private JScrollPane scrollPane_2;
+	
+	/**
+	 * JLabels de la finestra.
+	 */
 	private JLabel lbl_3;
 	private JLabel lbl_usuaris;
 	private JLabel lbl_center_center;
+	
+	/**
+	 * Botons de la finestra.
+	 */
 	private JButton btn_enviar;
 	private JButton btn_connection;
+	
+	/**
+	 * Barra de menú de la finestra amb els submenús.
+	 */
 	private JMenuBar menuBar_1;
 	private JMenu mnMen_1;
 	private JMenuItem mntm_about;
 	private JCheckBoxMenuItem chckbxmntm_1;
 	private JSeparator separator_1;
 	private JMenuItem mntm_sortir;
+	
+	/**
+	 * Models de l'aplicació.
+	 */
 	private UserModel userModel;
 	private MessageModel messageModel;
+	
+	/**
+	 * Col·leccions de dades de l'aplicació.
+	 */
 	private HashMap<String, User> users;
 	private ArrayList<Message> messages;
 	
+	/**
+	 * Variables de control de l'aplicació.
+	 */
 	private Timer timer;
 	private boolean connectedUser;
 	private boolean darkMode;
@@ -91,6 +139,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private int numMessages;
 	private int numUsers;
 	
+	/**
+	 * Constructor que crea una instancia de la vista del xat.
+	 */
 	public ChatView() {
 		this.userModel = new UserModel();
 		this.messageModel = new MessageModel();
@@ -108,6 +159,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		init();
 	}
 	
+	/**
+	 * Mètode que inicialitza de la vista del xat.
+	 */
 	private void init() {
 		generateWindow();
 		addComponents();
@@ -120,6 +174,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	
 	// MÉTODES CONTROLADORS
 	
+	/**
+	 * Mètode que conecta l'usuari al xat i realitza les modificacions adients a la vista.
+	 */
 	public void connect() {
 		this.userNick = this.textField_user.getText();
 		User u = new User(this.userNick);
@@ -136,6 +193,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		}
 	}
 	
+	/**
+	 * Mètode que desconnecta l'usuari del xat i realitza les modificacions adients a la vista.
+	 */
 	public void disconnect() {
 	    boolean disconnected = this.userModel.disconnect();
 	    if (disconnected) {
@@ -153,15 +213,21 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    }
 	}
 	
+	/**
+	 * Mètode que envia un missatge recollit del textField i actualitza la vista del xat.
+	 */
 	public void send() {
 		Message m = new Message(this.textField_message.getText());
 		boolean sent = this.messageModel.send(m);
 		if (sent) {
 			this.textField_message.setText("");
-		    moveScrollToBottom();
+		    // moveScrollToBottom();
 		}
 	}
 	
+	/**
+	 * Mètode que afegeix un timer per anar refrescant la vista del xat.
+	 */
 	public void addTimer() {
 		this.timer = new Timer(1000, new ActionListener() {
             @Override
@@ -172,6 +238,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
         this.timer.start();
 	}
 	
+	/**
+	 * Mètode que afegeix i elimina les vistes del usuaris al panel d'usuaris.
+	 */
 	public void addUsersViews() {
 	    this.users = this.userModel.getConnectedUsers();
 	    for (User u : this.users.values()) {
@@ -190,6 +259,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    		UserView uv = new UserView(u, this.darkMode);
 		        this.pnl_west_center_center.add(uv);
 		        this.pnl_users_height += uv.getPreferredSize().height + (this.numUsers < 9 ? 6 : 0);
+		        moveScrollToBottom(this.scrollPane_1);
 	    	}
 	    }
 
@@ -205,8 +275,11 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 
 	    recalculatePnlHeights();
 	}
-
 	
+	
+	/**
+	 * Mètode que afegeix les vistes dels missatges emmagatzemats a la base de dades al panel de missatges.
+	 */
 	public void addMissatgeViews() {
 	    this.messages = this.messageModel.getMessages();
 	    for (Message m : this.messages) {
@@ -219,6 +292,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	            lbl.setBorder(null);
 	            this.pnl_center_center_center_east.add(lbl);
 	            this.numMessages++;
+	            moveScrollToBottom(this.scrollPane_2);
 	        } else {
 	            mv = new MessageView(m, this.darkMode, false);
 	            this.pnl_center_center_center_east.add(mv);
@@ -226,6 +300,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	            lbl.setBorder(null);
 	            this.pnl_center_center_center_west.add(lbl);
 	            this.numMessages++;
+	            moveScrollToBottom(this.scrollPane_2);
 	        }
 	        
 	        this.pnl_messages_height += mv.getPreferredSize().height + (this.numMessages < 6 ? 9 : 5);
@@ -236,6 +311,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	
 	// MÉTODES VISUALS
 	
+	/**
+	 * Mètode que genera la finestra principal de l'aplicació.
+	 */
 	private void generateWindow() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int x = (int) (screenSize.getWidth() - 1600) / 2;
@@ -245,6 +323,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.setTitle("Chat");
 		this.getContentPane().setLayout(new BorderLayout(0, 0));
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(ChatView.class.getResource("/chat/vista/resources/app-logo_128px.png")));
+		this.setResizable(false);
 		this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -263,6 +342,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
         });
 	}
 	
+	/**
+	 * Mètode que afegeix els components a la finestra principal de l'aplicació.
+	 */
 	private void addComponents() {
 	    JPanel pnl_main = new JPanel();
 	    getContentPane().add(pnl_main, BorderLayout.CENTER);
@@ -531,6 +613,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.mnMen_1.getPopupMenu().setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
 	}
 	
+	/**
+	 * Mètode que actualitza la label posicionada al panel superior amb els noms dels usuaris conectats al xat.
+	 */
 	public void addUsersToLabel() {
 	    StringBuilder sb = new StringBuilder();
 	    for (User u : this.users.values()) {
@@ -552,6 +637,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.lbl_usuaris.setText(sb.toString());
 	}
 	
+	/**
+	 * Mètode que canvia el tema de tota l'aplicació.
+	 */
 	public void changeTheme() {
 		if (this.darkMode) {
 			this.pnl_west.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, new Color(49, 56, 61)));
@@ -624,6 +712,11 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		}
 	}
 	
+	/**
+	 * Mètode que actualitza el tema els canvas (UserViews i MessageViews) del panels.
+	 * 
+	 * @param panel Panell a actualitzar.
+	 */
 	private void updateThemeForCanvas(Container panel) {
 	    Component[] components = panel.getComponents();
 	    for (Component component : components) {
@@ -633,8 +726,11 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    }
 	}
 	
+	/**
+	 * Mètode que recalcula les alçades dels panels on estan situats els canvas.
+	 */
 	private void recalculatePnlHeights() {
-		this.pnl_west_center_center.setPreferredSize(new Dimension(410, this.pnl_users_height));
+		this.pnl_west_center_center.setPreferredSize(new Dimension(400, this.pnl_users_height));
         this.pnl_west_center_center.revalidate();
         this.pnl_west_center_center.repaint();
 		
@@ -655,16 +751,21 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    this.pnl_center_center_center_east.repaint();
 	}
 	
-	private void moveScrollToBottom() {
-		int targetValue = this.scrollPane_2.getVerticalScrollBar().getMaximum();
+	/**
+	 * Mètode que mou la barra de scroll cap avall quan hi ha un nou missatge o es conecta un nou usuari.
+	 * 
+	 * @param scrollPane JScrollPane a moure.
+	 */
+	private void moveScrollToBottom(JScrollPane scrollPane) {
+		int targetValue = scrollPane.getVerticalScrollBar().getMaximum();
 		Timer timer = new Timer(1, new ActionListener() {
-			int currentValue = scrollPane_2.getVerticalScrollBar().getValue();
+			int currentValue = scrollPane.getVerticalScrollBar().getValue();
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (currentValue < targetValue) {
 					currentValue += 1;
-					scrollPane_2.getVerticalScrollBar().setValue(currentValue);
+					scrollPane.getVerticalScrollBar().setValue(currentValue);
 				} else {
 					((Timer) e.getSource()).stop();
 				}
@@ -674,6 +775,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		timer.start();
 	}
 	
+	/**
+	 * Mètode que refresca la vista de l'aplicació per aplicar els nous canvis.
+	 */
 	private void refresh() {
         addUsersViews();
         addUsersToLabel();
@@ -687,6 +791,11 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	
 	// MÉTODES IMPLEMENTATS
 	
+	/**
+	 * Mètode que s'executa quan es fa click amb el ratolí.
+	 * 
+	 * @param e Event del ratolí.
+     */
 	@Override
 	public void mouseClicked(MouseEvent e) {
 	    if (e.getSource() == this.btn_connection) {
@@ -700,6 +809,11 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    }
 	}
 	
+	/**
+	 * Mètode que s'executa quan es prem una tecla.
+	 * 
+	 * @param e Event de la tecla premuda.
+     */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -710,6 +824,8 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 			}
 		}
 	}
+	
+	// MÉTODES IMPLEMENTATS PERÒ NO UTILITZATS
 	
 	@Override
 	public void mouseExited(MouseEvent e) {}
