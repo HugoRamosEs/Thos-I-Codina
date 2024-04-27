@@ -98,29 +98,29 @@ public class UserView extends Canvas implements ThemeUpdatable {
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         g.setColor(separatorColor);
-        g.fillRect(89, 0, this.getWidth() - 10, 1);
-        g.fillRect(89, this.getHeight() - 3, this.getWidth() - 10, 1);
+        g.fillRect(91, 0, this.getWidth() - 10, 1);
+        g.fillRect(91, this.getHeight() - 3, this.getWidth() - 10, 1);
 
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        g.drawImage(this.img, 25, 12, this.img.getWidth(this), this.img.getHeight(this), this);
+        g.drawImage(this.img, 27, 12, this.img.getWidth(this), this.img.getHeight(this), this);
 
         g.setFont(Utils.loadFont("bold", 18));
         g.setColor(nameColor);
-        g.drawString(this.user.getNick(), 88, 33);
-
-        SimpleDateFormat hourFormat = new SimpleDateFormat("HH:mm");
-        g.setFont(Utils.loadFont("plain", 12));
-        g.setColor(dateAndHourColor);
-        g.drawString(hourFormat.format(this.user.getDate_con()), 375, 35);
+        g.drawString(this.user.getNick(), 89, 33);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         g.setFont(Utils.loadFont("plain", 14));
         g.setColor(dateAndHourColor);
-        g.drawString(dateFormat.format(this.user.getDate_con()), 88, 53);
+        g.drawString(dateFormat.format(this.user.getDate_con()), 89, 53);
+        
+        SimpleDateFormat hourFormat = new SimpleDateFormat("HH:mm");
+        g.setFont(Utils.loadFont("plain", 12));
+        g.setColor(dateAndHourColor);
+        g.drawString(hourFormat.format(this.user.getDate_con()), 375, 35);
     }
 	
 	/** 

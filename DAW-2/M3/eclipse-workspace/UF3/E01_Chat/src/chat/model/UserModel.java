@@ -67,7 +67,7 @@ public class UserModel extends Model {
 			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (connected) {
-				System.out.println("Usuari " + u.getNick() + " connectat!");
+				System.out.println("User " + u.getNick() + " connected!");
 			}
 		}
 		
@@ -94,13 +94,9 @@ public class UserModel extends Model {
 	            users.put(nick, u);
 	        }
 	        rs.close();
-	        super.printToConsole(users.values(), "Usuaris");
+	        super.printToConsole(users.values(), "Users");
 	    } catch (SQLException sqle) {
 	        JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
-	    } finally {
-	        if (!users.isEmpty()) {
-	            System.out.println("Usuaris connectats mostrats!");
-	        }
 	    }
 	    
 	    return users;
@@ -122,7 +118,7 @@ public class UserModel extends Model {
 			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (disconnected) {
-				System.out.println("Usuari desconnectat!");
+				System.out.println("Disconnected user!");
 			}
 		}
 		

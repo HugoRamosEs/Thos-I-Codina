@@ -58,13 +58,9 @@ public class MessageModel extends Model {
 				missatges.add(m);
 			}
 	        rs.close();
-	        super.printToConsole(missatges, "Missatges");
+	        super.printToConsole(missatges, "Messages");
 		} catch (SQLException sqle) {
 			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
-		} finally {
-			if (missatges.size() > 0) {
-				System.out.println("Missatges mostrats!");
-			}
 		}
 		
 		return missatges;
@@ -94,7 +90,7 @@ public class MessageModel extends Model {
 			JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error amb la base de dades", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			if (sent) {
-				System.out.println("Missatge enviat!");
+				System.out.println("Message sent!");
 			}
 		}
 		

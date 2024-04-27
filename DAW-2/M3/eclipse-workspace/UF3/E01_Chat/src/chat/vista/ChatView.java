@@ -111,9 +111,9 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	private JMenuBar menuBar_1;
 	private JMenu mnMen_1;
 	private JMenuItem mntm_about;
-	private JCheckBoxMenuItem chckbxmntm_1;
-	private JSeparator separator_1;
 	private JMenuItem mntm_sortir;
+	private JSeparator separator_1;
+	private JCheckBoxMenuItem chckbxmntm_1;
 	
 	/**
 	 * Models de l'aplicació.
@@ -172,7 +172,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		this.setVisible(true);
 	}
 	
-	// MÉTODES CONTROLADORS
+	// MÈTODES CONTROLADORS
 	
 	/**
 	 * Mètode que conecta l'usuari al xat i realitza les modificacions adients a la vista.
@@ -309,7 +309,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	    recalculatePnlHeights();
 	}
 	
-	// MÉTODES VISUALS
+	// MÈTODES VISUALS
 	
 	/**
 	 * Mètode que genera la finestra principal de l'aplicació.
@@ -576,6 +576,26 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		});
 		this.mnMen_1.add(this.mntm_about);
 		
+		this.mntm_sortir = new JMenuItem("Sortir");
+		this.mntm_sortir.setPreferredSize(new Dimension(160, 30));
+		this.mntm_sortir.setBackground(new Color(255, 255, 255));
+		this.mntm_sortir.setForeground(new Color(17, 27, 33));
+		this.mntm_sortir.setFont(Utils.loadFont("plain", 14));
+		this.mntm_sortir.setBorder(null);
+		this.mntm_sortir.setAccelerator(KeyStroke.getKeyStroke("control Q"));
+		this.mntm_sortir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				disconnect();
+				dispose();
+				System.exit(0);
+			}
+		});
+		
+		this.mnMen_1.add(this.mntm_sortir);
+		
+		this.separator_1 = new JSeparator();
+		this.mnMen_1.add(this.separator_1);
+		
 		this.chckbxmntm_1 = new JCheckBoxMenuItem("Tema Oscur");
 		this.chckbxmntm_1.setPreferredSize(new Dimension(160, 30));
 		this.chckbxmntm_1.setBackground(new Color(255, 255, 255));
@@ -591,25 +611,6 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		});
 		this.mnMen_1.add(this.chckbxmntm_1);
 		
-		this.separator_1 = new JSeparator();
-		this.mnMen_1.add(this.separator_1);
-		
-		this.mntm_sortir = new JMenuItem("Sortir");
-		this.mntm_sortir.setPreferredSize(new Dimension(160, 30));
-		this.mntm_sortir.setBackground(new Color(255, 255, 255));
-		this.mntm_sortir.setForeground(new Color(17, 27, 33));
-		this.mntm_sortir.setFont(Utils.loadFont("plain", 14));
-		this.mntm_sortir.setAccelerator(KeyStroke.getKeyStroke("control Q"));
-		this.mntm_sortir.setBorder(new EmptyBorder(0, 16, 0, 0));
-		this.mntm_sortir.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				disconnect();
-				dispose();
-				System.exit(0);
-			}
-		});
-		
-		this.mnMen_1.add(this.mntm_sortir);
 		this.mnMen_1.getPopupMenu().setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
 	}
 	
@@ -730,7 +731,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 	 * Mètode que recalcula les alçades dels panels on estan situats els canvas.
 	 */
 	private void recalculatePnlHeights() {
-		this.pnl_west_center_center.setPreferredSize(new Dimension(400, this.pnl_users_height));
+		this.pnl_west_center_center.setPreferredSize(new Dimension(410, this.pnl_users_height));
         this.pnl_west_center_center.revalidate();
         this.pnl_west_center_center.repaint();
 		
@@ -789,7 +790,7 @@ public class ChatView extends JFrame implements MouseListener, KeyListener {
 		recalculatePnlHeights();
 	}
 	
-	// MÉTODES IMPLEMENTATS
+	// MÈTODES IMPLEMENTATS
 	
 	/**
 	 * Mètode que s'executa quan es fa click amb el ratolí.
