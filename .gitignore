@@ -399,7 +399,11 @@ FodyWeavers.xsd
 
 # Ignore specified directories
 DAW-2/M3/eclipse-workspace/.metadata
+DAW-2/M3/eclipse-workspace/.metadata/
+DAW-2/M7/eclipse-workspace/.metadata
+DAW-2/M7/eclipse-workspace/.metadata/
 DAW-2/M7/eclipse-workspace/phpmyadmin
+DAW-2/M7/eclipse-workspace/phpmyadmin/
 DAW-2/M9/UF2/P2/
 DAW-2/M9/UF3/P1/public/video/
 

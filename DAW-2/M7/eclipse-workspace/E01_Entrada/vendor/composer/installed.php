@@ -3,7 +3,7 @@
         'name' => 'hramos/e01_entrades',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0a73f6447ad7df4594ebc12d6265e82ce9bb1270',
+        'reference' => '019bad830489311ead0d1d5498833e3e9da4c64b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -130,7 +130,7 @@
         'hramos/e01_entrades' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0a73f6447ad7df4594ebc12d6265e82ce9bb1270',
+            'reference' => '019bad830489311ead0d1d5498833e3e9da4c64b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
