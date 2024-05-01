@@ -1,0 +1,40 @@
+.contact {
+    background-color: var(--contact-sec-2-bg);
+
+    .sec-c1 {
+        background-color: var(--contact-sec-1-bg);
+
+        article {
+            align-self: center;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+    
+            h4 {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .sec-c2 {
+        background-color: var(--contact-sec-2-bg);
+
+        h2 {
+            margin: 1rem 0rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            margin-bottom: 1rem;
+            color: var(--hr);
+        }
+
+        form {
+            margin-bottom: 0.9rem;
+        }
+    }
+}

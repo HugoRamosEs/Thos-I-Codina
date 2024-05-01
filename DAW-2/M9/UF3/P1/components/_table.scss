@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    margin: 2% 0%;
+    color: var(--table-fg);
+    background-color: var(--table-rows);
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+
+    tr {
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        th {
+            background-color: var(--table-header);
+            font-size: 2rem;
+            padding: 1.1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: middle;
+        }
+    
+        td {
+            padding: 1.1rem;
+            font-size: 1rem;
+            font-family: Montserrat Regular, Verdana, sans-serif;
+            vertical-align: middle;
+    
+            img {
+                width: 100px;
+                height: auto;
+            }
+    
+            &:nth-child(2) {
+                font-weight: bold;
+                font-size: 1.75rem;
+            }
+
+            &:nth-child(3) {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+    
+            &:last-child {
+                text-align: start;
+            }
+        }
+    }
+}

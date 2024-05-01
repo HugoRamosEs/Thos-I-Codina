@@ -1,0 +1,29 @@
+.gallery {
+    .sec-g1 {
+        background-image: linear-gradient(to right, var(--gallery-sec-1-bg) 45%, transparent), url("../img/juegos.jpg");
+        background-size: cover;
+        background-position: center;
+    
+        article {
+            padding-right: 45%;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                margin-top: 1rem;
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    .sec-g2 {
+        background-color: var(--gallery-sec-2-bg);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+td {
+	border: 2px solid black;
+	padding: 10px;
+	vertical-align: top;
+}
+
+strong {
+	font-size: 18px;
+}
+
+span {
+	color: #38383D;
+	font-weight: bold;
+}
+
+.titol {
+	color: #3559E0;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.subtitol {
+	color: #4CB9E7;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.td-logo {
+	background-color: #EFEFEF;
+}
+
+.logo {
+	max-width: 14.5%;
+}
+
+.td-center {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.img {
+	max-width: 50%;
+}
+
+.info-entrada {
+	width: 36.5%;
+}

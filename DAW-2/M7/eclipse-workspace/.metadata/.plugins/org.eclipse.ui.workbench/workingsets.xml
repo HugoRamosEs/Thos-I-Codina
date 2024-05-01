@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714220246648_1" label="UF1" name="UF1">
+<item elementID="=E03_Mates" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/A_Corregit" type="4"/>
+<item elementID="=E05_Escacs" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E14_Idiomes" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E00_ProvaPHP" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=A_LandingPage" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E02_Arrodonir" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E04_CalculaEdat" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E12_WebScraping" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E15_Examen-2022" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E16_Examen-2023" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E07_ArraysIguals" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E09_DateVerifier" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E13_Cotitzacions" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E06_PuntsDeLaBrisca" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E08_BuscarUnaCadena" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E11_FormulariDeContacte" type="4"/>
+<item elementID="=E10_ComplexitatDeLesContrasenyes" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714220318350_2" label="UF2" name="UF2">
+<item elementID="=E2019_2020" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E2021_2022" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E2022_2023" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E2023_2024" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E04_Entrades" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E02_GuestBook" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=UF2_LandingPage" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714220370110_3" label="UF3" name="UF3">
+<item elementID="=UF3_M6" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=A00_Docs" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E02_Frases" type="4"/>
+<item elementID="=E03_Frases" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item elementID="=E04_Frases" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E05_Frases" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E06_Frases" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E07_Frases" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E08_Frases" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E09_Frases" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/UF3_Examen" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/UF3_LandingPage" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714483445576_4" label="UF4" name="UF4">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/E01_Entrada" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714592911233_5" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714592911238_6" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1714220179022_0" label="Window Working Set" name="Aggregate for window 1714220179022"/>
+<mruList name="UF4"/>
+<mruList name="UF3"/>
+<mruList name="UF2"/>
+<mruList name="UF1"/>
+</workingSetManager>

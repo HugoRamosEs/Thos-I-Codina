@@ -10,22 +10,35 @@
 @import 'base/typography';
 @import 'base/header';
 @import 'base/base';
+@import 'base/footer';
+@import 'base/navigation';
+@import 'base/forms';
 
-@import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
-@import 'layout/container';
 @import 'layout/main-home';
+@import 'layout/main-video';
+@import 'layout/main-rankings';
+@import 'layout/main-contact';
+@import 'layout/main-gallery';
+@import 'layout/nav-header';
+@import 'layout/nav-footer';
+
 
 @import 'components/buttons';
 @import 'components/carousel';
 @import 'components/cover';
 @import 'components/dropdown';
+@import 'components/card';
+@import 'components/table';
 
 @import 'pages/home';
 @import 'pages/contact';
+@import 'pages/video';
+@import 'pages/rankings';
+@import 'pages/gallery';
 
 @import 'themes/theme';
 @import 'themes/admin';

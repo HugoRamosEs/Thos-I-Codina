@@ -1,12 +1,81 @@
-.art1 {
-    background-color: var(--dark-1);
+.home {
+    .sec-1 {
+        background-color: var(--home-sec-1-bg);
+    
+        img:not(.arrow) {
+            mask-image: linear-gradient(to right, transparent, black);
+        }
+    
+        article {
+            align-self: center;
+    
+            h1 {
+                margin: 1rem 0rem;
+            }
+    
+            .sub {
+                margin-bottom: 1rem;
+            }
+    
+            div {
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+    
+                .arrow {
+                    width: 5%;
+                    height: auto;
+                }
+    
+                a {
+                    margin-left: 1rem;
+                    padding-bottom: 0.25rem;
+                    font-weight: bolder;
 
-    img {
-        width: 100%;
-        height: auto;
+                    &:hover {
+                        color: var(--home-sec-1-gradient);
+                    }
+                } 
+            }
+        }
     }
-}
+    
+    .sec-2 {
+        background-color: var(--home-sec-2-bg);
+    
+        #card-1 {
+            background-image: linear-gradient(to top, var(--home-sec-2-gradient), transparent), url("../img/ff13.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+    
+        #card-2 {
+            background-image: linear-gradient(to top, var(--home-sec-2-gradient), transparent), url("../img/undertale.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    .sec-3 {
+        background-image: linear-gradient(to right, var(--home-sec-3-gradient) 45%, transparent), url("../img/red-dead-redemption-2.webp");
+        background-size: cover;
+        background-position: center;
+    
+        article {
+            padding-right: 45%;
 
-.art-2 {
-    background-color: var(--dark-2);
+            h2 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                font-size: 1.05rem;
+            }
+    
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
 }

@@ -1,0 +1,34 @@
+.video {
+    .sec-v1 {
+        background-image: linear-gradient(to right, var(--video-sec-1-gradient) 45%, transparent), url("../img/dissidia.png");
+        background-size: cover;
+        background-position: center;
+    
+        article {
+            padding-right: 45%;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                margin-top: 1rem;
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    .sec-v2 {
+        video {
+            border: 5px solid var(--video-sec-2-border);
+        }
+    }
+}
+
+::cue {
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(238, 255, 0, 0.9);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

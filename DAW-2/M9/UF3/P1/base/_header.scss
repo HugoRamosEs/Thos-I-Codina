@@ -1,15 +1,18 @@
 header {
-    background-color: var(--dark-2);
-    color: var(--gray-2);
+    background-color: var(--header-bg);
+    color: var(--header-fg);
     
     img {
-        width: 125px;
-        height: auto;
+        width: 15%;
+        height: 15%;
     }
 
-    .title {
-        span {
-            font-size: 3rem;
-        }
+    span {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .icon {
+        font-size: 1.75rem;
     }
 }

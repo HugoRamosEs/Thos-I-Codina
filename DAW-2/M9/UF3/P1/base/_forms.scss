@@ -1,0 +1,30 @@
+form {
+    label {
+        font-family: Montserrat Regular, Verdana, sans-serif;
+        font-size: 0.90rem;
+        font-weight: bold;
+        color: var(--form-label);
+    }
+
+    input, select, textarea {
+        font-family: Montserrat Regular, Verdana, sans-serif;
+        font-size: 0.90rem;
+        padding: 1.5%;
+        background-color: var(--form-input-bg);
+        border: 1px solid var(--form-input-border);
+        color: var(--from-input-fg);
+    }
+
+    textarea {
+        height: 7rem;
+    }
+
+    button {
+        font-size: 1.15rem;
+        color: var(--white-2);
+        width: 35%;
+        padding: 1.75%;
+        align-self: center;
+        background-color: var(--contact-sec-2-button);
+    }
+}
