@@ -1,13 +1,13 @@
 <?php
     spl_autoload_register(function ($class) {
         $folders = array(
-            'core',
-            'controller',
-            'model',
-            'repository'
+            "core",
+            "controller",
+            "model",
+            "repository"
         );
 
-        $class = basename(str_replace('\\', '/', $class));
+        $class = basename(str_replace("\\", "/", $class));
         
         foreach ($folders as $folder) {
             

@@ -3,16 +3,18 @@
 
     .sec-c1 {
         background-color: var(--contact-sec-1-bg);
+        color: var(--p);
 
         article {
-            align-self: center;
+            padding-top: 3%;
 
             h1 {
                 margin-bottom: 1rem;
             }
     
-            h4 {
-                margin-bottom: 1rem;
+            p {
+                margin-top: 1rem;
+                font-size: 1.05rem;
             }
         }
     }
@@ -22,6 +24,10 @@
 
         h2 {
             margin: 1rem 0rem;
+        }
+
+        .form-title {
+            font-size: 2.5rem;
         }
 
         p {

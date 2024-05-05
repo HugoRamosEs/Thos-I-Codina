@@ -15,9 +15,9 @@ class App extends Controller {
 	        $value = $this->sanitize($_GET["value"]);
 	        $value = filter_var($value, FILTER_SANITIZE_URL);
 	        
-	        $date = DateTime::createFromFormat('d/m/Y', $value);
+	        $date = DateTime::createFromFormat("d/m/Y", $value);
 	        if ($date !== false) {
-	            $value = $date->format('d/m/Y');
+	            $value = $date->format("d/m/Y");
 	            $controller->xmlGenerator($value);
 	        } else {
 	            $controller->pdfGenerator($value);

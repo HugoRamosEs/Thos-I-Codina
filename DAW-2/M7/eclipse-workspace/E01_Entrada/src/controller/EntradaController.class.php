@@ -28,13 +28,15 @@ class EntradaController extends Controller {
             $mpdf->showWatermarkText = true;
             $mpdf->SetProtection(array("copy", "print"), "thosicodina", "2024@Thos");
             
-            $img = $entrada->getEvent()->getImatge();
-            if (strpos($img, 'img/') !== false) {
-                $img = str_replace('img/', '', $img);
-            }
+            $qrCode = "http://" . $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
             
+            $img = $entrada->getEvent()->getImatge();
+            if (strpos($img, "img/") !== false) {
+                $img = str_replace("img/", "", $img);
+            }
+
             ob_start();
-            include __DIR__ . '/../templates/entrada.tpl.php';
+            include __DIR__ . "/../templates/entrada.tpl.php";
             $html = ob_get_clean();
 
             $mpdf->WriteHTML($html);
@@ -81,8 +83,10 @@ class EntradaController extends Controller {
                 $p->addChild("estat", $entrada->getPagament()->getEstat());
             }
             
-            header('Content-type: text/xml');
-            echo $xml->asXML("entrades.xml");
+            header("Content-type: text/xml");
+            echo $xml->asXML();
+        } else {
+            echo "No hi ha entrades per a la data: " . $value;
         }
     }
 }

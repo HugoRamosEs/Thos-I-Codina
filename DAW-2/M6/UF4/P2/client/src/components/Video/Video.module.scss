@@ -1,0 +1,53 @@
+.main_video {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 10px;
+
+    video, canvas {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #15294e;
+    }
+
+    .title {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+            color: #15294e;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        button {
+            background-color: #f6f6eb;
+            color: #15294e;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 5px;
+            border: 5px solid #15294e;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fedb63;
+                border-color: #fedb63;
+            }
+        }
+    }
+
+    video {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    canvas {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}

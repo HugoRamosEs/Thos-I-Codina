@@ -2,6 +2,7 @@ let theme;
 const html = document.querySelector("html");
 const icon = document.querySelector(".icon");
 const arrow = document.querySelector(".arrow");
+const ffvii = document.querySelector(".ffvii");
 
 const applyTheme = () => {
     if (theme === "dark") {
@@ -10,11 +11,17 @@ const applyTheme = () => {
         if (arrow) {
             arrow.src = "public/img/flecha_blanca.png";
         }
+        if (ffvii) {
+            ffvii.src = "public/img/ff7_dark.gif";
+        }
     } else {
         html.classList.add("light");
         html.classList.remove("dark");
         if (arrow) {
             arrow.src = "public/img/flecha_oscura.png";
+        }
+        if (ffvii) {
+            ffvii.src = "public/img/ff7_light.gif";
         }
     }
 };

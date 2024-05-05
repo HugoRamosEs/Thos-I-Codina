@@ -22,11 +22,26 @@
             grid-column: 2 / 6;
             grid-row: 2;
             z-index: 2;
-            align-self: center;
-    
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(50px, auto);
+            height: auto;
+            align-content: center;
+            padding: 1.25% 0%;
+        
             video {
-                width: 100%;
+                grid-row: 1;
+                width: 60%;
                 height: auto;
+                margin: 0 auto;
+            }
+            
+            iframe {
+                grid-row: 2;
+                width: 60%;
+                height: auto;
+                margin: 0 auto;
+                aspect-ratio: 16 / 9;
             }
         }
     }
@@ -56,11 +71,26 @@
             grid-column: 2 / 6;
             grid-row: 2;
             z-index: 2;
-            align-self: center;
-    
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(50px, auto);
+            height: auto;
+            align-content: center;
+            padding: 1.25% 0%;
+        
             video {
-                width: 100%;
+                grid-row: 1;
+                width: 65%;
                 height: auto;
+                margin: 0 auto;
+            }
+            
+            iframe {
+                grid-row: 2;
+                width: 65%;
+                height: auto;
+                margin: 0 auto;
+                aspect-ratio: 16 / 9;
             }
         }
     }
@@ -90,11 +120,26 @@
             grid-column: 2 / 6;
             grid-row: 2;
             z-index: 2;
-            align-self: center;
-    
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(50px, auto);
+            height: auto;
+            align-content: center;
+            padding: 1.25% 0%;
+        
             video {
-                width: 100%;
+                grid-row: 1;
+                width: 70%;
                 height: auto;
+                margin: 0 auto;
+            }
+            
+            iframe {
+                grid-row: 2;
+                width: 70%;
+                height: auto;
+                margin: 0 auto;
+                aspect-ratio: 16 / 9;
             }
         }
     }

@@ -11,19 +11,19 @@
 		<tbody>
 			<tr>
 				<td class="titol"><?php echo $entrada->getEvent()->getTitol(); ?></td>
-				<td class="td-center td-logo"><img src="<?php echo __DIR__ . '/../img/logo.png'?>" alt="logo.png" class="logo" /></td>
+				<td class="td-center td-logo"><img src="<?php echo __DIR__ . "/../img/logo.png"?>" alt="logo.png" class="logo" /></td>
 			</tr>
 			<tr>
-				<td colspan="2" class="subtitol"><?php echo $entrada->getEvent()->getSubtitol(); ?></td>
+				<td colspan="2" class="subtitol"><?php echo iconv("UTF-8", "ISO-8859-1", $entrada->getEvent()->getSubtitol()); ?></td>
 			</tr>
 			<tr>
-				<td colspan="2" class="td-center"><img src="<?php echo __DIR__ . '/../img/' . $img; ?>" alt="<?php echo $img; ?>" class="img" /></td>
+				<td colspan="2" class="td-center"><img src="<?php echo __DIR__ . "/../img/" . $img; ?>" alt="<?php echo $img; ?>" class="img" /></td>
 			</tr>
 			<tr>
 				<td class="adreca">
 					<p><strong>Localització: </strong></p>
 					<ul>
-						<li><span>Lloc: </span><?php echo $entrada->getLocalitzacio()->getLloc(); ?></li>
+						<li><span>Lloc: </span><?php echo iconv("UTF-8", "ISO-8859-1", $entrada->getLocalitzacio()->getLloc()); ?></li>
 						<li><span>Localitat: </span><?php echo $entrada->getLocalitzacio()->getLocalitat(); ?></li>
 						<li><span>Adreça: </span><?php echo $entrada->getLocalitzacio()->getAdreca(); ?></li>
 					</ul>
@@ -61,7 +61,7 @@
 					<barcode code="<?php echo $entrada->getId(); ?>" type="C128A" size="1.4"/><br>
 					<p><?php echo $entrada->getId(); ?></p>
 				</td>
-				<td class="td-center"><barcode code="<?php echo $entrada->getId(); ?>" type="qr" size="1"/></td>
+				<td class="td-center"><barcode code="<?php echo $qrCode; ?>" type="qr" size="1"/></td>
 			</tr>
 		</tbody>
 	</table>

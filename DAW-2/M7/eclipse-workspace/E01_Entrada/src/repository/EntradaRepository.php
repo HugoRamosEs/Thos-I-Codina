@@ -1,4 +1,5 @@
 <?php
+
 namespace repository;
 
 /**
@@ -8,11 +9,11 @@ namespace repository;
  * repository methods below.
  */
 class EntradaRepository extends \Doctrine\ORM\EntityRepository {
-
-    public function findByDate($data) {
+    
+    public function findByDate($date) {
         $dql = "SELECT e FROM model\Entrada e INNER JOIN e.data d WHERE d.data = :data";
         $query = $this->_em->createQuery($dql);
-        $query->setParameter("data", $data);
+        $query->setParameter("data", $date);
         return $query->getResult();
     }
 }

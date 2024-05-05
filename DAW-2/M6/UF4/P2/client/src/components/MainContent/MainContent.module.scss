@@ -1,0 +1,44 @@
+.main_content {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #15294e;
+
+    h2{
+        font-size: 40px;
+        color: #15294e;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    div {
+        margin-top: 20px;
+        width: 650px;
+        text-align: center;
+        border: 5px solid #15294e;
+        padding: 10px;
+
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: -5px;
+        }
+
+        a {
+            font-size: 30px;
+            font-weight: bold;
+            color: #15294e;
+            margin-bottom: 10px;
+            margin-left: -5px;
+        }
+
+        a:hover {
+            color: #3822d4;
+        }
+    }
+}

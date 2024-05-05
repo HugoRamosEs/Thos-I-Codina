@@ -15,4 +15,18 @@ header {
     .icon {
         font-size: 1.75rem;
     }
+
+    nav {
+        ul {
+            li {
+                a {
+                    color: var(--a);
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }

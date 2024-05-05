@@ -1,5 +1,6 @@
 .video {
     .sec-v1 {
+        background-color: var(--video-sec-1-gradient);
         background-image: linear-gradient(to right, var(--video-sec-1-gradient) 45%, transparent), url("../img/dissidia.png");
         background-size: cover;
         background-position: center;
@@ -19,8 +20,13 @@
     }
 
     .sec-v2 {
-        video {
+        
+        video, iframe {
             border: 5px solid var(--video-sec-2-border);
+        }
+
+        iframe {
+            margin-top: 1rem;
         }
     }
 }

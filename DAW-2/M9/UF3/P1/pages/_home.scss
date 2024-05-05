@@ -8,13 +8,14 @@
     
         article {
             align-self: center;
-    
+
             h1 {
                 margin: 1rem 0rem;
             }
-    
-            .sub {
+
+            h2 {
                 margin-bottom: 1rem;
+                line-height: 1.75rem;
             }
     
             div {
@@ -29,12 +30,11 @@
                 }
     
                 a {
-                    margin-left: 1rem;
-                    padding-bottom: 0.25rem;
+                    margin-left: 0.75rem;
                     font-weight: bolder;
 
                     &:hover {
-                        color: var(--home-sec-1-gradient);
+                        color: var(--home-sec-1-a-hover);
                     }
                 } 
             }
@@ -58,6 +58,7 @@
     }
     
     .sec-3 {
+        background-color: var(--home-sec-3-gradient);
         background-image: linear-gradient(to right, var(--home-sec-3-gradient) 45%, transparent), url("../img/red-dead-redemption-2.webp");
         background-size: cover;
         background-position: center;
@@ -66,15 +67,13 @@
             padding-right: 45%;
 
             h2 {
-                margin-bottom: 1rem;
+                font-size: 3rem;
+                margin-bottom: 1rem; 
             }
     
             p {
                 font-size: 1.05rem;
-            }
-    
-            button {
-                margin-top: 2rem;
+                margin-bottom: 3rem;
             }
         }
     }

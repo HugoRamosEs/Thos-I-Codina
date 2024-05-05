@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="ca" class="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="public/css/main.css" />
-    <script defer type="text/javascript" src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/ableplayer/build/ableplayer.min.css" type="text/css"> 
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="js/ableplayer/build/ableplayer.min.js"></script>
+    <script defer src="js/script.js"></script>
     <title>Video - Game of sounds</title>
   </head>
   <body>
     <header>
-      <a href="home.html" class="no-effects"><span>GAME OF SOUNDS</span></a>
-      <span class="icon">&#xe9d5;</span>
+      <span lang="en">GAME OF SOUNDS</span>
+      <span class="icon" tabindex="0" role="button" aria-label="Botó per canviar de tema."></span>
       <nav>
         <ul>
           <li><a href="home.html">Inici</a></li>
@@ -24,13 +28,14 @@
 
     <main class="video">
       <video autoplay muted loop id="video-background">
-        <source src="public/video/dissidia-background.mp4" type="video/mp4" />
+        <source type="video/webm" src="public/video/dissidia-background.webm">
+        <source type="video/mp4" src="public/video/dissidia-background.mp4">
         El teu navegador no soporta HTML5 video.
       </video>
       <section class="sec-v1">
         <article>
           <h1>Final Fantasy Dissidia  012</h1>
-          <h4>Gameplay de Final Fantasy Dissidia 012</h4>
+          <h2>Gameplay de Final Fantasy Dissidia 012</h2>
           <p>
             ¿Preparat per veure un gameplay de Final Fantasy Dissidia 012?
             Agafa't fort perquè t'espera un munt d'acció! Veuràs com els teus
@@ -41,52 +46,31 @@
         </article>
       </section>
       <section class="sec-v2">
-        <video controls id="video">
-          <source
-            src="public/video/practica-2.mp4"
-            loading="lazy"
-            type="video/mp4"
-          />
-          <track
-            src="public/files/vtt_esp.vtt"
-            kind="subtitles"
-            srclang="es"
-            label="ESP"
-          />
-          <track
-            src="public/files/vtt_cat.vtt"
-            kind="subtitles"
-            srclang="cat"
-            label="CAT"
-          />
-          <track
-            src="public/files/captions_esp.vtt"
-            kind="captions"
-            srclang="es"
-            label="Captions ESP"
-          />
-          <track
-            src="public/files/captions_cat.vtt"
-            kind="captions"
-            srclang="cat"
-            label="Captions CAT"
-          />
-          <track
-            src="public/files/chapters.vtt"
-            kind="chapters"
-            srclang="es"
-            label="Chapters"
-          />
+        <video id="video" title="Video de Final Fantasy Dissidia 012" data-able-player data-skin="2020" playsinline tabindex="-1" controls>
+          <source type="video/webm" src="public/video/practica-2-webm.webm">
+          <source type="video/mp4" src="public/video/practica-2.mp4">
+          <source type="video/mp4" src="public/video/practica-2-libmp3lame.mp4">
+          <source type="video/mp4" src="public/video/practica-2-3MBbitrate.mp4">
+          <source type="video/mp4" src="public/video/practica-2-640.mp4">
+          <track kind="captions" src="public/files/captions_esp.vtt" srclang="es"  label="Español">
+          <track kind="captions" src="public/files/captions_cat.vtt" srclang="ca" label="Català">
+          <track kind="descriptions" src="public/files/captions_esp.vtt" srclang="es" label="Descripción en español">
+          <track kind="descriptions" src="public/files/captions_cat.vtt" srclang="ca" label="Descripció en català">
+          <track kind="subtitles" src="public/files/vtt_esp.vtt" srclang="es" label="Español">
+          <track kind="subtitles" src="public/files/vtt_cat.vtt" srclang="ca" label="Català">
+          <track kind="chapters" src="public/files/chapters_es.vtt" srclang="es" label="Capítulos">
+          <track kind="chapters" src="public/files/chapters_cat.vtt" srclang="ca" label="Capítols">
           El teu navegador no soporta HTML5 video.
         </video>
+        <iframe id="video-yt" allowfullscreen="" title="Video de Final Fantasy Dissidia 012" src="https://www.youtube.com/embed/oAKC2-hZGdU"></iframe>
       </section>
     </main>
 
     <footer>
       <section>
           <div class="explorar">
-              <h4>EXPLORAR</h4>
-              <hr />
+              <h2>EXPLORAR</h2>
+              <hr>
               <nav>
                   <ul>
                     <li><a href="home.html">Inici</a></li>
@@ -98,8 +82,8 @@
               </nav>
           </div>
           <div class="asistencia">
-              <h4>ASISTENCIA</h4>
-              <hr />
+              <h2>ASISTENCIA</h2>
+              <hr>
               <nav>
                   <ul>
                     <li><a href="#">Centre d'asistencia</a></li>
@@ -109,8 +93,8 @@
               </nav>
           </div>
           <div class="info">
-              <h4>INFORMACIÓ LEGAL</h4>
-              <hr />
+              <h2>INFORMACIÓ LEGAL</h2>
+              <hr>
               <nav>
                 <ul>
                   <li><a href="#">Política de privacitat</a></li>

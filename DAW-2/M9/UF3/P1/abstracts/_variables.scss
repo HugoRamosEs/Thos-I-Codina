@@ -1,49 +1,58 @@
 :root{
-    --white-1: #ffffff;
+    --white-1: #e7dede;
     --white-2: #f8f8f8;
     --white-3: #f4f4ed;
 
     --gray-1: #f1f1f1;
     --gray-2: #f1f1f1;
     --gray-3: #f7f7f7;
-    --gray-4: #9a9b9c;
-    --gray-5: #6b6c7b;
-    --gray-6: #d2d2d2;
+    --gray-4: #d2d2d2;
+    --gray-5: #a7a8aa;
+    --gray-6: #6b6c7b;
+    
     
     --dark-1: #37373f;
     --dark-2: #202020;
     --dark-3: #1d1d1d;
-    --dark-4: #000000;
+    --dark-4: #141414;
+    --dark-5: rgb(20, 20, 20);
 
     --blue-1: #48dbfd;
     --blue-2: #49d3f8;
     --blue-3: #34309f;
 
-    --orange-1: #f1832a;
+    --orange-1: #ff8d2f;
     --orange-2: #cf9e75;
 
-    --brown-1: #7a6262;
+    --brown-1: #614f4f;
     --brown-2: #4c4034;
     
-    --red-1: #d6191f;
-    --gold-1: #8e8266;
+    --red-1: #ff7575;
+    --red-2: #940005;
+
+    --gold-1: #695131;
+    --green-1: rgb(0, 255, 0);
 
     &.light {
-        --home-sec-1-bg: var(--gray-4);
+        --home-sec-1-bg: var(--gray-5);
         --home-sec-1-gradient: var(--gray-2);
+        --home-sec-1-a-hover: var(--gray-6);
         --home-sec-2-bg: var(--gray-2);
         --home-sec-2-gradient: var(--gray-1);
         --home-sec-3-gradient: var(--orange-1);
-        --gallery-sec-1-bg: var(--orange-2);
-        --gallery-sec-2-bg: var(--gray-6);
-        --video-sec-1-gradient: var(--gray-6);
+        --gallery-sec-1-gradient: var(--orange-2);
+        --gallery-sec-2-bg: var(--gray-4);
+        --video-sec-1-gradient: var(--gray-4);
         --video-sec-2-border: var(--gray-2);
-        --rankings-sec-1-bg: var(--blue-1);
-        --rankings-sec-2-bg: var(--blue-2);
+        --rankings-sec-1-gradient: var(--blue-1);
+        --rankings-sec-2-gradient: var(--blue-2);
         --rankings-sec-2-border: var(--gray-2);
-        --contact-sec-1-bg: var(--gray-4);
-        --contact-sec-2-bg: var(--gray-6);
-        --contact-sec-2-button: var(--red-1);
+        --contact-sec-1-bg: var(--gray-5);
+        --contact-sec-2-bg: var(--gray-4);
+        --contact-errors-bg: var(--dark-5);
+        --contact-errors-fg: var(--red-1);
+        --contact-errors-h2: var(--white-1);
+        --contact-correct-fg: var(--green-1);
 
         --h1: var(--dark-2);
         --h2: var(--dark-2);
@@ -52,14 +61,22 @@
         --sub: var(--dark-3);
         --p: var(--dark-3);
         --a: var(--dark-3);
-        --a-hover: var(--gray-4);
+        --a-hover: var(--gray-5);
         --hr: var(--dark-2);
+        --focus: var(--dark-3);
+        --btn-bg: var(--dark-2);
+        --btn-fg: var(--white-1);
+        --btn-border: var(--dark-2);
+        --btn-bg-hover: var(--gray-1);
+        --btn-fg-hover: var(--dark-5);
         --table-fg: var(--dark-2);
-        --table-header: var(--gray-6);
+        --table-caption: var(--gray-5);
+        --table-header: var(--gray-4);
         --table-rows: var(--white-1);
+        --table-hover: var(--gray-4);
         --form-label: var(--dark-2);
         --form-input-bg: var(--white-1);
-        --from-input-fg: var(--dark-1);
+        --form-input-fg: var(--dark-1);
         --form-input-border: var(--dark-1);
         --header-bg: var(--gray-2);
         --header-fg: var(--dark-3);
@@ -69,19 +86,23 @@
     &.dark {
         --home-sec-1-bg: var(--dark-1);
         --home-sec-1-gradient: var(--dark-3);
+        --home-sec-1-a-hover: var(--gray-5);
         --home-sec-2-bg: var(--brown-1);
         --home-sec-2-gradient: var(--dark-1);
-        --home-sec-3-gradient: var(--red-1);
-        --gallery-sec-1-bg: var(--brown-2);
+        --home-sec-3-gradient: var(--red-2);
+        --gallery-sec-1-gradient: var(--brown-2);
         --gallery-sec-2-bg: var(--brown-1);
         --video-sec-1-gradient: var(--gold-1);
         --video-sec-2-border: var(--dark-3);
-        --rankings-sec-1-bg: var(--blue-3);
-        --rankings-sec-2-bg: var(--blue-2);
+        --rankings-sec-1-gradient: var(--blue-3);
+        --rankings-sec-2-gradient: var(--blue-2);
         --rankings-sec-2-border: var(--dark-3);
         --contact-sec-1-bg: var(--dark-1);
         --contact-sec-2-bg: var(--brown-1);
-        --contact-sec-2-button: var(--red-1);
+        --contact-errors-bg: var(--dark-5);
+        --contact-errors-fg: var(--red-1);
+        --contact-errors-h2: var(--white-1);
+        --contact-correct-fg: var(--green-1);
         
         --h1: var(--white-1);
         --h2: var(--white-1);
@@ -90,14 +111,22 @@
         --sub: var(--white-2);
         --p: var(--white-2);
         --a: var(--white-2);
-        --a-hover: var(--gray-4);
+        --a-hover: var(--gray-5);
         --hr: var(--gray-2);
+        --focus: var(--white-1);
+        --btn-bg: var(--white-1);
+        --btn-fg: var(--dark-2);
+        --btn-border: var(--white-1);
+        --btn-bg-hover: var(--dark-2);
+        --btn-fg-hover: var(--white-1);
+        --table-caption: var(--dark-4);
         --table-fg: var(--white-2);
         --table-header: var(--dark-2);
         --table-rows: var(--dark-1);
+        --table-hover: var(--dark-2);
         --form-label: var(--white-2);
         --form-input-bg: var(--dark-1);
-        --from-input-fg: var(--white-1);
+        --form-input-fg: var(--white-1);
         --form-input-border: var(--dark-1);
         --header-bg: var(--dark-2);
         --header-fg: var(--gray-2);

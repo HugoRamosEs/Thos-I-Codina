@@ -1,6 +1,7 @@
 .gallery {
     .sec-g1 {
-        background-image: linear-gradient(to right, var(--gallery-sec-1-bg) 45%, transparent), url("../img/juegos.jpg");
+        background-color: var(--gallery-sec-1-gradient);
+        background-image: linear-gradient(to right, var(--gallery-sec-1-gradient) 45%, transparent), url("../img/juegos.jpg");
         background-size: cover;
         background-position: center;
     
@@ -20,6 +21,7 @@
 
     .sec-g2 {
         background-color: var(--gallery-sec-2-bg);
+        color: var(--p);
 
         img {
             width: 100%;
