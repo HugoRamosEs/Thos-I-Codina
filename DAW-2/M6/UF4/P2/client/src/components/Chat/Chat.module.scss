@@ -1,5 +1,96 @@
 .chat {
-    grid-column: 1;
-    grid-row: 2 / 4;
-    border: 5px solid #15294e;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 50px 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    gap: 10px;
+
+    .frm_enter {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+            color: #15294e;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                background-color: #f6f6eb;
+                color: #15294e;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 5px;
+                border: 5px solid #15294e;
+
+                &:focus {
+                    outline: none;
+                    border-color: #fedb63;
+                    background-color: white;
+                }
+            }
+
+            input[type="submit"] {
+                margin-left: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fedb63;
+                    border-color: #fedb63;
+                }
+            }
+        }
+    }
+
+    .messages {
+        grid-column: 1;
+        grid-row: 2;
+        border: 5px solid #15294e;
+    }
+
+    .frm_chat {
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                background-color: #f6f6eb;
+                color: #15294e;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 5px;
+                border: 5px solid #15294e;
+
+                &:focus {
+                    outline: none;
+                    border-color: #fedb63;
+                    background-color: white;
+                }
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            input[type="submit"] {
+                margin-left: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fedb63;
+                    border-color: #fedb63;
+                }
+            }
+        }
+    }
 }

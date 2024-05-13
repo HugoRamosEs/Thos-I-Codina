@@ -56,7 +56,7 @@ INSERT INTO joc (jugador) VALUES
 
 /* 6: Visualitza tots els resultats ordenats per categoria. 
 En quin ordre apareixen?
-Apareixen en ordre alfabetic. */
+Apareixen per l'ordre del enum. No es ordre alfabetic. */
 
 SELECT * FROM joc ORDER BY (jugador).categoria;
 
@@ -109,11 +109,12 @@ UPDATE joc SET jugador = ROW((jugador).nom, (jugador).categoria, ROW(((jugador).
 WHERE (jugador).nom = 'Diego';
 
 -- 15: Elimina tot el que has creat en aquest exercici. Tot.
-DROP TABLE IF EXISTS joc;
-DROP FUNCTION IF EXISTS obtenirPuntuacioRealJugador(punts);
-DROP TYPE IF EXISTS jugador;
-DROP TYPE IF EXISTS categoria;
-DROP TYPE IF EXISTS categoria_nom;
-DROP TYPE IF EXISTS punts;
-DROP DOMAIN IF EXISTS nombres_positius;
+-- DROP TABLE IF EXISTS joc;
+-- DROP FUNCTION IF EXISTS obtenirPuntuacioRealJugador(punts);
+-- DROP TYPE IF EXISTS jugador;
+-- DROP TYPE IF EXISTS categoria;
+-- DROP TYPE IF EXISTS categoria_nom;
+-- DROP TYPE IF EXISTS punts;
+-- DROP DOMAIN IF EXISTS nombres_positius;
+DROP DATABASE 'joc'; -- No creo la Database, creo que era la idea de la práctica.
 

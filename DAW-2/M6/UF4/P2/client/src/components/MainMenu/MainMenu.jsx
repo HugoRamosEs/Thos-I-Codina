@@ -10,7 +10,7 @@ function MainMenu() {
       <nav className={styles.main_menu}>
         <ul>
           <li><NavLink to="/" className={location.pathname === "/" ? styles.active : ""}>HOME</NavLink></li>
-          <li><NavLink to="/video" className={location.pathname === "/video" ? styles.active : ""}>VIDEO</NavLink></li>
+          <li><NavLink to="/videochat" className={location.pathname === "/videochat" ? styles.active : ""}>VIDEOCHAT</NavLink></li>
         </ul>
       </nav>
     </>
