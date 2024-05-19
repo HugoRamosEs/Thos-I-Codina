@@ -39,6 +39,19 @@ class Data{
             "hora" => $this->getHora() ? $this->getHora() : null,
         ];
 	}
+	
+	/**
+     * Set id
+     *
+     * @param integer $id
+     * 
+     * @return Data
+     */
+	public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+	}
 
     /**
      * Get id

@@ -1,6 +1,8 @@
 <?php
 namespace controller;
 
+use Exception;
+
 class Controller {
     public $entityManager;
     
@@ -74,6 +76,33 @@ class Controller {
     }
     
     /**
+     * Permet verificar una data, amb el seu format corresponent.
+     * @param mixed $data: Cadena que indica la data.
+     * @param int $format:
+     *      [0] DD/MM/YY.
+     *      [1] YY/MM/DD.
+     */
+    public function verifyData($data, $simbol, $format = 0){
+        $values = explode($simbol, $data);
+        if (count($values) === 3){
+            switch ($format){
+                case 0:
+                    if (checkdate($values[1], $values[0], $values[2])){
+                        return true;
+                    }
+                    break;
+                    
+                case 1:
+                    if (checkdate($values[2], $values[1], $values[0])){
+                        return true;
+                    }
+                    break;
+            }
+        }
+        return false;
+    }
+    
+    /**
      * Permet convertir un objecte o un array d'objectes en un array o array de arrays.
      * 
      * @param array|object $result
@@ -97,4 +126,3 @@ class Controller {
         return $resultArray;
     }
 }
-

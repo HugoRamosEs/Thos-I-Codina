@@ -47,6 +47,19 @@ class Event{
             "imatge" => $this->getImatge() ? $this->getImatge() : null,
         ];
 	}
+	
+	/**
+	 * Set id
+	 *
+	 * @param integer $id
+	 *
+	 * @return Event
+	 */
+	public function setId($id) {
+	    $this->id = $id;
+	    
+	    return $this;
+	}
 
     /**
      * Get id

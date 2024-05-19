@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
+class ComposerStaticInita7e03ff33b63763cd380aa10cf0b172b
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -15,9 +15,15 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'db356362850385d08a5381de2638b5fd' => __DIR__ . '/..' . '/mpdf/mpdf/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'setasign\\Fpdi\\' => 14,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -32,9 +38,18 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PackageVersions\\' => 16,
+        ),
+        'M' => 
+        array (
+            'Mpdf\\QrCode\\' => 12,
+            'Mpdf\\PsrLogAwareTrait\\' => 22,
+            'Mpdf\\PsrHttpMessageShim\\' => 24,
+            'Mpdf\\' => 5,
         ),
         'D' => 
         array (
@@ -49,10 +64,15 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'DeepCopy\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'setasign\\Fpdi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -89,6 +109,14 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -100,6 +128,22 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
         'PackageVersions\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
+        ),
+        'Mpdf\\QrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/qrcode/src',
+        ),
+        'Mpdf\\PsrLogAwareTrait\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/psr-log-aware-trait/src',
+        ),
+        'Mpdf\\PsrHttpMessageShim\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/psr-http-message-shim/src',
+        ),
+        'Mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
         ),
         'Doctrine\\Persistence\\' => 
         array (
@@ -147,6 +191,10 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
             1 => __DIR__ . '/..' . '/doctrine/persistence/src/Common',
             2 => __DIR__ . '/..' . '/doctrine/common/src',
         ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -167,10 +215,10 @@ class ComposerStaticInit30340a687dfffea1fb1f4bac644f358c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit30340a687dfffea1fb1f4bac644f358c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit30340a687dfffea1fb1f4bac644f358c::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit30340a687dfffea1fb1f4bac644f358c::$fallbackDirsPsr4;
-            $loader->classMap = ComposerStaticInit30340a687dfffea1fb1f4bac644f358c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita7e03ff33b63763cd380aa10cf0b172b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita7e03ff33b63763cd380aa10cf0b172b::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInita7e03ff33b63763cd380aa10cf0b172b::$fallbackDirsPsr4;
+            $loader->classMap = ComposerStaticInita7e03ff33b63763cd380aa10cf0b172b::$classMap;
 
         }, null, ClassLoader::class);
     }

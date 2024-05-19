@@ -6,7 +6,7 @@
     			<img src="img/error.png" alt="error.png">
     		</div>
 			<div class="main-error-text">
-				<h3><?php echo $title?></h3>
+				<h3>Hi ha hagut un error!</h3>
     			<p><?php echo $message?></p>
 			</div>
 		</div>

@@ -9,37 +9,50 @@ namespace model;
  * @Table( name="DATA" )
  */
 class Data{
-	/**
-	 * @var int
-	 *
-	 * @Id
-	 * @GeneratedValue
-	 * @Column(type="integer")
-	 */
-	private $id;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=10, name="DATA")
-	 */
-	private $data;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=5, name="HORA")
-	 */
-	private $hora;
-	
-	public function parseToArray() {
+    /**
+     * @var int
+     *
+     * @Id
+     * @GeneratedValue
+     * @Column(type="integer")
+     */
+    private $id;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=10, name="DATA")
+     */
+    private $data;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=5, name="HORA")
+     */
+    private $hora;
+    
+    public function parseToArray() {
         return [
             "id" => $this->getId() ? $this->getId() : null,
             "data" => $this->getData() ? $this->getData() : null,
             "hora" => $this->getHora() ? $this->getHora() : null,
         ];
-	}
-
+    }
+    
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Data
+     */
+    public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+    }
+    
     /**
      * Get id
      *
@@ -49,7 +62,7 @@ class Data{
     {
         return $this->id;
     }
-
+    
     /**
      * Set data
      *
@@ -60,10 +73,10 @@ class Data{
     public function setData($data)
     {
         $this->data = $data;
-
+        
         return $this;
     }
-
+    
     /**
      * Get data
      *
@@ -73,7 +86,7 @@ class Data{
     {
         return $this->data;
     }
-
+    
     /**
      * Set hora
      *
@@ -84,10 +97,10 @@ class Data{
     public function setHora($hora)
     {
         $this->hora = $hora;
-
+        
         return $this;
     }
-
+    
     /**
      * Get hora
      *

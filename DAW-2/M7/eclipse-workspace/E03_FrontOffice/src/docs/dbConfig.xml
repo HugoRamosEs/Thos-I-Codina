@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dbConfig>
+    <driver>pdo_mysql</driver>
+    <host>127.0.0.1</host>
+    <dbname>tickettune</dbname>
+    <user>usr_generic</user>
+    <password>2024@Thos</password>
+</dbConfig>

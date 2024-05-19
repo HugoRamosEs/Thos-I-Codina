@@ -6,7 +6,7 @@
 		              a tots els gustos. Navega fàcilment a través de la nostra interfície amigable i troba el teu concert ideal. Comença 
 		              a viure experiències inoblidables amb només uns pocs clics!</p>
 		<h3>Seccions</h3>
-		<?php echo (isset($_SESSION["login"])) ? '<a href="?Service/dispatch">':'<a href="?Usuari/login">';?>
+		<?php echo (isset($_SESSION["login"])) ? '<a href="?Venda/form">':'<a href="?User/login">';?>
 			<article>
 				<img src="img/venda_tickets.png" alt="venda_tickets.png">
 				<div class="text">

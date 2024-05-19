@@ -57,6 +57,19 @@ class Pagament{
         ];
 	}
 	
+	/**
+     * Set id
+     *
+     * @param integer $id
+     * 
+     * @return Pagament
+     */
+	public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+	}
+	
     /**
      * Get id
      *

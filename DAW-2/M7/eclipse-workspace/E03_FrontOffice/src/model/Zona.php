@@ -31,6 +31,19 @@ class Zona{
             "descripcio" => $this->getDescripcio() ? $this->getDescripcio() : null,
         ];
 	}
+	
+	/**
+     * Set id
+     *
+     * @param integer $id
+     * 
+     * @return Zona
+     */
+	public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+	}
 
     /**
      * Get id

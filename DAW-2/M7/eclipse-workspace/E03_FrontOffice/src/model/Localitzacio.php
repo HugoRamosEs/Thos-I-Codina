@@ -47,6 +47,19 @@ class Localitzacio{
             "localitat" => $this->getLocalitat() ? $this->getLocalitat() : null,
         ];
 	}
+	
+	/**
+	 * Set id
+	 *
+	 * @param integer $id
+	 * 
+	 * @return Localitzacio
+	 */
+	public function setId($id) {
+	    $this->id = $id;
+	    
+	    return $this;
+	}
 
     /**
      * Get id

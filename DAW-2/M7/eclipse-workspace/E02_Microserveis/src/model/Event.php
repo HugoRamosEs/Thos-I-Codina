@@ -9,45 +9,58 @@ namespace model;
  * @Table( name="EVENT" )
  */
 class Event{
-	/**
-	 * @var int
-	 *
-	 * @Id
-	 * @GeneratedValue
-	 * @Column(type="integer")
-	 */
-	private $id;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="TITOL")
-	 */
-	private $titol;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="SUTBITOL")
-	 */
-	private $subtitol;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="IMATGE")
-	 */
-	private $imatge;
-	
-	public function parseToArray() {
+    /**
+     * @var int
+     *
+     * @Id
+     * @GeneratedValue
+     * @Column(type="integer")
+     */
+    private $id;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="TITOL")
+     */
+    private $titol;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="SUTBITOL")
+     */
+    private $subtitol;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="IMATGE")
+     */
+    private $imatge;
+    
+    public function parseToArray() {
         return [
             "id" => $this->getId() ? $this->getId() : null,
             "titol" => $this->getTitol() ? $this->getTitol() : null,
             "subtitol" => $this->getSubtitol() ? $this->getSubtitol() : null,
             "imatge" => $this->getImatge() ? $this->getImatge() : null,
         ];
-	}
-
+    }
+    
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Event
+     */
+    public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+    }
+    
     /**
      * Get id
      *
@@ -57,7 +70,7 @@ class Event{
     {
         return $this->id;
     }
-
+    
     /**
      * Set titol
      *
@@ -68,10 +81,10 @@ class Event{
     public function setTitol($titol)
     {
         $this->titol = $titol;
-
+        
         return $this;
     }
-
+    
     /**
      * Get titol
      *
@@ -81,7 +94,7 @@ class Event{
     {
         return $this->titol;
     }
-
+    
     /**
      * Set subtitol
      *
@@ -92,10 +105,10 @@ class Event{
     public function setSubtitol($subtitol)
     {
         $this->subtitol = $subtitol;
-
+        
         return $this;
     }
-
+    
     /**
      * Get subtitol
      *
@@ -105,7 +118,7 @@ class Event{
     {
         return $this->subtitol;
     }
-
+    
     /**
      * Set imatge
      *
@@ -116,10 +129,10 @@ class Event{
     public function setImatge($imatge)
     {
         $this->imatge = $imatge;
-
+        
         return $this;
     }
-
+    
     /**
      * Get imatge
      *

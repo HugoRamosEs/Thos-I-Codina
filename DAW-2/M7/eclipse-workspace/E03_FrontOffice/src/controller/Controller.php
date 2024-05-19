@@ -1,6 +1,8 @@
 <?php
 namespace controller;
 
+use Exception;
+
 class Controller {
     public $entityManager;
     
@@ -74,6 +76,33 @@ class Controller {
     }
     
     /**
+     * Permet verificar una data, amb el seu format corresponent.
+     * @param mixed $data: Cadena que indica la data.
+     * @param int $format:
+     *      [0] DD/MM/YY.
+     *      [1] YY/MM/DD.
+     */
+    public function verifyData($data, $simbol, $format = 0){
+        $values = explode($simbol, $data);
+        if (count($values) === 3){
+            switch ($format){
+                case 0:
+                    if (checkdate($values[1], $values[0], $values[2])){
+                        return true;
+                    }
+                    break;
+                    
+                case 1:
+                    if (checkdate($values[2], $values[1], $values[0])){
+                        return true;
+                    }
+                    break;
+            }
+        }
+        return false;
+    }
+    
+    /**
      * Permet convertir un objecte o un array d'objectes en un array o array de arrays.
      * 
      * @param array|object $result
@@ -96,5 +125,54 @@ class Controller {
         
         return $resultArray;
     }
+    
+    /**
+     * Permet convertir un json en una entitat, una lista de d'entitats, especificades o un array amb missatges de resultat.
+     *
+     * @param string $json JSON a convertir.
+     * @param string $entityName Nom de la classe de l'entitat.
+     * @return mixed Un objecte de l'entitat, una array d'entitats o un array amb missatges de resultat.
+     */
+    public function parseResponse($json, $entityName) {
+        $json = trim($json);
+        $json = stripslashes($json);
+        $dataArray = json_decode($json, true);
+        
+        if (json_last_error() != JSON_ERROR_NONE) {
+            throw new Exception("Invalid JSON: ". json_last_error());
+        }
+        
+        if (isset($dataArray["OK"]) || isset($dataArray["error"]) || isset($dataArray["errors"])) {
+            return $dataArray;
+        }
+        
+        $entityClass = "model\\" . $entityName;
+        if (!class_exists($entityClass)) {
+            throw new Exception("Class {$entityName} does not exist");
+        }
+        
+        if (count($dataArray) == 1) {
+            $entity = new $entityClass();
+            foreach ($dataArray[0] as $key => $value) {
+                $setter = "set" . ucfirst($key);
+                if (method_exists($entity, $setter)) {
+                    $entity->$setter($value);
+                }
+            }
+            return $entity;
+        } else {
+            $entities = [];
+            foreach ($dataArray as $data) {
+                $entity = new $entityClass();
+                foreach ($data as $key => $value) {
+                    $setter = "set" . ucfirst($key);
+                    if (method_exists($entity, $setter)) {
+                        $entity->$setter($value);
+                    }
+                }
+                $entities[] = $entity;
+            }
+            return $entities;
+        }
+    }
 }
-

@@ -9,45 +9,45 @@ namespace model;
  * @Table( name="PAGAMENT" )
  */
 class Pagament{
-	/**
-	 * @var int
-	 *
-	 * @Id
-	 * @GeneratedValue
-	 * @Column(type="integer")
-	 */
-	private $id;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="BANC")
-	 */
-	private $banc;
-	
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="REF_EXTERNA")
-	 */
-	private $referenciaExterna;
-	
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=10, name="DATA")
-	 */
-	private $data;
-
-	/**
-	 * @var string
-	 *
-	 * @Column(type="string", length=90, name="ESTAT")
-	 */
-	private $estat;
-	
-	public function parseToArray() {
+    /**
+     * @var int
+     *
+     * @Id
+     * @GeneratedValue
+     * @Column(type="integer")
+     */
+    private $id;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="BANC")
+     */
+    private $banc;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="REF_EXTERNA")
+     */
+    private $referenciaExterna;
+    
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=10, name="DATA")
+     */
+    private $data;
+    
+    /**
+     * @var string
+     *
+     * @Column(type="string", length=90, name="ESTAT")
+     */
+    private $estat;
+    
+    public function parseToArray() {
         return [
             "id" => $this->getId() ? $this->getId() : null,
             "banc" => $this->getBanc() ? $this->getBanc() : null,
@@ -55,8 +55,21 @@ class Pagament{
             "data" => $this->getData() ? $this->getData() : null,
             "estat" => $this->getEstat() ? $this->getEstat() : null,
         ];
-	}
-	
+    }
+    
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Pagament
+     */
+    public function setId($id) {
+        $this->id = $id;
+        
+        return $this;
+    }
+    
     /**
      * Get id
      *
@@ -66,7 +79,7 @@ class Pagament{
     {
         return $this->id;
     }
-
+    
     /**
      * Set banc
      *
@@ -77,10 +90,10 @@ class Pagament{
     public function setBanc($banc)
     {
         $this->banc = $banc;
-
+        
         return $this;
     }
-
+    
     /**
      * Get banc
      *
@@ -90,7 +103,7 @@ class Pagament{
     {
         return $this->banc;
     }
-
+    
     /**
      * Set referenciaExterna
      *
@@ -101,10 +114,10 @@ class Pagament{
     public function setReferenciaExterna($referenciaExterna)
     {
         $this->referenciaExterna = $referenciaExterna;
-
+        
         return $this;
     }
-
+    
     /**
      * Get referenciaExterna
      *
@@ -114,7 +127,7 @@ class Pagament{
     {
         return $this->referenciaExterna;
     }
-
+    
     /**
      * Set data
      *
@@ -125,10 +138,10 @@ class Pagament{
     public function setData($data)
     {
         $this->data = $data;
-
+        
         return $this;
     }
-
+    
     /**
      * Get data
      *
@@ -138,7 +151,7 @@ class Pagament{
     {
         return $this->data;
     }
-
+    
     /**
      * Set estat
      *
@@ -149,10 +162,10 @@ class Pagament{
     public function setEstat($estat)
     {
         $this->estat = $estat;
-
+        
         return $this;
     }
-
+    
     /**
      * Get estat
      *
