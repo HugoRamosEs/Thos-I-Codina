@@ -3,6 +3,7 @@ namespace model;
 
 use PDO;
 use PDOException;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class UserModel implements Crudable {
     private $db;
@@ -13,7 +14,7 @@ class UserModel implements Crudable {
             $this->db = new PDO("mysql:host=" . $dbConfig->getHost() . ";dbname=" . $dbConfig->getDbname(), $dbConfig->getUser(), $dbConfig->getPassword());
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+            echo "Connexió fallida: " . $e->getMessage();
         }
     }
 
@@ -29,9 +30,10 @@ class UserModel implements Crudable {
     
     public function read($user = null) {
         $stmt = $this->db->query("SELECT * FROM `USER` ORDER BY `id` DESC");
-        $users = [];
+        $users = new ArrayCollection();
         while ($col = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $users[] = $this->mapToUser($col);
+            $userObject = $this->mapToUser($col);
+            $users->add($userObject);
         }
         
         return $users;
