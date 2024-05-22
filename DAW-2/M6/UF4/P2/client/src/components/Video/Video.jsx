@@ -21,8 +21,8 @@ function Video() {
             const socket = io("http://localhost:3002");
 
             const getUserMedia = navigator.getUserMedia || 
-                               navigator.webkitGetUserMedia || 
-                               navigator.mozGetUserMedia;
+                                 navigator.webkitGetUserMedia || 
+                                 navigator.mozGetUserMedia;
             
             // Include for older browsers...
             // const getMediaStream = (constraints) => {

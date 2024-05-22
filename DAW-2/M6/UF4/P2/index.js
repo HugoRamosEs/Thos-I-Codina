@@ -21,4 +21,8 @@ io.on("connection", (socket) => {
   socket.on("stream", (image) => {
     socket.broadcast.emit("stream", image);
   });
+
+  socket.on("message", (message) => {
+    socket.broadcast.emit("message", message);
+  });
 });

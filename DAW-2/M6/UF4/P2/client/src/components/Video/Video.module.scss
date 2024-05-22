@@ -45,6 +45,11 @@
         display: none;
     }
 
+    canvas, .receiver {
+        width: 650px;
+        height: 490px;
+    }
+
     canvas {
         grid-column: 1;
         grid-row: 2;

@@ -1,11 +1,29 @@
 import styles from "./Chat.module.scss";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { io } from "socket.io-client";
 
 function Chat() {
   const nickRef = useRef(null);
   const [nick, setNick] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    const newSocket = io("http://localhost:3000");
+    setSocket(newSocket);
+    
+    newSocket.on("message", (message) => {
+      setMessages((prevMessages) => [...prevMessages, message]);
+    });
+
+    return () => {
+      newSocket.disconnect();
+    };
+  }, []);
+  
 
   const handleEnterChat = (e) => {
     e.preventDefault();
