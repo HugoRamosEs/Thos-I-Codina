@@ -46,11 +46,6 @@
         display: none;
     }
 
-    canvas, .receiver {
-        width: 650px;
-        height: 490px;
-    }
-
     canvas {
         grid-column: 1;
         grid-row: 2;
@@ -59,5 +54,30 @@
     .receiver {
         grid-column: 2;
         grid-row: 3;
+    }
+}
+
+.filters, .extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #15294e;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+        transition: transform 0.2s;
+    }
+
+    img:last-child {
+        margin-bottom: 0;
+    }
+
+    img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
     }
 }

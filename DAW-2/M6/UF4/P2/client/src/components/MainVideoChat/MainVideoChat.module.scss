@@ -1,7 +1,7 @@
 .main_videochat {
     grid-column: 1 / 5;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 75px;
     grid-auto-rows: minmax(50px, auto);
     gap: 10px;
 
@@ -11,5 +11,9 @@
 
     .video {
         grid-column: 2;
+    }
+
+    #tools {
+        grid-column: 3;
     }
 }

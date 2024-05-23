@@ -22,7 +22,7 @@
 
         form {
             display: flex;
-            justify-content: space-between;
+            justify-content: right;
             align-items: center;
 
             input {
@@ -32,6 +32,7 @@
                 font-size: 20px;
                 padding: 5px;
                 border: 5px solid #15294e;
+                width: 53%;
 
                 &:focus {
                     outline: none;
@@ -43,6 +44,7 @@
             input[type="submit"] {
                 margin-left: 5px;
                 cursor: pointer;
+                width: 32.5%;
 
                 &:hover {
                     background-color: #fedb63;
@@ -56,6 +58,22 @@
         grid-column: 1;
         grid-row: 2;
         border: 5px solid #15294e;
+        overflow-y: auto;
+        max-height: 930px;
+
+        ul {
+            list-style-type: none;
+            padding: 15px;
+            margin: 0;
+
+            li {
+                font-size: 18px;
+
+                strong {
+                    color: #15294e;
+                }
+            }
+        }
     }
 
     .frm_chat {
@@ -84,6 +102,20 @@
             }
 
             input[type="submit"] {
+                margin-left: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fedb63;
+                    border-color: #fedb63;
+                }
+            }
+
+            img {
+                width: 50px;
+                height: auto;
+                padding: 2px;
+                border: 5px solid #15294e;
                 margin-left: 5px;
                 cursor: pointer;
 
