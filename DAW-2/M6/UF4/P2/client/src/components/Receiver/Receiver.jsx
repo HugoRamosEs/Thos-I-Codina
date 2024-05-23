@@ -5,34 +5,36 @@ import { useEffect, useRef, useContext } from "react";
 import { io } from "socket.io-client";
 
 function Receiver() {
-  const receiverRef = useRef(null);
-  const { isActive } = useContext(VideoContext);
+    const socketRef = useRef(null);
+    const receiverRef = useRef(null);
+    const { isActive } = useContext(VideoContext);
 
-  useEffect(() => {
-    const socket = io("http://localhost:3002");
-    socket.on("stream", (image) => {
-      receiverRef.current.src = image;
-      console.log(receiverRef.current);
-    });
+    useEffect(() => {
+        socketRef.current = io("http://localhost:3002");
+        socketRef.current.on("stream", (image) => {
+            receiverRef.current.src = image ? image : "";
+        });
 
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
+        return () => {
+            if (socketRef.current) {
+                socketRef.current.disconnect();
+            }
+        };
+    }, []);
 
-  useEffect(() => {
-    if (!isActive) {
-      receiverRef.current.src = "";
-    }
-  }, [isActive]);
+    useEffect(() => {
+        if (!isActive) {
+            receiverRef.current.src = "";
+        }
+    }, [isActive]);
 
-  return (
-    <>
-        <div className={styles.receiver}>
-          <img ref={receiverRef} alt=""></img>
-        </div>
-    </>
-  )
+    return (
+        <>
+            <div className={styles.receiver}>
+                <img ref={receiverRef} alt=""></img>
+            </div>
+        </>
+    );
 }
 
-export default Receiver
+export default Receiver;

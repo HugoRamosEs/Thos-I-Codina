@@ -5,7 +5,7 @@
     grid-auto-rows: minmax(50px, auto);
     gap: 10px;
 
-    .frm_enter {
+    .frm_connect {
         grid-column: 1;
         grid-row: 1;
         display: flex;
@@ -13,8 +13,9 @@
         align-items: center;
 
         h2 {
-            font-size: 30px;
+            font-size: 45px;
             color: #15294e;
+            border-bottom: 5px solid #15294e;
             font-weight: bold;
             margin-bottom: 0px;
         }
